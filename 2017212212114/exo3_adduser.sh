@@ -46,3 +46,6 @@ useradd -c "${COMMENT}"  -m "${USER_NAME}"
 echo ${USER_NAME}:${PASSWORD} | chpasswd
 #echo ${PASSWORD} | passwd --stdin ${USER_NAME}
 echo ${USER_NAME}:${PASSWORD}
+
+
+
