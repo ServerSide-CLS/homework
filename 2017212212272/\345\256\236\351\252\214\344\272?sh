@@ -1,6 +1,0 @@
-#!/bin/bash
-read -p 'Enter username:' USER_NAME
-read -p 'Enter person info:' COMMENT
-PASSWORD="$(echo '!@#$%^&*()_+='|fold -w1|shuf|head -c1)$(echo '!@#$%^&*()_+='|fold -w1|shuf|head -c1)$(echo '0123456789'|fold -w1|shuf|head -c1)$(echo '0123456789'|fold -w1|shuf|head -c1)$(echo '0123456789'|fold -w1|shuf|head -c1)$(echo '0123456789'|fold -w1|shuf|head -c1)$(echo '0123456789'|fold -w1|shuf|head -c1)$(echo '0123456789'|fold -w1|shuf|head -c1)"
-useradd -c "${COMMENT}" -m ${USER_NAME}
-echo ${USER_NAME}:${PASSWOR}
