@@ -7,34 +7,47 @@
 #Codename: Core
 
 INPUT="${#}"
-LEN="${2}"
+LEN=8
+S_LEN=0
+SORT=0
 
-if [[ "${3}" = '-s' ]]
+while getopts l:s:o INPUT
+do
+    case $INPUT in
+    l)
+        LEN=$OPTARG
+        ;;
+    s)
+        S_LEN=$OPTARG
+        ;;
+    o)
+        SORT=1
+        ;;
+    esac
+done
+
+if [[ "${S_LEN}" > 0 ]]
 then
-    if [[ "${5}" = '-o' ]]
+    if [[ "${SORT}" = 1 ]]
     then
         # 获取用户名
-        USER_NAME="${6}"
-        # 获取特殊字符位数
-        PASS_NUM="${4}"
+        USER_NAME="${@: -1}"
         # 获取英文数字位数
-        ((NUM = ${LEN}-${PASS_NUM}))
+        ((NUM = ${LEN}-${S_LEN}))
         # 生成密码
-        PASSWORD=$(echo '!@#$%^&*()_+=' | fold -w${PASS_NUM} | shuf | head -c${PASS_NUM} )$(date +%s%N${RANDOM}${RANDOM} | sha256sum | head -c${NUM} )
+        PASSWORD=$(echo '!@#$%^&*()_+=' | fold -w${S_LEN} | shuf | head -c${S_LEN} )$(date +%s%N${RANDOM}${RANDOM} | sha256sum | head -c${NUM} )
         PASSWORD=$(echo ${PASSWORD} | fold -w1 | shuf | xargs |sed 's/ //g')
     else
         # 获取用户名
-        USER_NAME="${5}"
-        # 获取特殊字符位数
-        PASS_NUM="${4}"
+        USER_NAME="${@: -1}"
         # 获取英文数字位数
-        ((NUM = ${LEN}-${PASS_NUM}))
+        ((NUM = ${LEN}-${S_LEN}))
         # 生成密码
-        PASSWORD=$(date +%s%N${RANDOM}${RANDOM} | sha256sum | head -c${NUM} )$(echo '!@#$%^&*()_+=' | fold -w${PASS_NUM} | shuf | head -c${PASS_NUM} )
+        PASSWORD=$(date +%s%N${RANDOM}${RANDOM} | sha256sum | head -c${NUM} )$(echo '!@#$%^&*()_+=' | fold -w${S_LEN} | shuf | head -c${S_LEN} )
     fi
 else
     # 获取用户名
-    USER_NAME="${3}"
+    USER_NAME="${@: -1}"
     # 生成密码
     PASSWORD=$(date +%s%N${RANDOM}${RANDOM} | sha256sum | head -c${LEN} )
 fi
