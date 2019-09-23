@@ -1,0 +1,11 @@
+read -p 'Enter username:' USER_NAME
+
+read -p 'Enter person info:' COMMENT
+
+PASSWORD=$(echo "${RANDOM}${RANDOM}" | head -c6)
+P="!@#$%^&*()_+="
+NOT_NORMAL=$(echo '!@#$%^&*()_+=' | fold -w8 | head -c2)
+PASSWORD="${PASSWORD}${NOT_NOEMAL}"
+PASSWORD=$(echo ${PASSWORD} | head -c8)
+
+echo "${PASSWORD}"
