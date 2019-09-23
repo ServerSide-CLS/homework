@@ -55,10 +55,9 @@ if [ $(id -u) -eq 0 ]; then
     else
         password=${character}${spCharacter}
     fi
-    # useradd -c "${comment}" -m ${username}
-    # echo ${username}:${password}|chpasswd
+    useradd -c "${comment}" -m ${username}
+    echo ${username}:${password}|chpasswd
     echo "The password is: ${password}"
-    echo "The username is: ${username}"
     [ $? -eq 0 ] && echo "User has been added to system!" || echo "Failed to add a user!"
 else
 	echo "Only root may add a user to the system"
