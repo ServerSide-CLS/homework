@@ -46,7 +46,7 @@ fi
 if [[ "${PWA_ORDER}" = 'true' ]]
 then
   LEN=`expr ${LEN1} - ${LEN2}`
-  PASSWORD=$(exho ${SPEC_CHAR}${PASSWORD} | fold -w${LEN} | shuf)
+  PASSWORD=$(exho ${PASSWORD} | fold -w1 | shuf | tr -d '\n' | head -c${LEN1})
 fi
 
 echo "${USER_NAME}:${PASSWORD}"
