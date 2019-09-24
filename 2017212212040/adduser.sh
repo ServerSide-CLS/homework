@@ -1,76 +1,22 @@
 #!/bin/bash
 
-usage() {
-  echo "Usage: ${0} [-l LENGTH] [-s LENGTH] [-o] [username]" >&2
-  echo 'Generate a random password'
-  echo '  -l LENGTH specify the password length'
-  echo '  -s Append a special char to the password'
-  echo '  -o Out of order characters'
-  exit 1
-}
+read -p 'Enter username:' USER_NAME
 
+read -p 'Enter person info:' COMMENT
 
-log() {
-  local MSG="${@}"
-}
+useradd -c "${COMMENT}" -m ${USER_NAME}
 
-USERS_PARAMAS="${#}"
-if [[ "${USERS_PARAMAS}" -lt 1 ]]
-then
-  usage
-  exit 1
-fi
+# sha256sum + RANDOM + head
+PASSWORD=$(date +%s%N${RANDOM}${RANDOM} | sha256sum | head -c6 )
 
-LEN=20
-len=0
-USERNAME=${!#}
+SPECIAL_CHAR=$(echo '!@#$%^&*()_+=?' | fold -w2 | shuf | tr -d '\n' | head -c2 )
 
-while getopts l:s:o OPTION
-do
-  case "${OPTION}" in
-    l)  
-      LEN="${OPTARG}"
-      ;;
-    s)
-      USE_SPEC_CHAR='true'
-      len="${OPTARG}"
-      ;;
-    o)
-      random='true'
-      ;;
-    ?)
-      usage
-      ;;
-  esac
-done
+FINALPASSWORD=$(echo "${PASSWORD}${SPECIAL_CHAR}" | fold -w1 |shuf | tr -d '\n' )
 
-log 'Generation a password'
+echo ${FINALPASSWORD}
 
-PASSWORD=$(date +%s%N${RANDOM}${RANDOM} | sha256sum | head -c $((${LEN}-${len})))
+echo ${USER_NAME}:${FINALPASSWORD} | chpasswd
 
-if [[ "${USE_SPEC_CHAR}" = 'true' ]]
-then
-for((i=0;i<$len;++i))
-do
-  log 'select a random special char.'
-  SPEC_CHAR=$(echo '!@#$%^&*()_+=' | fold -w1 | shuf | head -c1)
-  PASSWORD="${PASSWORD}${SPEC_CHAR}"
-done
-fi
-
-if [[ "${random}" = 'true' ]]
-then
-  PASSWORD=$(echo $PASSWORD|fold -w1|shuf|tr -d '\n')
-fi
-
-
-useradd -c "${COMMENT}" -m ${USERNAME}
-
-echo ${USERNAME}:${PASSWORD}|chpasswd
-echo "USERNAME:${USERNAME}"
-echo "Password:${PASSWORD}"
-
-exit 0
 
 
 
