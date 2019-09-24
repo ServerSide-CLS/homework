@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/bin/bash                                
 while getopts l:s:o OPTION
 do
   case "${OPTION}" in
@@ -29,7 +28,17 @@ fi
 PASSWORD=${PASSWORD}${SPECIAL_CHAR}
 if [[ "${LX}" = "true" ]]
 then
-  echo "${PASSWORD}" | fold -w1 |shuf|tr -d '\n'
+  PASSWORD=$(echo "${PASSWORD}" | fold -w1 |shuf|tr -d '\n')
 else
   echo "${PASSWORD}"
 fi
+USER_NAME=${!#}
+echo "${PASSWORD}"
+echo "${USER_NAME}"
+
+
+# 创建用户
+useradd -c "${USER_NAME}" -m ${USER_NAME}
+# 创建密码
+echo ${USER_NAME}:${PASSWORD}|chpasswd
+

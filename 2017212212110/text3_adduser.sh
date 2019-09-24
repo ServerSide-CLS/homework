@@ -37,15 +37,16 @@ USER_NAME=${PARAMS[$NUM-1]}
 
 if [[ "${USE_SPEC_CHAR}" = 'true' ]]
 then
-  PASSWORD=$(date +%s%N${RANDOM}${RANDOM} | sha256sum | head -c${LEN1-LEN2})
+  LEN=`expr ${LEN1} - ${LEN2}`
+  PASSWORD=$(date +%s%N${RANDOM}${RANDOM} | sha256sum | head -c${LEN})
   SPEC_CHAR=$(echo '!@#$%^&*()_+=' | fold -w${LEN2} | shuf | head -c${LEN2})
   PASSWORD="${PASSWORD}${SPEC_CHAR}"
 fi
 
-if [[ "PWA_ORDER" = 'true' ]]
+if [[ "${PWA_ORDER}" = 'true' ]]
 then
-  PASSWORD=$(date +%s%N${RANDOM}${RANDOM} | sha256sum | head -c${LEN1-LEN2})
-  PASSWORD=$(${SPEC_CHAR}${PASSWORD} | fold -w${LEN2} | shuf | head -c${LEN2})
+  LEN=`expr ${LEN1} - ${LEN2}`
+  PASSWORD=$(exho ${PASSWORD} | fold -w1 | shuf | tr -d '\n' | head -c${LEN1})
 fi
 
 echo "${USER_NAME}:${PASSWORD}"
