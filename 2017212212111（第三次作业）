@@ -1,0 +1,72 @@
+#!/bin/bash
+
+# 创建密码
+usage() {
+  echo "Usage: ${0} [-vs] [-l LENGTH][-s LENGTH][-o shuf]" >&2
+  echo 'Generate a random password'
+  echo '  -l LENGTH specify the password length' 
+  echo '  -s The number of append special char to the password'
+  echo '  -o shuf the password'
+  echo '  -v Increate verbosity'
+  exit 1
+}
+
+log() {
+  local MSG="${@}"
+  if [[ "${VERBOSE}" = 'true' ]]
+  then
+    echo "${MSG}"
+  fi
+}
+
+LEN=20
+SPEC_CHAR_NUMBER=20
+flag=0
+
+while getopts v:l:s:o OPTION
+do
+case "${OPTION}" in
+    v)
+      VERBOSE='true'
+      log 'verbose mode on'
+      ;;
+    l)
+      LEN="${OPTARG}"
+      ;;
+    s)
+      SPEC_CHAR_NUMBER="${OPTARG}"
+      ;;
+    o)
+      flag=1
+      ;;
+    ?)
+      usage
+      ;;
+  esac
+done
+ log 'Generation a password'
+
+PASSWORD=$(date +%s%N${RANDOM}${RANDOM} | sha256sum | head -c$((10#${LEN}-${SPEC_CHAR_NUMBER})))
+
+if [[ ${SPEC_CHAR_NUMBER} -gt 0 ]]
+then
+for((i=0;i<$SPEC_CHAR_NUMBER;++i))
+do
+  log 'select a random special char.'
+  SPEC_CHAR=$(echo '!@#$%^&*()_+=' | fold -w1 | shuf | head -c1)
+PASSWORD="${PASSWORD}${SPEC_CHAR}"
+done
+fi
+
+if [[ flag=1 ]]
+then
+  PASSWORD=$(echo $PASSWORD|fold -w1|shuf|tr -d '\n')
+fi
+
+useradd -c "${COMMENT}" -m ${USER_NAME}
+echo ${USERNAME}:${PASSWORD}|chpasswd
+
+log 'Done.'
+
+log 'Here is the password:'
+                                             
