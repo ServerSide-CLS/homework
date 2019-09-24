@@ -1,51 +1,22 @@
-#!/bin/bash
+﻿#!/bin/bash
 
-usage() {
-echo "Usage: ${0} [-vs] [-l LENGTH]" >&2
-echo 'Generate a random password'
-echo ' -l LENGTH specify the password length'
-echo ' -s Append a special char to the password'
-echo ' -o Disorder'
-exit 1
-}
+# 输入用户名
+read -p 'Enter username:' USER_NAME
 
-USER_NAME=${!#}
-LEN=48
-ORDER=0
-USER_SPEC_CHAR=0
+# 输入用户描述
+read -p 'Enter person info:' COMMENT
 
-while getopts l:s:o OPTION
-do
-case "${OPTION}" in
-o)
-ORDER=1
-;;
-l)
-LEN="${OPTARG}"
-;;
-s)
-USER_SPEC_CHAR="${OPTARG}"
-;;
-?)
-usage
-;;
-esac
-done
+# 创建用户
+useradd -c "${COMMENT}" -m ${USER_NAME}
+echo "username is ${USER_NAME}"
+#创建密码
+# sha256sum + RANDOM + head
+PASSWORD=$(date +%s%N${RANDOM}${RANDOM} | sha256sum | head -c6 )
 
-PASSWORD=$(date +%s%N${RANDOM}${RANDOM} | sha256sum | head -c `expr ${LEN} - ${USER_SPEC_CHAR}`)
+#特殊字符
+SPACIAL_CHAR=$(echo !'!@#$%^&*()_+=' | fold -w2 | shuf | head -c2)
 
-if [[ ${USER_SPEC_CHAR}>0 ]]
-then
-	SPEC_CHAR=$(echo '!@#$%^&*()_+=' | fold -w${USER_SPEC_CHAR} | shuf | head -c${USER_SPEC_CHAR})
-fi
+echo ${USER_NAME}:${PASSWORD}${SPACIAL_CHAR}|chpasswd
 
-PASSWORD="${PASSWORD}${SPEC_CHAR}"
-
-if [[ ${ORDER} == 1 ]]
-then
-	PASSWORD=$(echo "${PASSWORD}" | fold -w1 | shuf | tr -d [:space:])
-fi
-
-echo "${PASSWORD}"
-
-exit 0
+#首次登录修改密码
+passwd -e ${USER_NAME}
