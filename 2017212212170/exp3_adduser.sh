@@ -12,28 +12,38 @@ MIX_MODE='false'
 usage() {
   echo "Usage: ${0} [-l LEN_TOTAL] [-s LEN_SPEC] [-o] [-h]" >&2
   echo 'Generate a random password'
-  echo '  -l LEN_TOTAL the total length of pwd' 
+  echo '  -l LEN_TOTAL the total length of pwd'
   echo '  -s LEN_SPEC length of special char'
   echo '  -o mix special characters with pwd'
   echo '  -h help'
   exit 1
 }
 
-# 随机化 
+# 随机化
 # arg1 待随机化字符串 // arg2 取头部k个字符 可选
 randomize () {
 
     # 参数错误 Incorrect Usage
-    if [ ! $1 ]; then
+    if [[ ! $1 ]]; then
         exit 2
     fi
 
-    if [ ! $2 ]; then
+    if [[ ! $2 ]]; then
         echo "$1" | fold -w1 | shuf | tr -d '\n'
     fi
 
     echo "$1" | fold -w1 | shuf | tr -d '\n' | head -c"$2" 2> /etc/null
 }
+
+# 用户名取最后一个参数
+USER_NAME=${@: -1}
+
+# 最后一个参数以 '-' 开头, 可能用户忘记添加用户名参数
+# 也可能是用户故意要以-开头, 也会被下面的 getopts 拦截, 不过这里先提示下
+if [[ "$USER_NAME" =~ ^- ]]; then
+  echo "[ERROR] you forgot input UserName, or, UserName can't start with '-'"
+  exit 1
+fi
 
 while getopts l:s:oh OPTION
 do
@@ -46,19 +56,9 @@ do
   esac
 done
 
-# 生成6个字母/数字和2个特殊字符
-RAND_CHAR=$(randomize "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" `expr $LEN_TOTAL - $LEN_SPEC`)
-SPECIAL_CHAR=$(randomize "!@#$%^&*()_+=" $LEN_SPEC)
-
-# 用户名取最后一个参数
-USER_NAME=${@: -1}
-
-# 最后一个参数以 '-' 开头, 可能用户忘记添加用户名参数
-# 也可能是用户故意要以-开头, 自然会被前面的 getopts 拦截, 不过这里也要提示下
-if [[ "$USER_NAME" =~ ^- ]]; then
-  echo "[ERROR] you forgot input UserName, or, UserName can't start with '-'"
-  exit 1
-fi
+# 生成 (LEN_TOTAL - LEN_SPEC) 个字母/数字和 (LEN_SPEC) 个特殊字符
+RAND_CHAR=$(randomize "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" `expr ${LEN_TOTAL} - ${LEN_SPEC}`)
+SPECIAL_CHAR=$(randomize "!@#$%^&*()_+=" ${LEN_SPEC})
 
 # 根据 -o 参数确定是否混合字母/数字 和 特殊字符
 if [[ MIX_MODE=='true' ]]; then
@@ -66,7 +66,6 @@ if [[ MIX_MODE=='true' ]]; then
 else
   PASSWORD="$RAND_CHAR$SPECIAL_CHAR"
 fi
-
 
 # 输入用户描述
 read -p 'Enter person info:' COMMENT
