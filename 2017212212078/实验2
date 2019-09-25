@@ -1,0 +1,12 @@
+#!/bin/sh
+name=$1
+pass=$((RANDOM+10000000));
+echo "You're setting username: ${name}"
+sudo useradd bd
+if [[$? -eq 0]];then
+        echo "${name} is created successfully."
+else
+        echo "${name} is failed to be created."
+        exit 1
+fi
+echo $pass | sudo passwd bd --stdin &> /dev/null
