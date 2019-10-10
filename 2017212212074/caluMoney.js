@@ -2,7 +2,7 @@ var fs = require('fs');
 const readline = require('readline');
 // 需要  npm i yargs
 var argv = require('yargs').argv;
-
+// 写入的数据
 var arr = []
 const rl = readline.createInterface({
     input: fs.createReadStream('./study.txt')
