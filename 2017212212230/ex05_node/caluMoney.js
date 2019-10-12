@@ -11,7 +11,7 @@ readerStream.setEncoding('UTF8')
 readerStream.on('data', chunk => {
     data += chunk
 })
-// 文本 => result
+// 文本 => json
 readerStream.on('end', () => {
     data.split('\r\n').map(value => {
         value = value.trim().split(/\s+/)
