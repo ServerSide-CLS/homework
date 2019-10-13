@@ -85,8 +85,8 @@ if(len == 1){
                 console.log("赚钱最少的日子：",date_set[date_set.length-1].date);
                 break;
             default:
-	console.log("输入参数有误！");
-	break;
+		console.log("输入参数有误！");
+		break;
 
         }
     })
