@@ -30,7 +30,7 @@ item.forEach((value,index) => {
         if(flag == 0){
             student.push({"name":name,"money":money});
         }
-
+ 
     }
     //按日期
     if(date_set.length == 0){
@@ -47,7 +47,6 @@ item.forEach((value,index) => {
         if(flag == 0){
             date_set.push({"date":date,"money":money});
         }
-
     }
 });
 //学生排序
@@ -58,7 +57,6 @@ student.sort(function (item1,item2) {
     else{
         return 1;
     }
-
 })
 //日期排序
 date_set.sort(function (item1,item2) {
