@@ -1,0 +1,89 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+
+let arguments = process.argv.splice(2);
+let argv_len = arguments.length;
+let argv_name, total_money, students, dates;
+let name, time, place, money;
+
+let action = (which_action) => {
+    return new Promise(resolve => {
+        fs.readFile('study.txt', (err, data) => {
+            if (err) {
+                return console.error(err);
+            }
+            data.toString().split(/\n/).forEach((value) => {
+                [name, time, place, money] = value.split(/\s+/);
+                which_action(name, time, place, parseInt(money));
+            });
+            resolve('deal finish');
+        });
+    })
+}
+
+let action1 = (name, time, place, money) => {
+    if (argv_name == name) {
+        total_money += money;
+    }
+}
+
+let action2 = (name, time, place, money) => {
+    students.set(name, students.has(name) ? students.get(name) + money : money);
+}
+
+let action3 = (name, time, place, money) => {
+    if (argv_name == name) {
+        console.log(`${name.padEnd(7, ' ')}${time.padEnd(15, ' ')}${place.padEnd(8, ' ')}${money}`);
+    }
+}
+
+let action4 = (name, time, place, money) => {
+    students.set(name, students.has(name) ? students.get(name) + money : money);
+    dates.set(time, dates.has(time) ? dates.get(time) + money : money);
+}
+
+let total_info = (map, obj_type) => {
+    let rich_obj, poor_obj, rich, poor;
+    map.forEach((value, key) => {
+        [rich, poor] = [map.get(rich_obj), map.get(poor_obj)];
+        if (value > rich || rich == cundefined) {
+            rich_obj = key;
+        }
+        if (value < poor || rich == cundefined) {
+            poor_obj = key;
+        }
+    });
+    console.log(`赚钱最多的${obj_type}:`.padEnd(15, ' ') + `${rich_obj}\n`
+        + `赚钱最少的${obj_type}:`.padEnd(15, ' ') + `${poor_obj}`);
+}
+
+let main = async () => {
+    if ( argv_len == 3 && arguments[0] == '-n' && arguments[2] == '-l') {
+        argv_name = arguments[1];
+        await action(action3);
+    }
+    else if (argv_len == 2 && arguments[0] == '-n') {
+        [argv_name, total_money] = [arguments[1], 0];
+        await action(action1);
+        console.log(total_money);
+    }
+    else if (argv_len == 1 && arguments[0] == '-l') {
+        students = new Map();
+        await action(action2);
+        students.forEach((value, key) => {
+            console.log(`${key.padEnd(10, ' ')} ${value}`);
+        });
+    }
+    else if (argv_len == 1 && arguments[0] == '-a') {
+        [students, dates] = [new Map(), new Map()];
+        await action(action4);
+        total_info(students, '学生');
+        total_info(dates, '日子');
+    }
+    else{
+        console.error('synax error');
+    }
+}
+
+main();
