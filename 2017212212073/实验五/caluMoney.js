@@ -66,13 +66,13 @@ if (stu_name == "" && list == 0 && total) {
         var res = Object.keys(dict).sort(function(a, b) { return dict[b] - dict[a]; });
         for (var key in res) {
             if (i == 1)　 {
-                console.log('赚钱最多的学生: ' + res[key]);
+                console.log('赚钱最多的学生:    ' + res[key]);
                 break;
             }
         }
-        console.log('赚钱最少的学生: ' + res.pop());
-        console.log('赚钱最多的日子: ' + maxDay);
-        console.log('赚钱最少的日子: ' + minDay);
+        console.log('赚钱最少的学生:    ' + res.pop());
+        console.log('赚钱最多的日子:    ' + maxDay);
+        console.log('赚钱最少的日子:    ' + minDay);
     });
 }
 
