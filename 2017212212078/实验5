@@ -1,0 +1,102 @@
+var fs = require('fs');
+var arrend = [];
+var arrsta = [];
+var arrstaAnd = [];
+var arrdate = [];
+
+fs.readFile('student.txt', function (e, d) {
+  if (e) {
+    return console.error(e);
+  }
+  var array = d.toString().split('\r\n');
+  for(i = 0;i < array.length;i++){
+    arrend[i] = array[i].split();
+    arrend[i] = arrend[i][0].replace(/\s+/g, ' ').split(' ');
+  }
+  for(i = 0;i < arrend.length;i++){
+    if(arrsta.indexOf(arrend[i][0]) == -1){
+      arrsta.push(arrend[i][0],arrend[i][3]);
+    }
+    else{
+      for(j = 0;j < arrsta.length;j++){
+        if(arrsta[j] == arrend[i][0]){
+             arrsta[j+1] = parseInt(arrsta[j+1]) + parseInt(arrend[i][3])
+        }
+      }
+    }
+  }
+  for(j = 0;j < arrsta.length;j=j+2){
+    arrstaAnd.push([arrsta[j],arrsta[j+1]])
+  }
+  for(i = 0;i < arrstaAnd.length;i++){
+    for(j = i + 1;j < arrstaAnd.length;j++){
+      if(arrstaAnd[i][1]>arrstaAnd[j][1]){
+        k=arrstaAnd[j][1];
+        arrstaAnd[j][1] = arrstaAnd[i][1];
+        arrstaAnd[i][1] = k;
+      }
+    }
+  }
+  arrsta=[];
+  for(i = 0;i < arrend.length;i++){
+    if(arrsta.indexOf(arrend[i][1]) == -1){
+      arrsta.push(arrend[i][1],arrend[i][3]);
+    }
+    else{
+      for(j = 0;j < arrsta.length;j++){
+        if(arrsta[j] == arrend[i][1]){
+          arrsta[j+1] = parseInt(arrsta[j+1]) + parseInt(arrend[i][3])
+        }
+      }
+    }
+  }
+  for(j = 0;j < arrsta.length;j=j+2){
+    arrdate.push([arrsta[j],arrsta[j+1]])
+  }
+  for(i = 0;i < arrdate.length;i++){
+    for(j = i + 1;j < arrdate.length;j++){
+      if(arrdate[i][1]>arrdate[j][1]){
+        k=arrdate[j][1];
+        arrdate[j][1] = arrdate[i][1];
+        arrdate[i][1] = k;
+      }
+    }
+  }
+  var arguments = process.argv.splice(2);
+  if(arguments[1] == '-n'){
+    if(!arguments[3]){
+      total=0;
+      for(i = 0;i < arrend.length;i++){
+        if(arguments[2] == arrend[i][0]){
+          total += parseInt(arrend[i][3]);
+        }
+      }
+      console.log(total); 
+    }
+    else{
+      for(i = 0;i < arrend.length;i++){
+        if(arguments[2] == arrend[i][0]){
+          console.log(arrend[i][0].padEnd(10,' ')+arrend[i][1].padEnd(20,' ')+arrend[i][2].padEnd(10,' ')+arrend[i][3].padEnd(10,' '))
+        }
+      }
+    }  
+  }
+  else if(arguments[1] == '-l'){
+    for(i = 0;i < arrstaAnd.length;i++){
+      console.log(arrstaAnd[i][0].padEnd(10,' ')+String(arrstaAnd[i][1]).padEnd(10,' '));
+    }
+  }
+  else if(arguments[1] == '-a'){
+    console.log('赚钱最多的学生：      ' + arrstaAnd[arrstaAnd.length-1][0]);
+    console.log('赚钱最少的学生：      ' + arrstaAnd[0][0]);
+    console.log('赚钱最多的学生：      ' + arrdate[arrdate.length-1][0]);
+    console.log('赚钱最少的学生：      ' + arrdate[0][0]);
+  }
+  else{
+    console.log('Please input:')
+    console.log('caluMoney -a')
+    console.log('caluMoney -l')
+    console.log('caluMoney -n wang -l')
+    console.log('caluMoney -n name(example:wang)')
+  }
+});
