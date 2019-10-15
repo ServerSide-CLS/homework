@@ -47,9 +47,6 @@ else if(arguments[0] == '-a'){
 
 //声明数组array保存数据
 var arr = new Array();
-function findKey(obj, value, compare = (a, b) => a === b) {
-    return Object.keys(obj).find(k => compare(obj[k], value))
-}
 
 //输入-a
 if(flag_a){
@@ -71,6 +68,7 @@ if(flag_a){
 			MIN_DAY = arr[1];
 		}
 	});
+	//字典排序
 	objReadline.on('close', function(){
 		var i = 1;
 		var res = Object.keys(dict).sort(function(a, b) {return dict[b] - dict[a];});
@@ -94,7 +92,6 @@ else if(flag_n && flag_l){
             console.log(line);
         }
     });
-    // objReadline.on('close', function() {});
 }
 
 //输入-l
