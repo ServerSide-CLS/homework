@@ -1,0 +1,122 @@
+var fs = require("fs");
+//node.js按行读取
+var readline = require("readline");
+
+//创建可读流
+var readerStream = fs.createReadStream('study.txt');
+//设置编码
+readerStream.setEncoding('UTF8');
+
+//按行读取input为可读流的“study.txt”文件
+var objReadline = readline.createInterface({
+    input: readerStream
+});
+
+//设置参数
+process.argv.forEach(function(val,index,array){
+    if (val == '-n'){
+        stu_name = array[index+1];
+    }
+    if (val == '-1'){
+        list = 1;
+    }
+    if (val == '-a'){
+        total = 1;
+    }
+});
+
+//node.js通过属性值value值拿到属性名key值
+var array = new Array();
+function findKey(obj, value, compare = (a, b) => a === b) {
+    return Object.keys(obj).find(k => compare(obj[k], value));
+}
+
+//学生名称
+var stu_name = '';
+//输出列表
+var list = 0;
+//统计结果
+var total = 0;
+
+if (stu_name == "" && list == 0 && total) {
+    var maxDay = '';
+    var max = 0;
+    var minDay = '';
+    var min = 99999;
+    var dict = {};
+    objReadline.on('line', (line) => {
+        array = line.split(/\s+/);
+        if (dict[array[0]] == undefined) {
+            dict[array[0]] = 0;
+            dict[array[0]] += parseInt(array[3]);
+        } else {
+            dict[array[0]] += parseInt(array[3]);
+        }
+        if (array[3] > max) {
+            max = array[3];
+            maxDay = array[1];
+        }
+        if (array[3] < min) {
+            min = array[3];
+            minDay = array[1];
+        }
+    });
+    objReadline.on('close', function() {
+        var i = 1;
+        var res = Object.keys(dict).sort(function(a, b) { return dict[b] - dict[a]; });
+        for (var key in res) {
+            if (i == 1)　 {
+                console.log('赚钱最多的学生: ' + res[key]);
+                break;
+            }
+        }
+        console.log('赚钱最少的学生: ' + res.pop());
+        console.log('赚钱最多的日子: ' + maxDay);
+        console.log('赚钱最少的日子: ' + minDay);
+    });
+}
+
+// 输出单个学生的整个列表
+else if (stu_name != '' && list && total == 0) {
+    objReadline.on('line', (line) => {
+        array = line.split(/\s+/);
+        if (array[0] == stu_name) {
+            console.log(line);
+        }
+    });
+    objReadline.on('close', function() {});
+}
+
+//计算每个同学赚的所有钱，并进行排序
+else if (stu_name == '' && list && total == 0) {
+    var dict = {};
+    objReadline.on('line', (line) => {
+        array = line.split(/\s+/);
+        if (dict[array[0]] == undefined) {
+            dict[array[0]] = 0;
+            dict[array[0]] += parseInt(array[3]);
+        } else {
+            dict[array[0]] += parseInt(array[3]);
+        }
+    });
+    objReadline.on('close', function() {
+        var res = Object.keys(dict).sort(function(a, b) { return dict[a] - dict[b]; });
+        for (var key in res) {　　
+            console.log(res[key], dict[res[key]]);
+        }
+    });
+}
+
+//计算每个同学赚到的所有钱
+else if (stu_name != '' && list == 0 && total == 0) {
+    var sum = 0;
+    objReadline.on('line', (line) => {
+        array = line.split(/\s+/);
+        if (array[0] == stu_name) {
+            sum += parseInt(array[3]);
+        }
+    });
+    objReadline.on('close', function() {
+        console.log(sum);
+    });
+}
