@@ -1,1 +1,26 @@
 
+Js：（age：813）
+这里的code:感觉不大稳定，有的时候是304,200都有出现，京东这个很不稳定。
+京东这里的search也很不一样，在4个js文件之后。Js匹配完成之后才开始search。然后才开始载入主js。
+
+淘宝的200就很稳定。
+淘宝的js：
+先载入两个比较复杂的js。
+然后载入两个几乎相同的。Age：2152载入时间
+但是总体来说两个网站的js数量是持平的。
+淘宝发送的数据为：
+数据名称	内容	说明
+q	耳机	搜索内容
+imgfile		图片搜索
+commend	all	搜索类型
+ssid	s5-e	服务集标识
+search_type	item	搜索类型
+sourceId	tb.index	来源ID
+spm	a21bo.2017.201856-taobao-item.1	点击来源
+ie	utf8	编码格式
+initiative_id	tbindexz_20170306	内置参数
+京东的发送数据为：
+数据名称	内容	说明
+keyword	耳机	搜索内容
+enc	utf-8	编码格式
+pvid	e9a42357440b4f19b6a866013ae921a1	端口的虚拟局域网ID号
