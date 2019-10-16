@@ -68,7 +68,7 @@ app.get('/time', function(req, res) {
 });
 
 //显示 /etc/passwd 中所有的用户名
-app.get('/user', function(req, res) {
+app.post('/user', function(req, res) {
     res.send(getUser());
 });
 
