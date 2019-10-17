@@ -1,0 +1,11 @@
+{
+  "name": "ex06_express-basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
