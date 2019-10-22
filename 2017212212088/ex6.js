@@ -12,7 +12,7 @@ app.get('/time', (req, res) => {
 	res.send(year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second);
 })
 
-app.get('/user', (req, res) => {
+app.post('/user', (req, res) => {
 	var fs = require('fs');
 	var data = fs.readFileSync('/etc/passwd');
 	var Da = data.toString().split(/[\n]/g);
