@@ -31,7 +31,7 @@ nodemon app.js
 ## 前后端传递参数
 ### 一个简单的例子：
 前端：
-```
+``` html
 # content.vue         // running at localhost:8080
 <script>
   export default {
@@ -46,12 +46,13 @@ nodemon app.js
       }
     }
   }
-</script
+</script>
 ```
 
 后端：
-```
+``` js
 # app.js           //running at localhost:3000
+
 ...
 app.get('/getinfo',function(req,res){
   res.send({
@@ -60,6 +61,9 @@ app.get('/getinfo',function(req,res){
   })
 })
 ...
+app.listen(3000,()=>{
+  console.log("it is worked")
+})
 ```
 
 ## 项目演示
