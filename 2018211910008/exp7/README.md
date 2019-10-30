@@ -62,5 +62,10 @@ app.get('/getinfo',function(req,res){
 ...
 ```
 
-## 项目演示图
-![简单的分页 —— Exp7](https://github.com/ServerSide-CLS/homework/blob/master/2018211910008/exp7/showTest.png)
+## 项目演示
+> head 和 footer 原型是我自己当时博客项目做的组件
+
+
+![简单的分页 —— Exp7](showTest.png)
+
+
