@@ -1,6 +1,6 @@
-# product
+# 实验7的一些解释
 
-> A Vue.js project
+> A Vue.js (frontend) & express (backend) project 
 
 ## Build Setup
 
@@ -8,23 +8,58 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
-
 # build for production with minification
 npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
+# express 包导入
+npm install express --save
+# nodemon 包导入
+npm install nodemon --save
+# element-UI 包导入
+npm install element-ui --save
+# axios 插件导入
+npm install axios --save
 
-# run unit tests
-npm run unit
+# serve with hot reload at localhost:8080
+npm run dev
 
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+# backend reload at localhost:3000
+cd server
+nodemon app.js
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 前后端传递参数
+### 一个简单的例子：
+前端：
+```
+# content.vue         // running at localhost:8080
+<script>
+  export default {
+    name:'content-body'
+    methods:{
+      aMethod(){
+        this.$axios.get('/getinfo/').then( res => {
+            console.log(res)    // return a obj(data)
+        }).catch( error => {
+            console.log(error)  // catch error
+        })
+      }
+    }
+  }
+</script
+```
+
+后端：
+```
+# app.js
+...
+app.get('/getinfo',function(req,res){
+  res.send({
+    code : 200,
+    msg : "Succeed,Hello,YeZhikang!"
+  })
+})
+...
+```
+
+
