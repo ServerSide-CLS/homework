@@ -51,7 +51,7 @@ nodemon app.js
 
 后端：
 ```
-# app.js
+# app.js           //running at localhost:3000
 ...
 app.get('/getinfo',function(req,res){
   res.send({
@@ -62,4 +62,5 @@ app.get('/getinfo',function(req,res){
 ...
 ```
 
-
+## 项目演示图
+![简单的分页 —— Exp7](https://github.com/ServerSide-CLS/homework/blob/master/2018211910008/exp7/showTest.png)
