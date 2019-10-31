@@ -1,0 +1,22 @@
+html(lang='zh-CN')
+    head
+        meta(charset='UTF-8')
+        title Products
+        link(rel='stylesheet' href='./index.css')
+    body
+        header Header
+        div.main
+            div.product-list
+                - for (var index = startIndex; index <= endIndex; index += 1)
+                    if index <= itemSum
+                        div.product-item= 'Item ' + index
+            div.product-list-pagination
+                - for (var index = 0; index < paginationButtons.length; index += 1)
+                    - var buttonInfo = paginationButtons[index];
+                    if buttonInfo.page <= 0 || buttonInfo.content === '...'
+                        a(class='pagination-button disabled')!= buttonInfo.content
+                    else if buttonInfo.page === currentPage
+                        a(href='?page=' + buttonInfo.page class='pagination-button current-page')!= buttonInfo.content
+                    else
+                        a(href='?page=' + buttonInfo.page class='pagination-button')!= buttonInfo.content
+        footer Footer
