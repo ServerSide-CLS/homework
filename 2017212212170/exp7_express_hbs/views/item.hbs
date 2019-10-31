@@ -1,0 +1,28 @@
+<div class="content">
+	<div class="d-book-wrap">
+		<div class="d-title">
+			{{book.title}}
+		</div>
+
+		<div class="d-info-wrap">
+			<div class="d-book-img">
+				<img src="{{book.image}}" alt="">
+			</div>
+
+			<div class="d-book-info">
+				<div><span class="badge badge-light">作者</span>{{book.author}}</div>
+				<div><span class="badge badge-light">出版社</span>{{book.publisher}}</div>
+				<div><span class="badge badge-light">出版年</span>{{book.pubdate}}</div>
+				<div><span class="badge badge-light">页数:</span>{{book.pages}}</div>
+				<div><span class="badge badge-light">定价:</span>{{book.price}}</div>
+				<div><span class="badge badge-light">装帧</span>{{book.binding}} </div>
+				<div><span class="badge badge-light">ISBN</span>{{book.isbn13}} </div>
+			</div>
+		</div>
+
+		<div class="d-desc">
+			<div class="d-desc-title">内容简介</div>
+			<div class="d-desc-content" style="white-space: pre-line">{{book.summary}}</div>
+		</div>
+	</div>
+</div>

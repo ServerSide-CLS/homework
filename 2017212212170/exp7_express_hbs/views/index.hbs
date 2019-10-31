@@ -1,0 +1,49 @@
+<div class="btm-img">
+	<img src="https://images-na.ssl-images-amazon.com/images/G/01/kindle/content/merch/pennmann/editorial/unified/BOTmheader.jpg"
+	     alt="">
+</div>
+
+<div class="content">
+	<div class="item-list">
+		{{#each book}}
+			<div class="item">
+				<div class="book-img">
+					<img src="{{this.image}}" alt="">
+				</div>
+
+				<div class="book-info">
+					<div>
+						<div class="info-title">
+							<a href="item/{{this.id}}" >{{this.title}}</a>
+							<span class="info-date">{{this.pubdate}}</span>
+						</div>
+
+						<div class="info-author">
+							by
+							<a href="#" class="info-author-name">{{this.author}}</a>
+						</div>
+					</div>
+
+					<div class="info-tags">
+						{{#each tags}}
+							<span class="badge badge-info">{{this.title}}</span>
+						{{/each}}
+					</div>
+				</div>
+
+				<div class="book-price">
+					<span>{{this.price}}</span>
+				</div>
+			</div>
+		{{/each}}
+
+	</div>
+
+	<div class="pagination">
+		<nav aria-label="Page navigation example">
+			<ul class="pagination">
+				{{pagination currPage totPage}}
+			</ul>
+		</nav>
+	</div>
+</div>

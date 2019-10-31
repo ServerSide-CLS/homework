@@ -19,7 +19,6 @@
   #### 一、输入关键词后，会发送请求，弹出相关推荐（https://dd-search.jd.com/）
 
   ##### req
-
   ```yaml
   Request URL: https://dd-search.jd.com/?terminal=pc&newjson=1&ver=2&zip=1&key=%E8%80%B3%E6%9C%BA&pvid=c62b23ae44344ed695152bb4565d8583&t=1568041651463&curr_url=www.jd.com%2F&callback=jQuery4219686
   Request Method: GET

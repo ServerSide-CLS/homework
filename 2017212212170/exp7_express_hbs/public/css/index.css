@@ -1,0 +1,171 @@
+.root {
+	display: flex;
+	flex-direction: column;
+	font-family: "Amazon Ember", Arial, sans-serif;;
+}
+
+.header {
+	height: 100px;
+	background: #232F3E;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.content {
+	min-height: calc(100vh - 200px);
+}
+
+.header img {
+	height: 80px;
+}
+
+.btm-img {
+	margin: 0 auto;
+}
+
+.btm-img img {
+	width: 100%;
+}
+
+.item-list {
+	width: 60%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.item {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 10px;
+	padding-left: 10px;
+}
+
+.item:not(:last-child) {
+	padding-bottom: 10px;
+	border-bottom: #DDDDDD solid 1px;
+}
+
+.book-img {
+	flex: 1;
+	text-align: center;
+}
+
+.book-img img {
+	width: 100px;
+}
+
+.book-info {
+	flex: 6;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 3px 6px;
+}
+
+.info-title a {
+	font-size: 17px;
+	line-height: 1.255;
+	color: #0066C0;
+	text-decoration: none;
+}
+
+.info-date {
+	color: #555555;
+	font-size: 12px;
+}
+
+.info-author {
+	font-size: 12px;
+}
+
+.info-author-name {
+	text-decoration: none;
+	color: #0066C0;
+}
+
+.book-price {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+}
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.footer {
+	display: flex;
+	height: 100px;
+	background: #232F3E;
+	justify-content: center;
+	align-items: center;
+	color: #ffffff;
+}
+
+.to-top {
+	text-decoration: none;
+	color: #DDDDDD;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.to-top:hover {
+	text-decoration: none;
+	background-color: #37475A;
+	color: #DDDDDD;
+}
+
+.d-book-wrap {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	margin: 30px auto;
+}
+
+.d-book-img img {
+	width: 180px;
+}
+
+.d-title {
+	font-size: 36px;
+	font-weight: 600;
+	color: #494949;
+}
+
+.d-desc-title {
+	font-size: 20px;
+	font-weight: 600;
+	color: #232F3E;
+}
+
+.d-book-info {
+	font-size: 13px;
+	margin-left: 15px;
+	line-height: 30px;
+}
+
+.d-info-wrap {
+	display: flex;
+	flex-direction: row;
+	margin: 10px 0;
+}
+
+.d-desc {
+	margin-top: 30px;
+}
+
+.d-desc-content {
+	font-size: 14px;
+	color: #111111;
+	line-height: 28px;
+}
+
