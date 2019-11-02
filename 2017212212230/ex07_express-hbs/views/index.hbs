@@ -1,0 +1,26 @@
+<body>
+  <div class="container">
+    <div class="m-grid">
+      {{#each data}}
+      <div class="m-grid-box">{{this}}</div>
+      {{/each}}
+    </div>
+    <div class="m-page">
+      <ul class="m-page-header">
+        <div class="page-header-left">
+          <a href="/?page=1">&#139;&#139;</a>
+        </div>
+      </ul>
+      <ul class="m-page-body">
+        {{#each pageCountList}}
+        <a href="/?page={{this}}">{{this}}</a>
+        {{/each}}
+      </ul>
+      <ul class="m-page-header">
+        <div class="page-header-right">
+          <a href="/?page={{pageCount}}">&#155;&#155;</a>
+        </div>
+      </ul>
+    </div>
+  </div>
+</body>

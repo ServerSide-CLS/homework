@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 71px;
+  padding-top: 20px;
+  height: 100%;
+}
+
+.m-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 100px;
+}
+
+.m-grid-box {
+  width: 280px;
+  height: 160px;
+  margin: 8px 0px;
+  border: 1px solid #ddd;
+}
+
+.m-page {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px 100px;
+}
+
+.m-page-header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+}
+
+.page-header-left {
+  border-radius: 5px 0px 0px 5px;
+}
+
+.page-header-right {
+  border-radius: 0px 5px 5px 0px;
+}
+
+.m-page-body {
+  display: flex;
+  flex-direction: row;
+}
+
+.m-page-body a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+}

@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #00B7FF;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: calc(100% - 140px);
+  font: 14px "Lucida Grande", Georgia, Microsoft Yahei;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #eee;
+  background-color: rgba(255, 255, 255, 0.96);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #ddd;
+}
+
+@media screen and (max-height: 565px) {
+  footer {
+    position: initial;
+  }
+}
