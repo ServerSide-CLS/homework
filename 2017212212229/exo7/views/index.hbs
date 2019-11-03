@@ -1,0 +1,12 @@
+<div class="row" align="center">
+	{{#each data}}
+		<div class="col-md-4"><img src={{this}}></div>
+    {{/each}}
+</div>
+<div align="center">
+	<a class="btn btn-default" href="/?page={{lastPage}}"><<</a>
+	{{#each pagination}}
+        <a class="btn btn-default" href="/?page={{this}}" id="{{this}}">{{this}}</a>
+    {{/each}}
+	<a class="btn btn-default" href="/?page={{nextPage}}">>></a>	
+</div>

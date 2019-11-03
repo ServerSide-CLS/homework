@@ -1,0 +1,11 @@
+img {
+	width: 350px;
+	height: 250px;
+	margin: 20px;
+}
+.active{
+    background-color: #97FFFF;
+}
+input{
+	margin: 5px;
+}
