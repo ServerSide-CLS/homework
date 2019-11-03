@@ -1,0 +1,20 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: black
+}
+a:hover{
+  color: blue;
+  text-decoration:none;
+}
+/*点击时*/
+a:checked{
+  color: gray;
+}
+/*点击后*/
+a:visited{
+  color: black;
+}
