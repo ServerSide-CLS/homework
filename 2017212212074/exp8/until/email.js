@@ -1,7 +1,7 @@
 //nodemailer
 const nodemailer = require('nodemailer');
 let user = "848453404@qq.com"
-let pass = "tytvqybwluyxbche"
+let pass = "ziwxyevfdzynbbcc"
 let host = 'smtp.qq.com'
 
 const smtpTransport = nodemailer.createTransport({
@@ -25,6 +25,7 @@ module.exports = function sendMail(email,code) {
             html: "验证码为"+code+"  注意有效期为三分钟！"
         }, function (err, response) {
             if (err) {
+                // console.log(err)
                 reject({ code: 3000, message: err.response })
             }
             else {

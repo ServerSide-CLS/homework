@@ -81,7 +81,10 @@ app.post('/sendemail', async function (req, res) {
     designData.design.push(obj)
     writeData('./data/design.json', designData)
     //发送邮件
-    let result = await sendMail(email, code);
+    let result = await sendMail(email, code).catch(e=>{
+      res.send(e);
+      return ;
+    });
     res.send(result);
   }
 });
