@@ -1,0 +1,19 @@
+.header{
+	width:100%;
+	border-bottom:1px solid black;
+}
+#title{
+	text-align: center;
+}
+.content{
+	min-height: 95%
+}
+.footer{
+	height: 50px;
+	z-index: 9999;
+	width: 100%
+}
+#banquan{
+	text-align: center;
+	border-top:1px solid black;
+}
