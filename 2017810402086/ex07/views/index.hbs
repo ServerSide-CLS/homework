@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="d-flex flex-wrap">
+        {{#each itemList}}
+        <div class="p-2 bd-highlight item">
+            <div class="card" style="width: 18rem;">
+            <img src="{{this.img}}" class="card-img-top " alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{this.name}}</h5>
+                <p class="card-text overflow-hidden describ">{{this.describ}}</p>
+                <a href="" class="btn btn-primary stretched-link">show details(not exist...)</a>
+            </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    
+    <div class="page">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item {{#checkPage nowPage 1}}disabled{{/checkPage}}">
+                    <a class="page-link" href="{{getPrv nowPage}}">Previous</a>
+                </li>
+                
+                {{{createPagination nowPage totalPage}}}
+
+                <li class="page-item {{#checkPage nowPage totalPage}}disabled{{/checkPage}}">
+                    <a class="page-link" href="{{getNext nowPage}}">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+</div>
