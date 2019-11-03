@@ -3,11 +3,12 @@ const hbs = require("express-handlebars");
 const app = express();
 const path = require("path");
 const createData = require("./public/js/main.js");
-let page = 0;//页面数
-let pageNum = 8;//每页条数
-let row = 1;//行数
-let rowNum = 4;//每行条数
-let data;//处理后的数据
+var page = 0;//页面数
+var pageNum = 8;//每页条数
+var row = 1;//行数
+var rowNum = 4;//每行条数
+var data;//处理后的数据
+app.listen(8888);
 //将数据变为对象存入数组
 function createDataList(){
     let tempData = createData();
@@ -73,4 +74,3 @@ app.get("/page:pages",(req,res)=>{
     let dataArr = createDataArr(pageNow);
     res.render("home",{layout:"main",list:dataArr,page:pageArr});
 });
-app.listen(8888);
