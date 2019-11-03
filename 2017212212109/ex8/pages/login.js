@@ -32,7 +32,10 @@ document.getElementById('sign-up').onclick = () => {
     else if (passwordAgain === '') alertMessage = '请确认密码';
     else if (password !== passwordAgain) alertMessage = '两次输入的密码不一致';
 
-    if (alertMessage !== '') alert(alertMessage);
+    if (alertMessage !== '') {
+    	alert(alertMessage);
+    	return;
+    }
 
     const url =
         URL_ROOT +
