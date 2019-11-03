@@ -1,0 +1,24 @@
+<div class="row boxes">
+    {{#each data}}
+    <div class="outbox col-xs-6 col-md-3">
+        <div class="box ">{{this.name}}</div>
+    </div>
+    {{/each}}
+</div>
+<nav aria-label="Page navigation">
+    <ul class="pagination">
+        <li>
+            <a href="?page=1" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        {{#each pagenum}}
+        <li><a href=?page={{this}}>{{this}}</a></li>
+        {{/each}}
+        <li>
+            <a href=?page={{maxpage}} aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>
