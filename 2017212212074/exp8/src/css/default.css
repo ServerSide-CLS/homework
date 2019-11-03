@@ -1,0 +1,37 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    background-color: #E6CEAC;
+}
+.main-contain{
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 30px 30px 50px 50px;
+    margin: 150px;
+}
+.m-msg {
+    text-align: center;
+    position: fixed;
+    /* center horizontally */
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: TOAST-APPEAR;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+  }
+  
+  @keyframes TOAST-APPEAR {
+    0% {
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+  }
