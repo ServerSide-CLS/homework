@@ -1,0 +1,41 @@
+<div class="content wrapper">
+
+    <ol class="post-card-box clearfix">
+        {{#each entity}}
+
+            <li>
+                <div class="post-card">
+                    <a href="/index/{{id}}" class="post-card-image"
+                       style="background-image: url( ../public/assets/img/post-1.jpg )">
+                    </a>
+
+                    <div class="post-card-body">
+
+                        <a href="/index/{{id}}"
+                           class="post-card-link"><h3 class="post-card-title">{{name}}</h3></a>
+                    </div>
+
+                </div>
+            </li>
+        {{/each}}
+    </ol>
+
+
+    <footer>
+        <div class="page">
+        <span>
+            <ul>
+                <a href="/index?pageNumber=1" style="display: inline"><<</a>
+                <a href="/index?pageNumber=1">1</a>
+                <a href="/index?pageNumber=2">2</a>
+                <a href="/index?pageNumber=3">3</a>
+                <a href="/index?pageNumber=4">4</a>
+                <a href="/index?pageNumber=5">5</a>
+                <a href="/index?pageNumber=6">6</a>
+                <a href="/index?pageNumber=6">>></a>
+            </ul>
+        </span>
+        </div>
+    </footer>
+
+</div> <!-- End Wrapper -->

@@ -1,0 +1,128 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+/*header*/
+.main-header .logo {
+    width: 50%;
+    text-align: center;
+}
+
+.main-header .logo a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 27px;
+    font-weight: 300;
+    color: #311e3e;
+}
+
+/*wrapper*/
+
+.wrapper {
+    width: 960px;
+    max-width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.clearfix::before {
+    clear: both;
+}
+
+
+/* = = = = = = = = = = Post-Card Styles = = = = = = = = = = */
+.post-card-box {
+    margin: 100px 0 100px;
+    padding: 0;
+}
+
+.post-card-box li {
+    position: relative;
+    list-style: none;
+    float: left;
+    width: 50%;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.post-card-box li:hover {
+    opacity: 0.9;
+}
+
+.post-card {
+    position: relative;
+}
+
+.post-card .post-card-image {
+    display: block;
+    width: 100%;
+    min-height: 150px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.post-card .post-card-image::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.post-card .post-card-body {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+}
+
+.post-card .post-card-body .post-card-link {
+    text-decoration: none;
+    display: block;
+}
+
+.post-card .post-card-body .post-card-title {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #fff;
+    margin: 0 0 10px;
+}
+
+.post-card .post-card-body .post-card-title:hover {
+    opacity: .8;
+}
+
+.post-card .post-card-body .tag {
+    text-decoration: none;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.post-card .post-card-body .tag:hover {
+    text-decoration: underline;
+}
+
+/*footer*/
+.page {
+    display: inline;
+}
+.page .p {
+    display: inline;
+}
