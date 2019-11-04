@@ -2,7 +2,8 @@
 
 ```BASH
 npm install nodemon
-npm install handlebars --sava
+npm install express-handlebars --save
+npm install
 ```
 
 执行
