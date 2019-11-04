@@ -1,0 +1,30 @@
+<div class="content" style="margin: 20px;margin-top:40px">
+    <div class="row">
+        {{#each list.records as |item|}}
+        <div class="col addMargin">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/1.jpg" class="card-img-top" alt="show failed">
+                <div class="card-body">
+                    <h5 class="card-title">number:{{item.id}}</h5>
+                    <h5 class="card-title">title:{{item.title}}</h5>
+                    <p class="card-text">{{item.content}}</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    <div style="margin: 60px;">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-end">
+                {{#each list.pageCount as |item|}}
+                {{#if item.isactive}}
+                <li class="page-item active"><a class="page-link" href="/?page={{item.page}}&limit=8">{{item.page}}</a></li>
+                {{else}}
+                <li class="page-item"><a class="page-link" href="/?page={{item.page}}&limit=8">{{item.page}}</a></li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </nav>
+    </div>
+    {{!-- <h1>total: {{list.total}}</h1> --}}
+</div>
