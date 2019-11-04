@@ -3,8 +3,10 @@
 
 预先安装
 
-> 	安装 npm ;
-> npm install nodemon cross-env --save-dev ;
+> 	安装 npm 
+
+> npm install nodemon cross-env --save-dev 
+
 > npm install express-handlerbars --save 
 
 执行
