@@ -6,7 +6,9 @@ let Handlebars=require("handlebars");
 let ret = new Array();
 let pageSize=8
 let count=56;
-let pageCount=count/pageSize
+let pageCount=count/pageSize；
+for(let i=0;i<count;i++)
+     ret.push({"name":"产品名"+i+"","nums":"数量","price":"价格"});
 
 
 /* GET home page.初始化页面 */
@@ -27,9 +29,6 @@ router.get('/', function(req, res, next) {
 router.get('/goodslist',(req,res)=>{
   // res.send(req.query.pageNumber);
   let pageNum=req.query.pageNumber||1;
-
-  for(let i=0;i<count;i++)
-      ret.push({"name":"产品名"+i+"","nums":"数量","price":"价格"});
   
   res.render('./partials/content', { 
     entries:ret,
