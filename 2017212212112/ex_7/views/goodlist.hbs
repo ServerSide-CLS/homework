@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <script src="./lib/bootstrap/js/jquery-3.2.1.js"></script> <!--Handlebars-->
+  <script src="./js/handlebars-1.0.0.beta.6.js"></script> <!--jQuery-->
+  <link rel="stylesheet" type="text/css" href="../public/goodlist.css">  <!--本页的css代码-->
+  <title>Template</title>
+</head>
+<body class="{{params}}">
+  <div class="container">
+    <div class="header">
+        <p>某某公司</p>
+    </div>
+    <div class="content">
+        <div class="page">
+            <div id="imagesPane">
+            <div id="row_1">
+                {{#each onepieceInfoList}}
+                {{#if this.vis}}
+                {{#each this.images1}}
+                <img class="image" src="{{this.src}}">
+                {{/each}}
+                {{/if}}
+                {{/each}}
+            </div>
+            <div id="row_2">
+                {{#each onepieceInfoList}}
+                {{#if this.vis}}
+                {{#each this.images2}}
+                <img class="image" src="{{this.src}}">
+                {{/each}}
+                {{/if}}
+                {{/each}}
+            </div>
+        </div>
+            <ul id="page">
+                <a href="/goodslist?pageNumber=1" class="active">1</a> <!--当前页-->
+                <a href="/goodslist?pageNumber=2">2</a>
+                <a href="/goodslist?pageNumber=3">3</a>
+                <a href="/goodslist?pageNumber=4">4</a>
+                <a href="/goodslist?pageNumber=5">5</a>
+                <a href="/goodslist?pageNumber=6">6</a>
+                <a href="/goodslist?pageNumber=7">7</a>
+            </ul>
+            <ul class="m-header">
+                <a href="#"></a>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <p>国际企业，值得信赖</p>
+    </div>
+  </div>
+</body>
+</html>
