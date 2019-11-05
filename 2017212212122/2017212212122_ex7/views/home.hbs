@@ -1,0 +1,27 @@
+{{css '/css/main.css'}}
+{{js '/js/main.js'}}
+   <div class="row">
+
+        {{#each items}}
+        <div class="col-xl-4 items text-center item">
+            <img src={{this.image}} alt="wrong">
+            <p>{{this.name}}</p>
+        </div>
+        {{/each}}
+
+    </div>
+
+<div class="row">
+    <div class="col-xl-2 offset-xl-5 text-center">
+    <ul class="pagination">
+    <li class="page-item" id="pre"><a class="page-link" href="/?page={{pre}}">Previous</a></li>
+    <li class="page-item" id="page1"><a class="page-link" href="/?page={{l1}}">{{l1}}</a></li>
+    <li class="page-item" id="page2"><a class="page-link" href="/?page={{l2}}">{{l2}}</a></li>
+    <li class="page-item" id="page3"><a class="page-link" href="/?page={{l3}}">{{l3}}</a></li>
+    <li class="page-item" id="next"><a class="page-link" href="/?page={{next}}">Next</a></li>
+  </ul>
+  </div>
+  </div>
+
+
+
