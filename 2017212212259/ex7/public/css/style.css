@@ -1,0 +1,37 @@
+.header{
+	text-align: center;
+}
+.page .num a{
+	padding-left: 10px;
+	padding-right: 10px;
+	text-decoration: none;
+	background-color: #F0F0F0;
+	font-size: 30px;
+	border-radius: 50%;
+}
+.page .m-header a{
+	text-decoration: none;
+	background-color: #F0F0F0;
+	font-size: 30px;
+	border-radius: 50%;
+}
+.page{
+	padding-top: 500px;
+}
+.page #head{
+	margin-left: 360px;
+	float: left;
+}
+.page #end{
+	margin-top:-55px;
+	margin-right: 380px;
+    float: right;
+}
+#text{
+	padding-top: 20px;
+	padding-left: 100px;
+}
+.footer{
+	margin-top:30px;
+	text-align: center;
+}
