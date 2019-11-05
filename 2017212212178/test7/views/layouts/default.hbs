@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>实验七</title>
+  <link rel="stylesheet"  href="../stylesheets/index.css"/>
+</head>
+<body class="{{params}}">
+    {{!-- 引入头部部分 --}}
+    {{> header}}
+  <div>
+    {{!-- 引入中间部分 --}}
+    {{{body}}}
+  </div>
+    {{!-- 引入结尾部分 --}}
+    {{> footer}}
+    {{!-- 中间...控制 --}}
+  <script>
+    if({{pagenum2}} >= ({{pagesize}}-1)){
+      document.getElementById("key").style.display="none";
+    }
+  </script>
+</body>
+</html>

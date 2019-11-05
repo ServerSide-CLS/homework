@@ -1,0 +1,39 @@
+h1{
+  text-align: center;
+  font-size: 50px;
+}
+
+.headline{
+  margin-top: 70px;
+}
+
+.footline{
+  margin-top: 30px;
+}
+
+.foottitle{
+  text-align: center;
+  margin-top: 50px;
+}
+
+a{
+  border:1px solid black;
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.page{
+  padding-top: 80px;
+}
+
+img{
+  width: 410px;
+  height: 410px;
+  padding: 100px;
+}
+
+
+div{
+  text-align: center;
+}
