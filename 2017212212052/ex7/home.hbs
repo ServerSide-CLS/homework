@@ -1,0 +1,64 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://localhost:8900/home.css" rel="stylesheet">
+<script src="//cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!--导航区-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <span class="glyphicon glyphicon-leaf"></span> {{title}}
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <form action="" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" id="search" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-success">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<!--end--> 
+<div class="container">
+  <hr>
+</div> 
+<!--缩略图-->
+<div class="row">
+  <div class="container">
+  	{{#each img1}}
+    <div class="col-md-3">
+      <a href="http://localhost:8900/{{this}}.jpg" class="thumbnail">
+        <img src="http://localhost:8900/{{this}}.jpg" alt="">
+      </a>
+    </div>
+    {{/each}}
+  </div>
+  <div class="row">
+  <div class="container">
+  	{{#each img2}}
+    <div class="col-md-3">
+      <a href="http://localhost:8900/{{this}}.jpg" class="thumbnail">
+        <img src="http://localhost:8900/{{this}}.jpg" alt="">
+      </a>
+    </div>
+    {{/each}}
+  </div>
+</div>
+<!--end-->
+<!--分页-->
+<ul class="pagination">
+	<li><a href="{{left}}">&laquo;</a></li>
+	{{#each page}}
+		<li><a href="{{this}}">{{this}}</a></li>
+	{{/each}}
+	<li><a href="{{right}}">&raquo;</a></li>
+</ul>
+<!--end-->
