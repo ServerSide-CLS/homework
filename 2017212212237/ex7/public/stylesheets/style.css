@@ -1,0 +1,46 @@
+
+.itembox{
+  margin-top: 50px;
+  height: 100px;
+  border: 1px solid black;
+ 
+}
+.btn_pages{
+  margin-top: 50px;
+  text-align:center;
+  font-size: 16px;
+}
+.btn_pages a{
+  display: inline-block;
+  padding: 8px 12px;
+  border:1px solid black;
+  border-radius: 2px;
+  color:#333;
+
+}
+
+.clicknow{
+  background: yellowgreen;
+}
+
+html, body {
+  height: 100%;
+}
+.header{
+	border-bottom:2px solid black;
+}
+#title{
+	text-align: center;
+}
+.content{
+	height: 95%;
+	width:100%;
+}
+.footer{
+	height: 5%;
+	width: 100%
+}
+#copyright{
+	text-align: center;
+	border-top:1px solid black;
+}
