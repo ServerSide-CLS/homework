@@ -1,0 +1,15 @@
+.header{
+	width:100%;
+	border-bottom:1px solid black;
+}
+#title{
+	text-align: center;
+}
+.content{
+	min-height: 96%;
+}
+.footer{
+	height: 49px;
+	z-index: 9999;
+	width: 100%;
+}
