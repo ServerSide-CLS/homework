@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title></title>
+  
+	<link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel='stylesheet' href='/stylesheets/content.css' />
+</head>
+<body>
+<header>{{>header}}</header>
+<div style='text-align: center;margin-left:40px;margin-right:40px'>西暦2205年、時の政府は過去へ干渉し歴史改変を目論む「歴史修正主義者」に対抗すべく、物に眠る想いや心を目覚めさせ力を引き出す能力を持つ「審神者」（さにわ）と刀剣より生み出された付喪神「刀剣男士」（とうけんだんし）を各時代へと送り込み、戦いを繰り広げる。そして「刀剣男士」、「歴史修正主義者」の双方を良しとしない第三の勢力「検非違使」が介入し、刀剣男士の前に立ちはだかる。</div>
+	<hr>
+	<div class='content'>
+		{{{body}}}
+	</div>
+	<hr>
+	<footer>
+		{{>footer}}
+	</footer>
+</body>
+<script type='text/javascript'>
+	var x = document.getElementsByTagName('x');
+	for(var i = 0; i < x.length ; i++){
+		if(x[i].getAttribute("id") == {{pageNumber}})
+			x[i].className += 'btn btn-success';
+</script>
+</html>
