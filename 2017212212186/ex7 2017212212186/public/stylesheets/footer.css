@@ -1,0 +1,13 @@
+#content {  
+	display: flex;
+	height: 100px;
+	background: rgb(111, 160, 221);
+	justify-content: center;
+    align-items: center;
+	color:#ffffff;
+	font-family: "Times New Roman", Times, serif;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
