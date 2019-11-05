@@ -10,10 +10,7 @@ router.get('/good', (req, res) => {
   if(req.query && Object.keys(req.query).length != 0){
     query = req.query;
   }
-  // console.log(query.page, query.limit)
-  res.render("home", {layout: "default.hbs", list: methods.getGoodListByPage(query.page, query.limit)});
+  res.render("./layouts/default.hbs", {list: methods.getGoodListByPage(query.page, query.limit)});
 });
-
-
 
 module.exports = router;
