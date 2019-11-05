@@ -1,0 +1,48 @@
+<div class="content">
+	<div class="entry">
+		
+		<div class="image_row1">
+			{{#each personInfoList}}
+				{{#if this.flag}}
+					{{#each this.images1}}
+						<img class="img1" src="{{this.src}}">
+					{{/each}}
+				{{/if}}
+			{{/each}}
+		</div>
+
+		<div class="image_row2">
+			{{#each personInfoList}}
+				{{#if this.flag}}
+					{{#each this.images2}}
+						<img class="img2" src="{{this.src}}">
+					{{/each}}
+				{{/if}}
+			{{/each}}
+		</div>
+
+	</div>
+
+	<div class="m-paga">
+
+		<ul class="m-header">
+			<a href="/goodlist?pageNumber={{pre_pageNumber}}"><<</a>
+		</ul>
+
+		<ul>
+			<a href="/goodlist?pageNumber=1">1</a>
+			<a href="/goodlist?pageNumber=2">2</a>
+			<a href="/goodlist?pageNumber=3">3</a>
+			<a href="/goodlist?pageNumber=4">4</a>
+			<a href="/goodlist?pageNumber=5">5</a>
+			<a href="/goodlist?pageNumber=6">6</a>
+			<a href="/goodlist?pageNumber=7">7</a>
+		</ul>
+
+		<ul class="m-footer">
+			<a href="/goodlist?pageNumber={{nxt_pageNumber}}">>></a>
+		</ul>
+
+	</div>
+
+</div>
