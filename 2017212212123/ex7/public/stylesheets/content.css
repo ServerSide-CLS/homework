@@ -1,0 +1,30 @@
+.header{
+    text-align: center;
+}
+
+.photolist img{
+    width: 600px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* #text{
+    text-align: center;
+} */
+
+.page ul{
+    margin-left: -40px;
+    text-align: center;
+}
+
+.page li{
+    list-style-type: none;
+    display: inline;
+}
+
+.footer{
+    text-align: center;
+}

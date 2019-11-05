@@ -1,0 +1,18 @@
+
+{{css '/css/content.css'}}
+{{js '/js/content.js'}}
+
+<div class="photolist">
+    {{#each photo}}
+    <img src={{this.image}}>
+    {{/each}}
+</div>
+
+{{!-- <p id="text">“老师，你或许可以通过上面的网址看出来翻页了...”</p> --}}
+
+<div class="page">
+    <ul class="p">
+        <li class="page-item" id="page1"><a class="page-link" href="/?page={{l1}}">{{l1}}</a></li>
+        <li class="page-item" id="page2"><a class="page-link" href="/?page={{l2}}">{{l2}}</a></li>
+    </ul>
+</div>
