@@ -1,0 +1,22 @@
+
+<div class="container">
+    <div class="content">
+      {{#each data}}
+      <span class="contentBox">{{this}}</span>
+      {{/each}}
+    </div>
+	<br>
+    <div class="page">
+      <span>
+        <a href="/?page=1">&#139;&#139;</a>
+      </span>
+      <span>
+        {{#each pageCountList}}
+        <a href="/?page={{this}}">{{this}}</a>
+        {{/each}}
+      </span>
+      <span>
+        <a href="/?page={{pageCount}}">&#155;&#155;</a>
+      </span>
+    </div>
+  </div>
