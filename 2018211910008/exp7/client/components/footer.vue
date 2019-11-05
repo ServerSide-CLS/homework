@@ -1,8 +1,8 @@
 <template>
   <div class="footer">
-    <p><el-button type="primary" icon="el-icon-share" style="background-color: darkcyan ;border: darkcyan" >叶志康的个人网站</el-button>
-      博客 | 纪事 | 想法 | 记录<br>
-      踏实、专注、天天积累</p>
+    <p><el-button type="primary" icon="el-icon-share" style="background-color: darkcyan ;border: darkcyan" >～～～～～～</el-button>
+      ～～～～～～～～～～～～～～～～～～～～～～<br>
+      ～～～～～</p>
   </div>
 </template>
 

@@ -1,9 +1,8 @@
 <template>
   <div>
     <el-row v-for="i in 2" :key="i">
-      <el-col :span="5" v-for="o in 4" :key="o" >
+      <el-col :span="5" v-for="o in showNum/2" :key="o" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/logo.png" class="image">
           <div style="padding: 14px;">
             <span>{{(currentPage-1)*8+o+((i-1)*4)}}</span>
             <div class="bottom clearfix">
@@ -30,12 +29,18 @@
         mounted(){
             this.$axios.get('/getinfo/').then( res => {
                 console.log(res);
-            } )
+                this.pageNum = res.data.pageNum;
+                this.showNum = res.data.showNum;
+            } ).catch(error => {
+                console.log(error)
+            })
         },
         data(){
             return{
                 currentDate: new Date(),
-                currentPage: 1
+                currentPage: 1,
+                pageNum:0,
+                showNum: 0
             }
         },
         methods:{

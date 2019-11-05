@@ -2,15 +2,15 @@
   <div>
     <header>
       <nav>
-        <img src="../images/nav-logo-A.jpeg" >
-        <img src="../images/nav-logo-B.jpeg" >
+        <img src="" >
+        <img src="" >
         <span>Made By <span style="color: darkcyan">Yekoko</span>.</span>
         <ul>
-          <li class="active"><router-link to="/idea"><a >想法</a></router-link></li>
-          <li ><router-link to="/blog"><a>我的博客</a></router-link></li>
-          <li ><router-link to="/mess"><a>乱七八糟</a></router-link></li>
+          <li class="active"><router-link to="/idea"><a >～～</a></router-link></li>
+          <li ><router-link to="/blog"><a>～～～～</a></router-link></li>
+          <li ><router-link to="/mess"><a>～～～～</a></router-link></li>
           <li > | </li>
-          <li class="who" ><router-link to="/"><a style="color: darkcyan"> 叶志康</a></router-link></li>
+          <li class="who" ><router-link to="/"><a style="color: darkcyan"> ～～～</a></router-link></li>
 
         </ul>
       </nav>
