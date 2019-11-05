@@ -1,0 +1,60 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'body-parser',
+1 verbose cli   'multer' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData body-parser
+8 silly fetchPackageMetaData multer
+9 silly fetchNamedPackageData body-parser
+10 silly mapToRegistry name body-parser
+11 silly mapToRegistry using default registry
+12 silly mapToRegistry registry https://registry.npmjs.org/
+13 silly mapToRegistry uri https://registry.npmjs.org/body-parser
+14 silly fetchNamedPackageData multer
+15 silly mapToRegistry name multer
+16 silly mapToRegistry using default registry
+17 silly mapToRegistry registry https://registry.npmjs.org/
+18 silly mapToRegistry uri https://registry.npmjs.org/multer
+19 verbose request uri https://registry.npmjs.org/multer
+20 verbose request no auth needed
+21 info attempt registry request try #1 at 下午3:16:52
+22 verbose request id 33bb8ad5b12adf62
+23 http request GET https://registry.npmjs.org/multer
+24 verbose request uri https://registry.npmjs.org/body-parser
+25 verbose request no auth needed
+26 info attempt registry request try #1 at 下午3:16:52
+27 verbose etag W/"f964f603e8da8888073bf1fdcada7aa9"
+28 verbose lastModified Sat, 21 Sep 2019 18:45:40 GMT
+29 http request GET https://registry.npmjs.org/body-parser
+30 info retry will retry, error on last attempt: Error: read ECONNRESET
+31 info retry will retry, error on last attempt: Error: read ECONNRESET
+32 info attempt registry request try #2 at 下午3:17:38
+33 http request GET https://registry.npmjs.org/multer
+34 info attempt registry request try #2 at 下午3:17:41
+35 verbose etag W/"f964f603e8da8888073bf1fdcada7aa9"
+36 verbose lastModified Sat, 21 Sep 2019 18:45:40 GMT
+37 http request GET https://registry.npmjs.org/body-parser
+38 info retry will retry, error on last attempt: Error: read ECONNRESET
+39 info retry will retry, error on last attempt: Error: read ECONNRESET
+40 verbose stack Error: write EIO
+40 verbose stack     at _errnoException (util.js:1022:11)
+40 verbose stack     at WriteWrap.afterWrite [as oncomplete] (net.js:880:14)
+41 verbose cwd /home/xiezhongyuan/myapp/views
+42 error Linux 5.0.0-23-generic
+43 error argv "/usr/bin/node" "/usr/bin/npm" "install" "--save" "body-parser" "multer"
+44 error node v8.10.0
+45 error npm  v3.5.2
+46 error code EIO
+47 error errno EIO
+48 error syscall write
+49 error write EIO
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
