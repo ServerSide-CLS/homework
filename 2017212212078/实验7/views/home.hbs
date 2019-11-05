@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/home.css">
+</head>
+<body>
+    <div class="container">
+        {{#each list}}
+        <div class="row">
+            {{#each rowData}}
+            <div class="col-md-2 part">
+                <image src="/static/images/bg.jpeg" class="partImg"></image>
+                <div class="text">
+                    <div>
+                        名称:
+                        <span>{{name}}</span>
+                    </div>
+                    <div>
+                        时间:
+                        <span>{{cTime}}</span>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{/each}}
+        <div class="paging">
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    {{#each page}}
+                    <li><a href="/page{{pageNum}}">{{pageNum}}</a></li>
+                    {{/each}}
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div> 
+</body>
+</html>
