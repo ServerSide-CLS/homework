@@ -1,0 +1,36 @@
+<body class="{{params}}">
+
+	<div class="container">
+        {{#each product}}
+        <div class="product">
+            <img src={{this.img}} id="img">
+            <p id="text">{{this.text}}</p>
+        </div>
+        {{/each}}
+
+        <div class="page">
+            <ul class="m-hearder">
+                 <!--判断当前是否为第一页-->
+                {{#if preUrl}}
+                    <li><a href="#"><<</a></li>
+                {{else}} 
+                    <li><a href={{prePage}}><<</a></li>
+                {{/if}}
+                <li>{{> page}}<li>
+                <!--判断当前是否为最后一页-->
+                {{#if nextUrl}}
+                    <li><a href="#">>></a></li>
+                {{else}} 
+                    <li><a href={{nextPage}}>>></a></li>
+                {{/if}}
+            </ul> 
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<script>
+//修改当前页面的a标签css
+$("{{curPage}}").css("border", "none");
+$("{{curPage}}").css("color", "black");
+</script>

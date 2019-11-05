@@ -1,0 +1,16 @@
+<div class="container">
+    
+
+	<div class="btn_pages">
+    <a href="/?page={{prepage}}">&lt;&lt;上一页</a>
+    {{#each List}}    
+        {{#if flag_choose}}     
+          <a class="clicknow" href="/?page={{this.b}}">String.fromCharCode({{this.b}})</a>          
+        {{/if}}
+        {{#if flag_not_choose}}
+          <a class="" href="/?page={{this.b}}">111</a>
+        {{/if}}
+    {{/each}}
+      <a href="/?page={{nextpage}}">下一页&gt;&gt;</a>
+  </div>
+</div>

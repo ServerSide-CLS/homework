@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>英雄联盟</title>
+    <link rel="stylesheet" type="text/css" href="/static/goodlist.css">
+
+</head>
+<body>
+<div id="allpage">
+    <div id="header">
+        <p>英雄联盟信息大全</p>
+    </div>
+    <div id="content">
+        <div id="imagesPane">
+            <div id="row_1">
+                {{#each onepieceInfoList}}
+                {{#if this.vis}}
+                {{#each this.images1}}
+                <img class="img1" src="{{this.src}}">
+                {{/each}}
+                {{/if}}
+                {{/each}}
+
+            </div>
+            <div id="row_2">
+                {{#each onepieceInfoList}}
+                {{#if this.vis}}
+                {{#each this.images2}}
+                <img class="img2" src="{{this.src}}">
+                {{/each}}
+                {{/if}}
+                {{/each}}
+            </div>
+        </div>
+
+        <ul id="change">
+            <a href="/goodlist?pageNumber={{prepage}}"><<</a>
+            <a href="/goodlist?pageNumber=1">1</a>
+            <a href="/goodlist?pageNumber=2">2</a>
+            <a href="/goodlist?pageNumber=3">3</a>
+            <a href="/goodlist?pageNumber=4">4</a>
+            <a href="/goodlist?pageNumber=5">5</a>
+            <a href="/goodlist?pageNumber=6">6</a>
+            <a href="/goodlist?pageNumber=7">7</a>
+            <a href="/goodlist?pageNumber={{nextpage}}"> >> </a>
+        </ul>
+    </div>
+    <div id="footer">
+
+    </div>
+</div>
+</body>
+</html>

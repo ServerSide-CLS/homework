@@ -1,0 +1,101 @@
+<style>
+    div.imalist{
+        width: 100%;
+        height: 45%;
+        background-color: white;
+        
+    }
+    hr{
+        border: 2px solid grey;
+    }
+    ul{
+       
+        margin-left: 100px;      
+        list-style: none;
+ 
+    }
+    li{
+        margin-top: 5px;
+        margin-left: 30px;         
+        float:left
+    }
+    div.li{
+        width: 200px;
+        height: 150px;
+        background-color: rgb(103, 146, 238);
+        margin-left: 30px;
+    }
+    ul.pagination{
+       position: relative;
+       top:-40px;
+      
+    }
+</style>
+
+
+<div class="imalist">
+    <ul>
+        <li><div class="li"></div></li>
+        <li><div class="li"></div></li>
+        <li><div class="li"></div></li>
+        <li><div class="li"></div></li>
+    </ul>
+</div>
+
+
+
+
+ <div class="imalist"></div>   
+    <ul style="margin-top: -155px">
+       <li><div class="li"></div></li>
+        <li><div class="li"></div></li>
+        <li><div class="li"></div></li>
+        <li><div class="li"></div></li>
+    </ul>
+</div>
+
+<hr >
+
+<ul class="pagination" id="pagination"></ul>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script> 
+
+  <script>
+  $(document).ready(function() {
+    if($("#pagination")){
+        var pagecount =10;
+        var pagesize = 2;
+        var currentpage =1;
+        var counts,pagehtml="";
+        if(pagecount%pagesize==0){
+            counts = parseInt(pagecount/pagesize);
+        }else{
+            counts = parseInt(pagecount/pagesize)+1;
+        }
+        //只有一页内容
+        if(pagecount<=pagesize){pagehtml="";}
+        //大于一页内容
+        if(pagecount>pagesize){
+            if(currentpage>1){
+                ///course/index/'+(currentpage-1)+'
+                pagehtml+= '<li><a href="">上一页</a></li>';
+            }
+            for(var i=0;i<counts;i++){
+                if(i>=(currentpage-3) && i<(currentpage+3)){
+                    if(i==currentpage-1){
+                        pagehtml+= '<li class="active"><a href="">'+(i+1)+'</a></li>';
+                        //	pagehtml+= '<li><a href="">上一页</a></li>';
+                    }else{
+                        pagehtml+= '<li><a href="">'+(i+1)+'</a></li>';
+                        //	pagehtml+= '<li><a href="">上一页</a></li>';
+                    }
+                    
+                }
+            }
+            if(currentpage<counts){
+                pagehtml+= '<li><a href="">下一页</a></li>';
+            }
+        }
+        $("#pagination").html(pagehtml);
+    }
+});
+  </script>

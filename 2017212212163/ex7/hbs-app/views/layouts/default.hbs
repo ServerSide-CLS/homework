@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Template</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+<body class="{{params}}">
+  <header>
+    <div class="m-header">
+      <img src="/images/logo.jpg" width="64" height="64">
+      <h2 style="display: inline;font-style:oblique;">华为手机热卖</h2>
+    </div>
+  </header>
+  <div class="container">
+    {{{body}}}    {{! 将某个模板加载进来}}
+    {{> pages}}
+  </div>
+  {{> footer}}
+</body>
+</html>

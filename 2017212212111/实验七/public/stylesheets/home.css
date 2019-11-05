@@ -1,0 +1,14 @@
+.pages{
+    font-size: 12px;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+.pages a{
+    display: inline-block;
+    padding: 8px 12px;
+    border:1px solid #e6e6e6;
+    color:white;
+    text-decoration: none;
+    margin-left: 12px;
+  }

@@ -1,0 +1,33 @@
+*{
+    margin: 0px
+}
+body{
+    background-color: black;
+}
+
+div.content{
+    widows: 600px;
+    height: 400px;
+    background-color: white;
+}
+
+div#footer{
+    widows: 600px;
+    height: 100px;
+    background-color: rgb(46, 149, 184);
+}
+
+div#header{
+    widows: 600px;
+    height: 100px;
+    background-color: rgb(132, 190, 132);
+}
+
+p{
+    color: wheat;
+    font-size: 25px;
+    position: absolute;
+    left:0px;
+    
+
+}

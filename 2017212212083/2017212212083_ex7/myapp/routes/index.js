@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var bodyParser = require('body-parser');
 
 let project = [
     {
@@ -173,16 +172,24 @@ let project = [
         type: 42
     },
 ];
-// let project = [1, 2, 3, 4, 5];
 let pageSize = 6;
 let pageCnt = project.length / pageSize;
+let pageList = [];
+
+function getPageList() {
+    pageList = [];
+    for (let i = 1; i <= pageCnt; ++i) {
+        pageList.push({data: i});
+    }
+}
 
 /* GET home page. */
 router.get('/index', function (req, res, next) {
     let currentPage = parseInt(req.query.pageNumber) || 1;
     let offset = (currentPage - 1) * pageSize;
     let newArr = project.slice(offset, offset + pageSize);
-    res.render('index', {pageCount: pageCnt, pageNumber: currentPage, count: pageSize, entity: newArr});
+    getPageList();
+    res.render('index', {pageCount: pageCnt, pageNumber: currentPage, count: pageSize, entity: newArr, pageList:pageList});
 });
 
 module.exports = router;

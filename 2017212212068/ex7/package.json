@@ -1,0 +1,16 @@
+{
+  "name": "ex7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ex_7.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1"
+  }
+}

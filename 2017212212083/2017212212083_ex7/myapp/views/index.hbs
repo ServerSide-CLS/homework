@@ -2,7 +2,6 @@
 
     <ol class="post-card-box clearfix">
         {{#each entity}}
-
             <li>
                 <div class="post-card">
                     <a href="/index/{{id}}" class="post-card-image"
@@ -23,19 +22,15 @@
 
     <footer>
         <div class="page">
-        <span>
+            <span>
             <ul>
                 <a href="/index?pageNumber=1" style="display: inline"><<</a>
-                <a href="/index?pageNumber=1">1</a>
-                <a href="/index?pageNumber=2">2</a>
-                <a href="/index?pageNumber=3">3</a>
-                <a href="/index?pageNumber=4">4</a>
-                <a href="/index?pageNumber=5">5</a>
-                <a href="/index?pageNumber=6">6</a>
-                <a href="/index?pageNumber=6">>></a>
+                {{#each pageList}}
+                    <a href="/index?pageNumber={{data}}">{{data}}</a>
+                {{/each}}
+                <a href="/index?pageNumber={{pageCount}}">>></a>
             </ul>
-        </span>
+            </span>
         </div>
     </footer>
-
 </div> <!-- End Wrapper -->

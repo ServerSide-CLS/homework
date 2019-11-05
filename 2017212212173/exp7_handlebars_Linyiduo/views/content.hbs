@@ -1,0 +1,19 @@
+<div>
+    <div class="container" style="padding-top: 30px">
+        <div class="row" style="height: 20%">
+            {{#each book}}
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img src="{{this.images.small}}" style="height:250px;">
+                        <div class="caption">
+                            <p>{{this.title}}</p>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+
+        {{pageChoose pageNow pagesNum}}
+
+    </div>
+</div>

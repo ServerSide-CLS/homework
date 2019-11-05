@@ -1,0 +1,29 @@
+body{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+
+}
+ul{
+    display: inline-block;
+}
+.image{
+
+    margin: 30px;
+    width: 220px;
+    height: 200px;
+}
+#page{
+    text-align: center;
+    text-align: center;;
+    font-weight: bold;
+    font-size: 150%;
+    margin: 0 200px;
+}
+p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+    font-style: italic;
+}

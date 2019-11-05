@@ -1,9 +1,10 @@
 {
-  "name": "express",
+  "name": "ex07_express-hbs",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "dev"  : "nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

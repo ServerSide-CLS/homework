@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link type="text/css" rel="stylesheet"  href="stylesheets/style.css" />
+  <script src="//cdn.jsdelivr.net/handlebarsjs/4.0.5/handlebars.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <title>{{title}}</title>
+   {{!-- 尝试了<script></script> + Handlebars.compile(),html里面可以，变成hbs获取不到了 --}}
+</head>
+<body class="content">
+  {{> header}}
+  <div class="container">
+    {{{body}}}
+  </div>
+  {{> footer}} 
+</body>
+</html>
