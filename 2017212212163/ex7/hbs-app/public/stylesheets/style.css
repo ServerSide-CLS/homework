@@ -11,7 +11,7 @@ a {
 ul.pagination {
   display: inline-block;
   padding: 0;
-  margin: 0;
+  margin: 40px;
 }
 
 ul.pagination li {display: inline;}
@@ -45,3 +45,23 @@ ul.pagination {
  position: relative;
  left: 100px;
 }
+
+.m-header {
+  height: 70px;
+}
+
+.m-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.border {
+    width: 300px;
+    height: 100px;    
+    padding: 50px;
+    border: 1px solid red;
+}
+
