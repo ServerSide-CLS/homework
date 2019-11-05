@@ -56,9 +56,15 @@ img{
 }
 
 a{
+  text-decoration: none;
   margin-right: 0px;
   display: block;
   overflow: hidden;
+}
+
+.cp{
+  width: 150px;
+  height: 150px;
 }
 
 .liText {
