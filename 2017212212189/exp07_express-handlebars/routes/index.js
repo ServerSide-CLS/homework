@@ -26,7 +26,7 @@ router.get('/', function(req, res, next) {
 //查询路由
 router.get('/goodslist',(req,res)=>{
   // res.send(req.query.pageNumber);
-  let pageNum=req.query.pageNumber
+  let pageNum=req.query.pageNumber||1;
 
   for(let i=0;i<count;i++)
       ret.push({"name":"产品名"+i+"","nums":"数量","price":"价格"});
