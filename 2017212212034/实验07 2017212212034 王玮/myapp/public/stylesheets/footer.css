@@ -1,0 +1,17 @@
+.footer{
+   border: #fffff9 solid 1px; 
+   display: block;
+   text-align: center;
+   padding: 15px;
+   border-left: none;
+   border-right: none;
+}
+
+#copyRight{
+    font-family: 'Times New Roman', Times, serif;
+    color: #fffff9;
+}
+
+a{
+    text-decoration: none;
+}

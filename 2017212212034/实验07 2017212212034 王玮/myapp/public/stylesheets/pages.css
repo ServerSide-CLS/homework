@@ -1,0 +1,32 @@
+.page{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.p_header{
+    margin: 15px 10px 15px 10px;
+    display: inline-block;
+    padding: 8px 8px;
+    background: #365e7c;
+    border-color: #3b8399;
+    text-align: center;
+    box-shadow: -8px 8px 8px #222526;
+    border-radius: 4px;
+}
+
+.pageNum{
+    margin: 15px 10px 15px 10px;
+    padding: 0;
+}
+
+.p_page{
+    display: inline-block;
+    margin: 0px 4px 0px 4px;
+    padding: 10px 12px;
+    background: #365e7c;
+    border-color: #3b8399;
+    text-align: center;
+    box-shadow: -8px 8px 8px #222526;
+    border-radius: 4px;
+}

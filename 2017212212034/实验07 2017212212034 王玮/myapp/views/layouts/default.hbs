@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="stylesheets/default.css">
+  <link rel="stylesheet" href="stylesheets/footer.css">
+  <link rel="stylesheet" href="stylesheets/header.css">
+  <link rel="stylesheet" href="stylesheets/goods.css">
+  <link rel="stylesheet" href="stylesheets/pages.css">
+  <title>Default</title>
+</head>
+<body>
+  {{!-- 页头部分 --}}
+  {{> header}}
+  {{!-- 商品列表部分 --}}
+  <div class="goodslist">
+    {{> goods}}
+  </div>
+  {{!-- 分页栏 --}}
+  {{> pages}}
+  {{!-- 页脚部分 --}}
+  {{> footer}}
+</body>
+</html>
