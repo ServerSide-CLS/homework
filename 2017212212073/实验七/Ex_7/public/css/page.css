@@ -1,0 +1,12 @@
+body{
+	padding-top: 50px;}
+nav{
+	background-color: black;
+}
+.thumbnail img:hover{
+	transform: scale(1.5) rotate(10deg);
+	border-style: solid;
+	border-color: #333;
+	border-width: 1px;
+	padding: 3px;
+}
