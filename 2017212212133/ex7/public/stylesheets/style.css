@@ -1,0 +1,48 @@
+body {
+  padding: 0px;
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+  display: inline;
+  padding: 3px;
+  padding-left: 7px;
+  padding-right: 7px; 
+  margin-left: 5px;
+  border: 0.5px solid black;
+}
+
+header{
+	padding-top: 8px;
+	text-align: center;
+    border-bottom: 1px solid black;
+}
+
+#container{
+	padding: 100px;
+	text-align: center;
+}
+div{
+	margin-bottom: 150px;
+}
+.goods{
+	 border-style:solid;
+	 padding: 50px;
+	 margin: 50px;
+}
+#page{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding-right: 200px;
+}
+footer{
+	width: 100%;
+    height: 80px;
+    position: absolute;
+    bottom:0;
+    border-top: 1px solid black;
+    text-align: center;
+}

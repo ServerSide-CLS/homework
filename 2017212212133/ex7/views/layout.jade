@@ -1,0 +1,31 @@
+html(len="en")
+html
+  head
+    title shiyingdan
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    header
+        h1 header
+    #container
+        div 
+            span#div1.goods #{goods[0]}
+            span#div2.goods #{goods[1]}
+            span#div3.goods #{goods[2]}
+            span#div4.goods #{goods[3]}
+        div 
+            span#div5.goods #{goods[4]}
+            span#div6.goods #{goods[5]}
+            span#div7.goods #{goods[6]}
+            span#div8.goods #{goods[7]}
+        #page
+            a(href="#{lastPage}") <<
+            a(href="/?pageNo=1") 1
+            a(href="/?pageNo=2") 2
+            a(href="/?pageNo=3") 3
+            a(href="/?pageNo=4") 4
+            a(href="/?pageNo=5") 5
+            a(href="#{nextPage}") >>
+            
+    footer
+        h2 footer
+
