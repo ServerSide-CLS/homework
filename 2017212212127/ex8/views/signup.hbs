@@ -1,0 +1,21 @@
+ <form action="/check" method="post">
+		<input type="text" name="account" placeholder="account" id="email" required>
+
+      <button type = "Submit"  id="checkbt">获取验证密码有效性</button>
+       {{#if msg}}
+      <p>{{msg}}</p>
+    {{/if}}
+ </form>
+ <form action="/signup" method="post">
+      <input type="text" name="checknum" placeholder="checknum" required>
+      <input type="password" name="password" placeholder="password" required>
+
+      <input type="password" name="passwordagain" placeholder="passwordagain" required>
+
+      <button type = "Submit">Sign up</button>
+
+
+      {{#if message}}
+      <p>{{message}}</p>
+    {{/if}}
+ </form>
