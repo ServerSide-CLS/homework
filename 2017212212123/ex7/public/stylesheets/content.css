@@ -2,18 +2,18 @@
     text-align: center;
 }
 
-.photolist img{
-    width: 600px;
-}
-
 a{
     text-decoration: none;
     color: black;
 }
 
-/* #text{
+.ttext{
+    margin: 0 auto;
     text-align: center;
-} */
+    /* background-color: coral; */
+    height: 280px;
+    /* width: 800px; */
+}
 
 .page ul{
     margin-left: -40px;
