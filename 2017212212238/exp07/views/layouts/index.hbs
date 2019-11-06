@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>产品列表</title>
+	<link rel="stylesheet" href="/stylesheets/style.css" />
+  	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+</head>
+<body>
+
+	<div class="header">
+		{{> header}}
+	</div>
+
+	<div class="content">
+		<div class="container">
+    <div class="row">
+      {{#each data}}
+        <div class="col-md-2 col-md-offset-1 itembox">{{this}}</div>
+      {{/each}}
+    </div>
+
+	<div class="btn_pages">
+    <a href="/?page={{prepage}}">&lt;&lt;上一页</a>
+    {{#each List}}    
+        {{#if flag_choose}}     
+          <a class="clicknow" href="/?page={{this.v}}">{{this.v}}</a>          
+        {{/if}}
+        {{#if flag_not_choose}}
+          <a class="" href="/?page={{this.v}}">{{this.v}}</a>
+        {{/if}}
+    {{/each}}
+      <a href="/?page={{nextpage}}">下一页&gt;&gt;</a>
+  </div>
+</div>
+	</div>
+
+	 <div class="footer">
+	 	 {{> footer}}
+	 </div>
+
+</body>
+</html>
+
