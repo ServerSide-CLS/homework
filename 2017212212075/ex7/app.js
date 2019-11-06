@@ -15,6 +15,9 @@ app.engine('.hbs', hbs({
   partialsDir: __dirname + '/views/partials/'
 }));
 
+app.get('/', getProducts,function (req, res) {
+  res.render('index', { layout: 'default', ...req.pageData });
+});
 app.get('/goodlist', getProducts,function (req, res) {
   res.render('index', { layout: 'default', ...req.pageData });
 });
