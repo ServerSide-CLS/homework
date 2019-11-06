@@ -1,0 +1,18 @@
+<div class="container">
+    {{#each data}}
+        <div class="block">{{this}}</div>
+    {{/each}}
+    <div class="row">
+        <ul class="pagination">
+            <li><a href="/?page={{prepage}}">&lt;</a></li>
+            {{#each pageLst}}
+                {{#equal ../page this}}
+                    <li><a href="/?page={{this}}" class="active">{{this}}</a></li>
+                {{else}}
+                    <li><a href="/?page={{this}}">{{this}}</a></li>
+                {{/equal}}   
+            {{/each}}
+            <li><a href="/?page={{nextpage}}">&gt;</a></li>
+        </ul>
+    </div>
+</div>
