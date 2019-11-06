@@ -1,18 +1,17 @@
-var data = {
-    "photo": [
-        {"image": "", "id": 0},
-        {"image": "", "id": 1},
-        {"image": "", "id": 2},
-        {"image": "", "id": 3},
-        {"image": "", "id": 4},
-        {"image": "", "id": 5},
-        {"image": "", "id": 6},
-        {"image": "", "id": 7},
-        {"image": "", "id": 8},
-        {"image": "", "id": 9},
-        {"image": "", "id": 10},
-        {"image": "", "id": 11},
-        {"image": "", "id": 12}
+module.exports = {
+    "message": [
+        {"text": "text1", "id": 0},
+        {"text": "text2", "id": 1},
+        {"text": "text3", "id": 2},
+        {"text": "text4", "id": 3},
+        {"text": "text5", "id": 4},
+        {"text": "text6", "id": 5},
+        {"text": "text7", "id": 6},
+        {"text": "text8", "id": 7},
+        {"text": "text9", "id": 8},
+        {"text": "text10", "id": 9},
+        {"text": "text11", "id": 10},
+        {"text": "text12", "id": 11},
+        {"text": "text13", "id": 12}
     ]
 };
-module.exports = data;
