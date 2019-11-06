@@ -34,7 +34,7 @@ app.engine('.hbs', hbs({
 
 //注册页面
 app.get('/', function (req, res) {
-  res.render('home', { layout: 'default', ...req.pageData });
+  res.render('home', { layout: 'default' });
 });
 //发送邮箱验证码
 app.post('/sendemail', async function (req, res) {
