@@ -1,0 +1,60 @@
+<form action="_self" class="form-x" class="form-x">
+    <h1 style="text-align: center;">login</h1>
+    <p id="errorMsg"></p>
+    <div class="container">
+        <input type="text" placeholder="请输入您的电子邮箱" id="email" name="email">
+        <input type="password" placeholder="请输入密码" id="password">
+        <input type="submit" value="登录" id="submit">
+        <p>
+            <a href="/signup">signup</a>
+        </p>
+    </div>
+</form>
+
+<script>
+    function validateEmail(mail) {
+        var rep = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
+        return rep.test(mail);
+    }
+    function validatePassword() {
+        if (password.value.length < 6) {
+            return '密码长度不能小于6位';
+        }
+        return false;
+    }
+    function loginMsgHandle(msg) {
+        errorMsg.innerHTML = '* ' + msg;
+        setTimeout(function () {
+            errorMsg.innerHTML = "";
+        }, 3000)
+    }
+    submit.onclick = function (e) {
+        e.preventDefault();
+        if (!validateEmail(email.value)) {
+            loginMsgHandle('邮箱格式错误');
+            return;
+        }
+        const pwdValidate = validatePassword();
+        if (pwdValidate) {
+            loginMsgHandle(pwdValidate);
+            return;
+        }
+        fetch('/login', {
+            method: 'POST',
+            body: JSON.stringify({
+                email: email.value,
+                password: password.value,
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json()).then(data => {
+            if (data.code == 0) {
+                location.href = '/'
+            } else {
+                loginMsgHandle(data.message);
+                password.value = '';
+            }
+        })
+    }
+</script>
