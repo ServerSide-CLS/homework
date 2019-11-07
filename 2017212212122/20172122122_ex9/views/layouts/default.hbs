@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>  
+  {{#each cssList}}
+  <link rel="stylesheet" href="{{this}}" id="products" media="screen" title="no title" charset="utf-8">
+  {{/each}}
+  <title>Template</title>
+</head>
+
+<body>
+  <div class="container-fluid main" id="main">
+    {{{body}}}
+  </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>  
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+ 
+<!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
+<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+ 
+<!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+{{#each jsList}}
+  <script src="{{this}}" charset="utf-8"></script>
+{{/each}}
+
+</html>
