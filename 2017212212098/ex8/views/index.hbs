@@ -1,0 +1,37 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+
+    <title>Register</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="stylesheets/style.css" rel="stylesheet">
+</head>
+<body class="text-center ">
+    <form class="form-signin" method="post" action="/register">
+        <h1 class="h3 mb-3 font-weight-normal">Please register in</h1>
+        <input type="email" class="form-control" id="inputEmail" name = "email" placeholder="邮箱" required autofocus>
+        <br>
+        <input type="password" class="form-control" name = "pwd" placeholder="密码" required>
+        <br>
+        <input type="password" class="form-control" name = "rpwd" placeholder="确认密码" required>
+        <div class="row justify-content-between" style="padding:15px">
+            <input id="inputCode" class="col-4"  name = "code" placeholder="验证码" required>
+            <button class=" btn btn-outline-primary " style="width:125px" type="button" id="code">获取验证码</button>
+        </div>
+        <br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Register in</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
+    </form>
+</body>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src ="javascripts/index.js"></script>
+</html>
