@@ -1,0 +1,16 @@
+<table class="table" style="width:60%;margin:20px auto;">
+    <thead>
+        <tr>
+            <th>eamil</th>
+            <th>password</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each user}}
+        <tr>
+            <td>{{this.email}}</td>
+            <td>{{this.password}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
