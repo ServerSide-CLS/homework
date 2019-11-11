@@ -18,7 +18,7 @@ body{
     background-color: #fafafa;
 }
 
-.login-form-container{
+.sign-in-form-container{
     height: 360px;
     width: 280px;
     padding: 20px 40px;
@@ -61,26 +61,7 @@ button{
     border-radius: 4px;
 }
 
-.sign-up{
+.sign-in{
     width: 100%;
     padding: 10px;
-}
-
-.send-auth-code{
-    width: 160px;
-    margin-left: 10px;
-    background-color: #fff;
-    color: #000;
-    border: 1px solid rgba(0,0,0,0.3);
-}
-
-.send-auth-code:hover:not(.disabled){
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-}
-
-.disabled{
-    border: 1px solid rgba(0,0,0,0.3);
-    color: rgba(0,0,0,0.3);
-    cursor: not-allowed;
 }

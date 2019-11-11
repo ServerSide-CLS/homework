@@ -21,6 +21,13 @@ router.get('/', function(req, res, next) {
 
     let first = (req.query.pageNo - 1) * pageMax;
     let goods = [];
+	
+    if(req.query.pageNo == undefined){
+        lastPage = "#";
+        nextPage = 2;
+        first = 0;
+    }
+	
     for (let i = first; i <= first + (pageMax - 1); i++) {
         goods.push(data[i]);
     }

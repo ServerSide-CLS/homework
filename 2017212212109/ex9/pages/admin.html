@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>管理员</title>
+</head>
+
+<body>
+    <h1>用户列表</h1>
+    <div id="user-list"></div>
+    <script>
+        fetch('http://localhost:8900/api/getUserInfoList').then(response => {
+            if (response.status !== 200) {
+                console.error(`不期望的状态码：${response.status}`);
+                return;
+            }
+
+            return response.json();
+        }).then(list => {
+            const dom_userList = document.getElementById('user-list');
+            for (const userInfo of list) {
+                const { userEmail, userPassword } = userInfo;
+                const dom_p = document.createElement('p');
+                dom_p.innerText = userEmail + ' ' + userPassword;
+                dom_userList.append(dom_p);
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+{
+    "name": "node",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "express-session": "^1.17.0",
+        "mongodb": "^3.3.3"
+    }
+}
