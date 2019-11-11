@@ -23,5 +23,5 @@ app.use("/", router);
 app.use(express.static(__dirname + "/public"));
 
 app.listen(3000, () => {
-    console.log("server starts on http://locpalhost:3000");
+    console.log("server starts on http://localhost:3000");
 });
