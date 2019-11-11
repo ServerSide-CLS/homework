@@ -1,0 +1,17 @@
+    {{#each goods}}
+<div class="goods">
+    <img src="images/img.jpg">
+    <p>{{title}}</p>
+ 
+</div>
+   {{/each}}
+<div class="pag">
+  <ul>
+    {{#each data}}
+    <li {{#if cur}} class="cur"{{/if}}
+        {{#if clickable}} class="clickable" >{{/if}}
+        <a href="/?page={{index}}">{{{text}}}</a>
+    </li>
+    {{/each}}
+  </ul>
+</div>

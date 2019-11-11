@@ -5,6 +5,7 @@
       <div class="m-grid-box">{{this}}</div>
       {{/each}}
     </div>
+    
     <div class="m-page">
       <ul class="m-page-header">
         <div class="page-header-left">
@@ -13,7 +14,11 @@
       </ul>
       <ul class="m-page-body">
         {{#each pageCountList}}
-        <a href="/?page={{this}}">{{this}}</a>
+          {{#if this.ifCurrentPage}}
+            <a class="m-page-block currentPage" href="/?page={{this.value}}">{{this.value}}</a>
+          {{else}}
+            <a class="m-page-block" href="/?page={{this.value}}">{{this.value}}</a>
+          {{/if}}
         {{/each}}
       </ul>
       <ul class="m-page-header">

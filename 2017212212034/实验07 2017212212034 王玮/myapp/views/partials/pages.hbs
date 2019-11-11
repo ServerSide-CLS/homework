@@ -1,0 +1,26 @@
+<div class="page">
+    <ul class="p_header">
+        {{#if_eq list.currentPage 1}}
+        <a href="#"><<</a>
+        {{else}}
+        <a href="/good?page={{list.previous}}&limit=9"><<</a>
+        {{/if_eq}}
+    </ul>
+    <ul class="pageNum">
+        {{!-- 这里就默认一页显示9个了，有点偷懒性质，没有写页面大小选项控件 --}}
+        {{#each list.pageCollect as |pageInfo|}}
+        {{#if pageInfo.isactive}}
+        <a class="p_page active" href="/good?page={{pageInfo.page}}&limit=9">{{pageInfo.page}}</a>
+        {{else}}
+        <a class="p_page" href="/good?page={{pageInfo.page}}&limit=9">{{pageInfo.page}}</a>
+        {{/if}}
+        {{/each}}
+    </ul>
+    <ul class="p_header">
+        {{#if_eq list.currentPage list.total}}
+        <a href="#">>></a>
+        {{else}}
+        <a href="/good?page={{list.next}}&limit=9">>></a>
+        {{/if_eq}}
+    </ul>
+</div>

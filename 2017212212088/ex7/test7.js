@@ -1,20 +1,22 @@
 var express = require('express');
 var app = express();
 
+app.set('view engine', 'hbs');
+
 app.use(express.static(__dirname + '/public'));
 
-const exphbs = require('express-handlebars');
+const hbs = require('express-handlebars');
 
-app.engine('hbs', exphbs({
-    layoutsDir: 'views',
+app.engine('hbs', hbs({
     defaultLayout: 'layout',
-    extname: '.hbs'
+    extname: '.hbs',
+    layoutsDir:  __dirname + '/views/layouts/',
+    partialsDir: __dirname + '/views/partials/'
 }));
-app.set('view engine', 'hbs');
 
 app.get('/', function(req, res) {
 	var page_number = 7;
-    res.render('goodlist', {
+    res.render('layouts/goodlist', {
         layout: false,
         title: "首页",
         css_href: "/static/goodlist.css",
@@ -81,7 +83,7 @@ app.get('/goodlist', function(req, res) {
 
 	flags[page__] = true;
 
-	res.render('goodlist', {
+	res.render('layouts/goodlist', {
         layout: false,
         title: "首页",
         css_href: "/static/goodlist.css",

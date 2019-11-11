@@ -1,0 +1,30 @@
+<div class="myline">
+    <ul>
+    {{#each data}}
+    <li class="image">
+        <img src="{{this.image}}" alt="goods" class="logo">
+        <ul class="people_list" style="padding:0">
+            <li>{{this.name}}</li>
+            <li>FOR SALE</li>
+            <li>ONLY SALE:{{this.cost}}</li>
+        </ul>
+    </li>
+    {{/each}}
+    </ul>
+</div>
+
+
+<div class="page">
+    <ul class="pagination">
+        <li>
+            <a href="/?page={{pagePre}}">&laquo;</a>
+        </li>
+        {{#each pageAll}}
+            <li class="{{isActive this ../page}}" id="{{this}}"><a href="/?page={{this}}">{{this}}</a></li>
+        {{/each}}
+        <li>
+            <a href="/?page={{pageNext}}">&raquo;</a>
+        </li>
+    </ul>
+</div>
+

@@ -1,0 +1,104 @@
+.jumbotron {
+    background-color: rgb(182,73,38);
+    color: white;
+    height: 100%;
+}
+.jumbotron p{
+    margin-left:20px;
+}
+.ul {
+    border-bottom: 1px dashed #DDDDDD;
+    line-height: 100%;
+    clear: both;
+}
+.pline p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.indent {
+    word-break: break-all;
+}
+html body, html td, html th, html .pl, html input {
+    font-size: 13px;
+}
+body, td, th {
+    font: 12px Helvetica,Arial,sans-serif;
+    line-height: 1.62;
+    color: rgb(153, 153, 153);
+}
+table {
+    border-collapse: collapse;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
+.indent {
+    word-break: break-all;
+}
+.label {
+  font-size: 9px;  
+}
+.pl2 a{
+    text-decoration: none;
+}
+.pl{
+    margin:0;
+}
+.pl1{
+    margin:0;
+    margin-top:10px; 
+}
+#page {
+    margin: 20px auto;
+    color: #666;
+    display: block;
+    text-align: center;
+}
+
+#page li {
+    display: inline-block;
+    min-width: 30px;
+    height: 28px;
+    cursor: pointer;
+    color: #666;
+    font-size: 13px;
+    line-height: 28px;
+    background-color: #f9f9f9;
+    border: 1px solid #dce0e0;
+    text-align: center;
+    margin: 0 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.xl-nextPage,
+.xl-prevPage {
+    width: 60px;
+    color: #0073A9;
+    height: 28px;
+}
+
+#page li.xl-disabled {
+    opacity: .5;
+    cursor: no-drop;
+}
+
+#page li.xl-active {
+    background-color: #0073A9;
+    border-color: #0073A9;
+    color: #FFF
+}

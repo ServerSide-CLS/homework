@@ -1,0 +1,20 @@
+<div class="d-flex flex-wrap align-content-center">
+{{#each id}}
+    <div class="card m-4">
+            <div class="card-body">
+                <h4 class="card-title">{{this}}</h4>
+                <p class="card-text">Some example.<br>Some example {{this}}.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+    </div>
+{{/each}}
+</div>
+
+<ul class="pagination justify-content-center">
+    <li class="page-item"><a class="page-link" href="/1">Top</a></li>
+    {{#each pages}}
+        <li class="page-item"><a class="page-link" href="/{{this}}">{{this}}</a></li>
+    {{/each}}
+    <li class="page-item"><a class="page-link" href="/{{countPage}}">End</a></li>
+</ul>

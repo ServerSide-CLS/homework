@@ -1,0 +1,51 @@
+<body class="{{params}}">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="nav_top">
+        <div class="container">
+            <form class="navbar-form">
+                <p class="navbar-text" style="color:white;"><span class="glyphicon glyphicon-globe"><strong> 风景</strong></span></p>
+            </form>
+            <!--标识-->
+        </div>
+    </nav>
+    <!--导航条-->
+
+    <div class="container">
+
+        {{#each product}}
+        <div class="product">
+            <img src={{this.img}} id="img">
+            <p id="text">{{this.text}}</p>
+        </div>
+        {{/each}}
+
+        <div class="page">
+            <ul class="m-header">
+                 <!--判断当前是否为第一页-->
+                {{#if preUrl}}
+                <li><a href="#"></a> </li>
+                {{else}} 
+                 <li><a href={{prePage}}></a></li>
+                 {{/if}}
+            </ul> 
+            <ul>
+                <li><a href="/goodlist?pageNumber=1" id="page1">1</a></li>
+                <li><a href="/goodlist?pageNumber=2" id="page2">2</a></li>
+            </ul>
+            <ul class="m-header">
+                <!--判断当前是否为最后一页-->
+                 {{#if nextUrl}}
+                <li><a href="#">>></a> </li>
+                {{else}} 
+                 <li><a href={{nextPage}}>>></a></li>
+                 {{/if}}
+            </ul>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+//修改当前页面的a标签css
+$("{{curPage}}").css("border", "none");
+$("{{curPage}}").css("color", "black");
+</script>

@@ -1,0 +1,25 @@
+<form>
+ 
+  <div class="image">
+    {{#each ret_new}}
+      <span class="span">{{this}}</span>
+    {{/each}}
+  </div>
+
+  <div class = 'pages'>
+      <a class = 'page' href="/?pageNumber={{pageNumber_del1}}"><</a>
+      <a class = 'page' href="/?pageNumber={{pageNumber_del1}}">{{pageNumber_del1}}</a>
+      <a class = 'page' href="/?pageNumber={{pageNumber}}">{{pageNumber}}</a>
+      <a class = 'page' href="/?pageNumber={{pageNumber_add1}}" id ='key1'>{{pageNumber_add1}}</a>
+      <a class = 'page' id ='key'>..</a>
+      <a class = 'page' href="/?pageNumber={{pageCount}}">{{pageCount}}</a>
+      <a class = 'page' href="/?pageNumber={{pageNumber_add1}}">></a>
+  </div>
+
+</form>
+
+
+
+
+
+

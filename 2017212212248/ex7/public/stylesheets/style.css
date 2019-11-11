@@ -1,0 +1,53 @@
+body {
+  width: 1000px;
+  margin: 30px auto;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.topnav{
+	border:1px #000 solid;
+	padding-left: 20px;
+	font-family: fantasy;
+}
+.content{
+	border:1px #000 solid;
+}
+.myline{
+	/*display: flex;*/
+	width: 1000px;
+	text-align: center;
+
+}
+.image{
+	float:left;
+	width: 200px;
+	border-radius: 5px;
+	border:1px #eee solid;
+	margin:10px;
+}
+.image img{
+
+	width:100px;
+}
+li{
+	text-align: center;
+	list-style: none;
+}
+
+.page{
+	text-align: center;
+}
+
+.pagination li{
+	display: inline;
+}
+footer{
+	text-align: center;
+	color:#262d3d;
+	border:1px #000 solid;
+	font-family: fantasy;
+}
+

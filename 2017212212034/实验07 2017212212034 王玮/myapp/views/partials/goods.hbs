@@ -1,0 +1,16 @@
+{{#each list.records as |item|}}
+<div class="goods">
+    <div class="logoBox">
+        <img src="{{item.goodImg}}" class="goodsImg">
+    </div>
+    <div class="goodInfo">
+        <p class="goodName">Name: {{item.goodName}}</p>
+        <p class="goodPrice">Price: {{item.goodPrice}}</p>
+    </div>
+    <a href="/purchaseById?id={{item.goodId}}">
+        <div class="purchaseBtn">
+            <p>购买</p>
+        </div>
+    </a>
+</div>
+{{/each}}

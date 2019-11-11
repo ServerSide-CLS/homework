@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+      {{#each curProduction}}
+      	<div class="col-md-2 Bproduct">{{this}}</div>
+      {{/each}}
+    </div>
+    <div class="lpages">
+        <a class='l1' href="/?page={{lastpage}}"> << </a>
+        {{#each lpages}}
+            <a class='l1' href="/?page={{this}}">{{this}}</a>
+        {{/each}}
+        <a class='l1' href="/?page={{nextpage}}"> >> </a>
+    </div>
+</div>

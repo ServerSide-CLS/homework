@@ -1,0 +1,30 @@
+.header{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.ttext{
+    margin: 0 auto;
+    text-align: center;
+    /* background-color: coral; */
+    height: 280px;
+    /* width: 800px; */
+}
+
+.page ul{
+    margin-left: -40px;
+    text-align: center;
+}
+
+.page li{
+    list-style-type: none;
+    display: inline;
+}
+
+.footer{
+    text-align: center;
+}

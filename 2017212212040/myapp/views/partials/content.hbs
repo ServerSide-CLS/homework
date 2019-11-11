@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="css/app.css">
+
+<div class="container">
+    <div class="content">
+      {{#each data}}
+      <span class="content-box">{{this}}</span>
+      {{/each}}
+    </div>
+    <div class="page">
+      <div class="left">
+        <a href="/?page=1">&#139;&#139;</a>
+      </div>
+      <div class="body">
+        {{#each pageCountList}}
+        <a href="/?page={{this}}">{{this}}</a>
+        {{/each}}
+      </div>
+      <div class="right">
+        <a href="/?page={{pageCount}}">&#155;&#155;</a>
+      </div>
+    </div>
+</div>

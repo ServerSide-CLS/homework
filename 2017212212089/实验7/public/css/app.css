@@ -1,0 +1,14 @@
+.fontCenter {
+    text-align: center;
+}
+.addPadding{
+    padding: 10px;
+}
+
+.addMargin{
+    margin: 10px;
+}
+
+.fontRight{
+    text-align: right;
+}

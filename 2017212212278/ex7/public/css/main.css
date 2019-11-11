@@ -1,0 +1,33 @@
+.header{
+    height:50px;
+    background-color: #333300;
+}
+.footer{
+    height: 50px;
+    background-color: #333300;
+/*    position: absolute;*/
+}
+.hed{
+    font-size: 30px;
+    color: #FFFFCC;
+    margin-left:630px; 
+}
+.fot{
+    color: #FFFFCC;
+}
+.container{
+    width: 1100px;
+    margin: 0 auto;
+}
+.content{
+    margin-top: 50px;
+    padding: 20px;
+}
+.pic{
+    margin-bottom: 30px;
+}
+.picc{
+    border: 3px solid black;
+    width: 300px;
+    height: 150px;
+}

@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+      {{#each data}}
+        <div class="col-xs-5 col-xs-offset-1 col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-1 itembox">{{this}}</div>
+      {{/each}}
+    </div>
+
+	<div class="btn_pages">
+    <a href="/?page={{prepage}}">&lt;&lt;lastpage</a>
+    {{#each List}}    
+        {{#if flag_choose}}     
+          <a class="clicknow" href="/?page={{this.b}}">{{this.b}}</a>          
+        {{/if}}
+        {{#if flag_not_choose}}
+          <a class="" href="/?page={{this.b}}">{{this.b}}</a>
+        {{/if}}
+    {{/each}}
+      <a href="/?page={{nextpage}}">nextpage&gt;&gt;</a>
+  </div>
+
+
+</div>

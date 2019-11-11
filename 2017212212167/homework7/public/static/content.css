@@ -1,0 +1,39 @@
+body{
+  background-color:white;
+}
+
+table{
+  margin: 0 auto;
+  margin-bottom:40px;
+  border-spacing:50px;
+}
+
+#content{
+  height: 500px;
+}
+
+table tr>td{
+  text-align:center;
+  width:200px;
+  height:150px;
+  border:1px solid black;
+}
+
+.pages {
+  position:absolute;
+  left:40%;
+  top:75%;
+}
+
+.pages li {
+  display:inline;
+}
+
+.pages li a {
+  float:left;
+  padding:5px;
+  text-decoration:none;
+}
+.pages li a.active {
+  background-color:gray;
+}

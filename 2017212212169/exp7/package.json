@@ -1,0 +1,28 @@
+{
+  "name": "exp7",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-handlebars": "^3.1.0",
+    "handlebars": "^4.5.1",
+    "http-errors": "~1.6.3",
+    "jQuery": "^1.7.4",
+    "jade": "^1.11.0",
+    "jquery": "^3.4.1",
+    "jsdom": "^15.2.1",
+    "morgan": "^1.9.1",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

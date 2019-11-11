@@ -1,0 +1,29 @@
+.content{
+    margin: 100px 10px 100px 10px;
+    float:top;
+}
+.content-box{
+    border: 1px black solid;
+    padding: 50px;
+    margin:10px;
+    float:left;
+    float:100%;
+    width: 15%;
+}
+.page{
+    float:left;
+    float:100%;
+    width:8000px;
+}
+.left{
+    float:left;
+    float:5%;
+}
+.body{
+    float:left;
+    float:35%;
+}
+.right{
+    float:left;
+    float:5%;
+}

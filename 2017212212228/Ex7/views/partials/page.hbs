@@ -1,0 +1,21 @@
+let count = ret.length
+let pagesize = 10
+let pageCount = count/pagesize
+let pageNumber = 1
+res.render('goodslist',{
+  entries:     ret,
+  pageCount:   pageCount,
+  pageNumber:  pageNumber,
+  count:       count
+})
+<div class="page">
+  <ul class="m-header">
+    <a href="#"><<</a>
+  </ul>
+  <ul>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+  </ul>
+<div>

@@ -1,0 +1,102 @@
+body{
+    margin: 0 auto;
+}
+.content{
+    margin-top:40px ;
+    min-height: 478px;
+}
+.item-list {
+	width: 60%;
+    display: flex;
+    flex-direction: row;
+    font-family: "STSong";
+    font-weight: bold;
+    min-height: 413px;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+    padding-left: 10px;
+    min-height: 300px;
+    min-width: 250px;
+    margin-left: 85px;
+    max-height: 392px;
+}
+.badge-info{
+    font-size: 14px;
+    font-family: 'STXinwei';
+    color: rgb(141, 141, 141);
+}
+.item{
+	padding-bottom: 10px;
+	border-bottom: #DDDDDD solid 1px;
+}
+
+.book-image {
+	flex: 1;
+    text-align: center;
+
+}
+
+.book-image img {
+    width:150px; 
+    height:200px;
+}
+
+.book-info {
+	flex: 6;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 3px 6px;
+}
+
+.info-title{
+	font-size: 17px;
+	color: rgb(78, 104, 250);
+}
+.info-date {
+	color: #555555;
+	font-size: 12px;
+}
+
+.info-author {
+	font-size: 12px;
+}
+
+.info-author-name {
+	text-decoration: none;
+	color: rgb(140, 141, 141);
+}
+
+.book-price {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    font-size: 16px;
+    margin-top:20px ;
+}
+
+.pagination {
+	display: flex;
+	justify-content: center;
+    text-align: center;
+    list-style-type:none;
+    margin-top:20px ;
+}
+
+.page-link {
+    /* border: #555555 1px solid; */
+    margin: 5px;
+    padding: 2px;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    text-decoration:none;
+}
+
+#pagin{
+    padding: 5px;
+}
