@@ -1,0 +1,35 @@
+.container1 {
+  margin-top: 70px;
+  width: 45%;
+  margin-left: 30%;
+}
+
+/* 需要在一行的元素 */
+.inline-style {
+  display: inline-block;
+}
+
+/* 文字需要靠右 */
+.font-position-right {
+  text-align: right;
+}
+
+/* 注册按钮 */
+.register-btn {
+  margin-right: 15%;
+  margin-top: 5%;
+}
+
+/* 输入验证码 */
+#inIdentyCode {
+  margin-left: 45px;
+}
+
+.m-msg{
+  width: 300px;
+  height: 30px;
+  border-radius:5px;
+  text-align:center;
+  margin-left:43%;
+  color: rgb(250, 251, 252);
+}

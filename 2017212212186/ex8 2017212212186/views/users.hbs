@@ -1,0 +1,11 @@
+<body>
+  <h1>users page</h1>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    let data = { params: { usr: 123, pwd: 321 } }
+    axios.get('http://localhost:3000/users', data).then((r) => {
+      console.log(r)
+    })
+  </script>
+</body>
