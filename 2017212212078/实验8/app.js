@@ -7,8 +7,8 @@ var hbs = require('express-handlebars');
 
 var cookieParser = require('cookie-parser');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var indexRouter = require('./routes/index.js');
+var usersRouter = require('./routes/users.js');
 
 var app = express();
  
