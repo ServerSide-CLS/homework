@@ -27,6 +27,7 @@ $(document).ready(function(){
                 }
             }, 1000);
             console.log(code);
+            //注释掉了 控制台输出密码，这里测试多了发不了了
             // $.ajax({
             //     type:'POST',
             //     dataType:'json',
