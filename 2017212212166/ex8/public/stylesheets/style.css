@@ -1,0 +1,21 @@
+body {
+  text-align:center;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+#email, #password, #repeatPassword,#code{
+	width: 150px;
+}
+input{
+	text-align:center;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+#sendCode{
+	text-align:center;
+}
+#register{
+	text-align:center;
+}
+div{
+	margin:5px;
+}
