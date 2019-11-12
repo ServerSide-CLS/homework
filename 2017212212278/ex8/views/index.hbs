@@ -1,0 +1,55 @@
+<body>
+  <h1>Please Register</h1>
+  <form action="/" method="post">
+        <div>
+            <p>账号<input type="text" id="username" placeholder="请输入账号" /></p>
+        </div>
+        <div>
+            <p>密码<input type="password" id="password" placeholder="请输入密码" /></p>
+        </div>
+        <div>
+            <p>确认密码<input type="password" id="CPassword" placeholder="请再次输入密码" /></p>
+        </div>
+        <div>
+            <p>Email<input type="text" name="email" placeholder="请输入邮箱" id="email" />
+            </p>
+            <button id = 'find' onclick="abc()">获取验证邮箱有效性</button><input type="text" name="check" placeholder="请输入验证码" id="check" />
+            <br>
+            <br>
+        </div>
+       
+    <div>
+        <button type="submit" id = 'submit'>注册</button>
+    </div>
+    </form>
+  </body>
+<script src="/js/mail.js"></script>
+<script>
+    function abc() {
+        var time = 180;
+        const email = $('#email').val();
+        console.log('defaults.hbs :' + email)
+        $.get('/email', {
+            email: email
+        },
+        function (data) {
+                console.log(data)
+            });
+        var myTime = setInterval(() => {
+            subs();
+        }, 1000)
+        function subs() {
+            time--;
+            $('#find').attr("value", "请" + time + "秒后再试");
+            console.log('1');
+            if (time === 0) {
+                clearInterval(myTime);
+                $('#find').attr("value", "发送验证码");
+                $('#find').attr("disabled", false);
+            }
+            else {
+                $('#find').attr("disabled", true);
+            }
+        }
+    }
+</script>
