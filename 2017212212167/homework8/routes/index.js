@@ -43,7 +43,7 @@ router.post('/sendCode',function(req, res)
 	}
 	else
 	{
-		res.send(req.body.email+"请输入正确的邮箱地址！");
+		res.send("请输入正确的邮箱地址！");
 	}
 });
 
