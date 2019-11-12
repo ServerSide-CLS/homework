@@ -1,0 +1,44 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+#header{
+	height: 60px;
+	width: 100%;
+	font-size:50px;
+	line-height: 60px;
+	text-align: center;
+}
+
+#footer{
+	height: 60px;
+	width: 100%;
+	/*margin-top: 200px;*/
+	line-height: 60px;
+	text-align: center;
+}
+.list{
+	overflow: hidden;
+}
+.page{
+	text-align: center;
+}
+.page-up{
+	margin-right: 15%;
+}
+.page-down{
+	margin-left: 15%;
+}
+.list-img{
+	float: left;
+	height: 40%;
+	width: 45%;
+	margin-left: 1%;
+	margin-top: 10px;
+	text-align: center;
+	border: 1px black solid;
+}
+img{
+	height: 300px;
+	width: 300px;
+}
