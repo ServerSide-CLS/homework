@@ -2,73 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6076fc45-55df-49bf-98eb-e6f57ed89f8f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex_7.js" beforeDir="false" afterPath="$PROJECT_DIR$/ex_7.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/goodlist.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/goodlist.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image1_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image1_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image1_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image1_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image1_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image1_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image2_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image2_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image2_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image2_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image2_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image3_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image3_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image3_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image3_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image3_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image3_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image4_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image4_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image4_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image4_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image4_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image4_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image4_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image4_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image5_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image5_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image5_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image5_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image5_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image5_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image5_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image5_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image6_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image6_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image6_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image6_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image6_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image6_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image6_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image6_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image7_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image7_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image7_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image7_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image7_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image7_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image7_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/image7_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/lf.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/luo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/sl.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/sz.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/timg.jfif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/timg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/goodlist.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/goodlist.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules.zip" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -80,12 +14,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ex_7.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="102" column="21" lean-forward="true" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
+            <state relative-caret-position="2244">
+              <caret line="102" column="21" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -93,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/goodlist.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="462">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -102,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/static/goodlist.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="37" column="23" lean-forward="true" selection-end-line="45" selection-end-column="1" />
+            <state relative-caret-position="193">
+              <caret line="33" column="16" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -143,11 +77,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-5" />
     <option name="y" value="-5" />
     <option name="width" value="630" />
-    <option name="height" value="669" />
+    <option name="height" value="670" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -155,12 +89,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -193,20 +128,21 @@
       <workItem from="1572863083909" duration="8526000" />
       <workItem from="1572965835363" duration="2226000" />
       <workItem from="1572969262895" duration="2052000" />
+      <workItem from="1573546858365" duration="30000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13343000" />
+    <option name="totallyTimeSpent" value="13373000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21466315" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.06702413" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -216,8 +152,9 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.16713881" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.09490085" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -249,24 +186,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ex_7.js">
+    <entry file="file://$PROJECT_DIR$/views/goodlist.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="102" column="21" lean-forward="true" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
+        <state relative-caret-position="462">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/goodlist.hbs">
+    <entry file="file://$PROJECT_DIR$/ex_7.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="2244">
+          <caret line="102" column="21" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/static/goodlist.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="37" column="23" lean-forward="true" selection-end-line="45" selection-end-column="1" />
+        <state relative-caret-position="193">
+          <caret line="33" column="16" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
         </state>
       </provider>
     </entry>

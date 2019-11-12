@@ -1,0 +1,46 @@
+body{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+
+}
+p{
+    text-align: center;
+    font-family: "ËÎÌå","·ÂËÎ",sans-serif;
+    font-weight: bold;
+    font-size: 200%;
+    font-style: italic;
+    color: red;
+    opacity: 0.5;
+}
+
+.rectangle{
+    float: left;
+    border:1px dashed #000;
+    margin: 20px;
+    width: 20%;
+    height: 220px;
+}
+.Introduction{
+    width: 20%;
+    margin: auto 2%;
+    float: left;
+    text-align: center;
+    font-family: "ËÎÌå","·ÂËÎ",sans-serif;
+    font-weight: bold;
+    font-size: 100%;
+    font-style: italic;
+    color: blue;
+    opacity: 0.5;
+}
+#change{
+    text-align: center;
+    font-family: "ËÎÌå","·ÂËÎ",sans-serif;
+    font-weight: bold;
+    font-size: 150%;
+    font-style: italic;
+    color: red;
+    opacity: 0.5;
+    margin: 0 28%;
+}
