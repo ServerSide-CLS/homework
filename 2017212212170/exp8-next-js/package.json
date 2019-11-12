@@ -1,0 +1,32 @@
+{
+  "name": "exp8-next-js",
+  "version": "1.0.0",
+  "description": "next.js + React => SSR",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon server/index.js",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "lowdb": "^1.0.0",
+    "mongoose": "^5.7.8",
+    "next": "^9.1.2",
+    "nodemailer": "^6.3.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-semantic-toasts": "^0.6.5",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.1"
+  },
+  "devDependencies": {
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "url-loader": "^2.2.0"
+  }
+}
