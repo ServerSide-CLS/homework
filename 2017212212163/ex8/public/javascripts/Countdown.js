@@ -1,5 +1,5 @@
 function countdown(){
-    var time  = 10;  //定义3分钟（180s）的倒计时
+    var time  = 180;  //定义3分钟（180s）的倒计时
     var email = $('#email').val();//获取输入框的邮箱
     var user_name = $('#userName').val();//获取输入的账户名
 
