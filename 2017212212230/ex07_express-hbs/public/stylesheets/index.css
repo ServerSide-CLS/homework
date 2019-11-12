@@ -48,11 +48,15 @@
   flex-direction: row;
 }
 
-.m-page-body a {
+.m-page-block {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 30px;
   height: 30px;
   border: 1px solid #ddd;
+}
+
+.currentPage {
+  border: 2px solid tomato;
 }

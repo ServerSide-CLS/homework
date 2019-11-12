@@ -1,0 +1,47 @@
+ {{#each movies}}
+<div class="row">
+        <p class="ul first pline"></p>
+        <table class="col-md-12"> 
+            <tr class="item">
+                <td width="100" valign="top">
+                        <a class="nbg" href={{alt}}  title="{{title}}">
+                            <img src={{images.small}} width="75" alt="{{title}}" class=""/>
+                        </a>
+                    </td>
+                    <td valign="top">
+                        <div class="pl2">
+                        <a href={{alt}}  class="title">
+                            {{title}}
+                            / <span style="font-size:13px;">{{original_title}}</span>
+                        </a>
+                        <p class="pl1">
+                            {{#each pubdates}}
+                                {{this}}
+                            {{/each}}
+                        </p>
+                        <p class="pl">
+                            {{#each directors}}
+                                {{this.name}}/
+                            {{/each}}
+                            {{#each casts}}
+                                {{this.name}}/
+                            {{/each}}
+                            {{durations}}
+                        </p>
+                        <div class="plot">
+                            
+                        </div>           
+                        <div class="star clearfix">
+                            {{#each genres}}
+                                <span class="label label-primary">{{this}}</span>
+                            {{/each}}
+                            <span class="label label-warning">{{rating.average}}分</span>
+                            <span class="label label-success">({{collect_count}}人评价)</span>
+                        </div>
+                    </div>
+
+                </td>
+            </tr>
+        </table>
+</div>
+{{/each}}

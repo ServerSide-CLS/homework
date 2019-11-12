@@ -1,0 +1,16 @@
+{{css '/stylesheets/content.css'}}
+{{js '/javascript/content.js'}}
+{{js '/javascript/index.js'}}
+
+<div class="ttext">
+    {{#each messages}}
+    <p>{{this.text}}</p>
+    {{/each}}
+</div>
+
+<div class="page">
+    <ul class="p">
+        <li id="page1"><a href="/?page={{l1}}">{{l1}}</a></li>
+        <li id="page2"><a href="/?page={{l2}}">{{l2}}</a></li>
+    </ul>
+</div>

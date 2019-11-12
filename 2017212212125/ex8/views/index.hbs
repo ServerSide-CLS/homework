@@ -1,0 +1,8 @@
+<h1>当前用户：{{username}}</h1>
+<a href="/logout">logout</a>
+<h2>已注册的用户列表：</h2>
+<ol>
+    {{#userList}}
+    <li>{{.}}</li>
+    {{/userList}}
+</ol>

@@ -1,0 +1,61 @@
+<h1>lab8_signup</h1>
+<form action="/" method="post">
+    <tr>
+        <td>
+            <text>password&emsp;&emsp;&nbsp;&nbsp;:</text>
+            <input type="password" name="password" placeholder="password" required><br>
+        </td>
+        <td>
+            <text>repassword&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</text>
+            <input type="password" name="comfirmed" placeholder="input your passsword again" required><br>
+        </td>
+        <td>
+            <text>email&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;:</text>
+            <input type="email" name="email" placeholder="email" id="email" required><br>
+        </td>
+        <td>
+            <input type="button" onclick="abc()" value="&emsp;&nbsp;send&emsp;&nbsp;" id="emailcore"></input>
+            <input type="text" name="code" placeholder="code" required><br>
+        </td>
+        <td><button type = "submit" style="width: 35%">Register</button></td>
+    </tr>
+</form>
+
+<script>
+    function abc() {
+        console.log("yyy");
+        let time =180;
+        let email=$('#email').val();
+        let id=$('#id').val();
+
+        $.get('/email', {
+            email:email
+                },
+                function (data) {
+                    console.log(data);
+                }
+        );
+
+        var now=setInterval(function () {
+            subs();
+        },1000);
+
+        function subs() {
+            time--;
+            console.log("ttt:"+time);
+
+            if(time==0){
+                clearInterval(now);
+
+                $('#emailcore').attr("value","send code ");
+                $('#emailcore').attr("disabled",false);
+                // console.log("0");
+            }else{
+                $('#emailcore').attr("value",time+'s again');
+                //$('#emailcore').attr("value","send code ");
+                $('#emailcore').attr("disabled",true);
+                // console.log("1");
+            }
+        }
+    }
+</script>

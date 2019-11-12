@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  </head>
+  <body>
+    <form action="/signup" method="post">
+      <input type="text" name="email" placeholder="email" required>
+      <input type="button" class="check" value="获取验证码">
+      <input type="text" name="code" placeholder="code" required>
+      <input type="password" name="password" placeholder="password" required>
+      <input type="password" name="repassword" placeholder="repassword" required>
+      <button type ="Submit">Sign up</button>
+    </form>
+    <script src="js/jquery.js"></script>
+    <script src="js/check.js"></script>
+    {{#if context}}
+      <script>
+        alert("{{context}}")
+      </script>
+    {{/if}}
+  </body>
+</html>

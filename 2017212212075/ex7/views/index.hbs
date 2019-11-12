@@ -1,0 +1,28 @@
+<div >
+    {{#each products}}
+        <div class="col-xs-4 col-md-4">
+            <div class="pro">
+                <p>{{this.id}}</p>
+                <img src="{{this.src}}">
+            </div>
+        </div>
+    {{/each}}
+</div>
+
+<div class="pa" >
+    <ul class="pagination ">
+        <li>
+            <a href="goodlist?page=1" >
+                <span aria-hidden="true">首页</span>
+            </a>
+        </li>
+        {{#each pages}}
+            <li><a href=goodlist?page={{this}}>{{this}}></a></li>
+        {{/each}}
+        <li>
+            <a href=goodlist?page={{maxnum}}>
+                <span aria-hidden="true">尾页</span>
+            </a>
+        </li>
+    </ul>
+</div>

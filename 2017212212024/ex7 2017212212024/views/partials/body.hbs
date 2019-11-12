@@ -1,0 +1,28 @@
+<div class="row">
+    {{#each data}}
+    <div class="col-md-2 card">
+        <img src="images/coffee.jpg" alt="This is a picture" class="images">
+        <p>No:{{this}}</p>
+        <p>Cost:$10</p>
+    </div>
+    {{/each}}
+</div>
+
+<nav aria-label="Page navigation" class="pagelist">
+  <ul class="pagination">
+    <li>
+      <a href="/?page={{prepage}}" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    {{#each pageCountList}}
+        <li><a href="/?page={{this}}">{{this}}</a></li>
+    {{/each}}
+
+    <li>
+        <a href="/?page={{nextpage}}" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+        </a>
+    </li>
+  </ul>
+</nav>

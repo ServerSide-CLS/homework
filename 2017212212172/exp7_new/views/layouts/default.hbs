@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="css/default.css">
+  <meta name="referrer" content="no-referrer" />
+
+  <title>Template</title>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</head>
+<body class="">
+    {{>header}}
+    <div class="container main">
+        {{>content}}
+        <p class="ul first pline"></p>
+        <div id="page" name={{nowpage}}>
+          <ul class="pagination" name={{totnum}} id="pagenum">
+              {{#each paging}}
+                  <li 
+                  id="{{index}}" 
+                  {{#if cur}}class="page xl-active xl-disabled"{{/if}} 
+                  {{#if unclickable}} class="page xl-disabled" {{/if}} class="page">{{{text}}}</li>
+              {{/each}}
+          </ul>
+        </div>
+    </div>
+    {{>footer}}
+</body>
+</html>

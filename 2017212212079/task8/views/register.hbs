@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/formPost" class="form-horizontal" method="POST">
+        <div class="form-group">
+            <label>
+                Email
+                <input type="text" class="form-control" placeholder="请输入Email" name="Email" id="Email">
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                密码
+                <input type="password" class="form-control" placeholder="请输入密码" name="pwd" id="pwd">
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                确认密码
+                <input type="password" class="form-control" placeholder="请确认密码" name="pwdConfirm" id="pwdConfirm">
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                <input type="text" class="form-control" placeholder="请输入验证码" name="checkNum" id="checkNum">
+            </label>
+            <button type="button" class="btn btn-primary" id="getCode">获取验证码</button>
+            <div id="waitTimeTip"></div>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit" id="registerConfirm">注册</button>
+        </div>
+    </form>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/public/js/register.js"></script>
+</body>
+</html>

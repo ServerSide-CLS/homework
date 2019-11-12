@@ -126,3 +126,14 @@ a {
 .page .p {
     display: inline;
 }
+
+.main-footer {
+    padding: 15px 0;
+    background-color: #efefef;
+}
+
+.main-footer .copyright {
+    text-align: center;
+    color: #311e3e;
+    font-size: 16px;
+}

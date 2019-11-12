@@ -1,0 +1,39 @@
+.header{
+  text-align: center;
+  background-color: #eee;
+  margin: 0 0 0 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.p{
+  font-size: 25px;
+}
+.footer{
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  background-color: #eee;
+  z-index: 9999;
+  margin-top: 10px;
+  text-align: center;
+}
+.con{
+  margin-top: 5%;
+}
+.pro{
+  border: 1px solid black ;
+  padding-top: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+  min-height: 200px;
+  margin: 10px;
+}
+.pa{
+  position: absolute;
+  bottom: 10%;
+  left: 41%;
+  height: 50px;
+  text-align: center;
+}

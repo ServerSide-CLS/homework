@@ -1,0 +1,55 @@
+/* header */
+.header {
+  text-align: center;
+  margin-top:50px;
+}
+
+/* .content */
+.content {
+  height: 500px;
+}
+
+/* 表单 */
+table {
+  margin: 0 auto;
+  border-spacing: 40px 40px;
+}
+
+table tr>td {
+  text-align: center;
+  width: 300px;
+  height: 150px;
+  border: 1px solid;
+  border-radius:25px
+}
+
+/* 分页 */
+.pagination {
+  display: inline-block;
+  position: left;
+}
+
+.pagination li {
+  display: inline;
+}
+
+.pagination li a {
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+.pagination li a.active {
+  background-color: #bbb;
+  color: white;
+}
+
+.pagination li a:hover:not(.active) {
+  background-color: #eee;
+  color: white;
+}
+
+
+/* footer */
+.footer {
+  text-align: center;
+}

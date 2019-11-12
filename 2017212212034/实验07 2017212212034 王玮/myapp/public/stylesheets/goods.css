@@ -1,0 +1,56 @@
+
+.goods{
+    display: flex;
+    height: 350px;
+    width: 300px;
+    padding: 10px;
+    flex-direction: column;
+    background: #365e7c;
+    border-radius: 6px;
+    margin: 15px;
+    box-shadow: -10px 10px 8px #222526;
+}
+
+.logoBox{
+    display: block;
+    height: 190px;
+}
+
+.goodsImg{
+    display: block;
+    height: 190px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.goodInfo{
+    display: block;
+    text-align: left;
+}
+
+.goodName{
+    display: block;
+    font-family: "Adobe Garamond Pro Bold";
+    color: #ffffe0;
+}
+
+.goodPrice{
+    display: block;
+    font-family: "Adobe Garamond Pro Bold";
+    color: #ffffe0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.purchaseBtn{
+    display: inline-block;
+    padding: 1px 20px;
+    border-radius: 6px;
+    background: #5bc0de;
+    border-color: #46b8da;
+    text-align: center;
+    font-family: "Adobe Garamond Pro Bold";
+    color: #ffffe0;
+}

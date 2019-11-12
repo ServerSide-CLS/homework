@@ -13,7 +13,6 @@
         <div class="row">
             {{#each rowData}}
             <div class="col-md-2 part">
-                <image src="/static/images/bg.jpeg" class="partImg"></image>
                 <div class="text">
                     <div>
                         名称:
@@ -31,19 +30,9 @@
         <div class="paging">
             <nav aria-label="Page navigation">
                 <ul class="pagination">
-                    <li>
-                        <a href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
                     {{#each page}}
                     <li><a href="/page{{pageNum}}">{{pageNum}}</a></li>
                     {{/each}}
-                    <li>
-                        <a href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
                 </ul>
             </nav>
         </div>

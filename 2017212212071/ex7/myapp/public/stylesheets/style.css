@@ -1,0 +1,110 @@
+body {
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+header{
+  position:fixed;
+  top:0px;
+  width:100%;
+  height:60px;
+  background-color: darkseagreen;
+}
+
+.headTitle{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.container{
+  position: fixed;
+  top: 60px;
+  bottom: 40px;
+  width: 100%;
+}
+
+.back{
+  position: relative;
+  padding: 30px !important;
+  width: 60%;
+  height: 50%;
+  top: 100px;
+  height: 500px;
+  margin: 0 auto;
+  background: rgba(255, 255, 200, .85);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  border-radius: 5px;
+  transition: .25s;
+}
+
+img{
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+}
+
+.list{
+  list-style: none;
+  margin-left: 70px;
+}
+
+.li{
+  float: left;
+  width: auto;
+  padding-bottom: 36px;
+  padding-right: 110px;
+}
+
+a{
+  margin-right: 0px;
+  display: block;
+  overflow: hidden;
+}
+
+.liText {
+  float: left;
+  width: 150px;
+  height: 72px;
+  position: relative;
+  font-size: 20px;
+  line-height: 5px;
+}
+
+.page{
+  position: fixed;
+  margin: auto;
+  padding-left: 38%;
+  bottom: 80px;
+}
+
+ul.pagination {
+  display: inline-block;
+  padding: 0 auto;
+  margin: 0 auto;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+ul.pagination li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+
+footer{
+  height: 40px; /*设定footer高度*/
+  position: fixed; /*设定footer位置在底部*/
+  bottom: 0;
+  width: 100%; /*展开footer宽度*/
+  background-color: wheat;
+  line-height: 40px;
+  text-align: center;
+}

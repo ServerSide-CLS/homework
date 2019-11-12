@@ -1,0 +1,31 @@
+<div class="container">
+
+    <div class="back">
+        <ul class="list">
+            {{#each product}}
+                <li class="li">
+                    <a href="/product?id={{id}}">
+                        <div class="cp">
+                            产品{{id}}
+                        </div>
+                    </a>
+                    <div class="liText">
+                        <p>{{name}}</p>
+                        <p>{{price}} 元</p>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <div class="page">
+        <ul class="pagination" style="list-style: none;">
+            <li><a href="/index?page=1" style="display: inline"><<</a></li>
+            {{#each pageList}}
+                <li><a href="/index?page={{data}}">{{data}}</a></li>
+            {{/each}}
+            <li><a href="/index?page={{totalPage}}">>></a></li>
+        </ul>
+    </div>
+
+</div>

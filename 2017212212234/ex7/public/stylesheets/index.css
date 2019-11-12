@@ -1,0 +1,33 @@
+*{
+    margin: 0px
+}
+body{
+    background-color: black;
+}
+
+div.content{
+    widows: 600px;
+    height: 420px;
+    background-color: white;
+}
+
+div#footer{
+    widows: 600px;
+    height: 80px;
+    background-color: rgb(255, 227, 239);
+}
+
+div#header{
+    widows: 600px;
+    height: 105px;
+    background-color: rgb(219, 112, 147);
+    
+}
+
+p{
+    color: rgb(238, 66, 132);
+    font-size: 15px;
+    text-align: center;
+    padding-top: 30px;
+
+}

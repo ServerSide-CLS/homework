@@ -1,0 +1,15 @@
+.item{
+    padding:5px;
+}
+.item img{
+    width:400px;
+    height: 250px;
+}
+.footer{
+    position:absolute;
+    bottom: 5px;
+    z-index: 100000000;
+}
+.header{
+	margin-top: 10px;
+}

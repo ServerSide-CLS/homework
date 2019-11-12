@@ -17,6 +17,10 @@ app.all('*', function (req, res, next) {
 });
 
 app.get('/getinfo',function (req,res) {
-  res.send('hahahasss');
+  var pageInfo = {
+    pageNum : 10,
+    showNum : 8
+  };
+  res.send(pageInfo);
 });
 

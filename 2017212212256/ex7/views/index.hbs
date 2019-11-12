@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="list">
+
+		{{#each imgdata}}
+		<div class="list-img"><img src="{{this}}">
+		</div>
+		{{/each}}
+	</div>
+	<br>
+	<div class="page">
+		<div class="page-up">
+			<a href="/?page=1"><<</a>
+		</div>
+		<div class="page-body">
+			{{#each pageCountList}}
+			<a href="/?page={{this}}">{{this}}</a>
+			{{/each}}
+		</div>
+		<div class="page-down">
+			<a href="/?page={{pageCount}}">>></a>
+		</div>
+	</div>
+</div>

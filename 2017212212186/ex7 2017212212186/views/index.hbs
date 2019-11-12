@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="/static/stylesheets/index.css" />
+<div class="content">
+    <div class="item-list">
+        {{#each book}}
+        <div class="item">
+            <div class="book-image">
+                <img src="{{this.image}}" alt="">
+            </div>
+
+            <div class="book-info">
+                <div>
+                    <div class="info-title">
+                        <p>{{this.title}}</p>
+                        <span class='info-date'>{{this.pubdate}}</span>
+                    </div>
+
+                    <div class='info-author'>
+                        <span class="info-author-name">{{this.author}}</span>
+                    </div>
+                </div>
+                <div class="info-tags">
+                    {{#each tags}}
+                    <span class="badge-info">{{this.title}}</span>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="book-price">
+                <span>{{this.price}}</span>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    <div class="pagination">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination" id="pagin">
+                {{pagination currPage totPage}}
+            </ul>
+        </nav>
+    </div>
+</div>

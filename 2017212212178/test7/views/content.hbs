@@ -1,0 +1,22 @@
+<div>
+    {{!-- 产品展示 --}}
+    <div>
+        {{#each thispagearray}}
+            <img src="../images/{{this}}.jpg"/>
+        {{/each}}
+    </div>
+    {{!-- 分页功能 --}}
+    <div class="page">
+        <a href="/?pagenum={{pagenum1}}">«</a>
+        <a href="/?pagenum={{pagenum1}}"  class="checked">{{pagenum1}}</a>
+        <a href="/?pagenum={{pagenum}}">{{pagenum}}</a>
+        <a href="/?pagenum={{pagenum2}}">{{pagenum2}}</a>
+        <a href="/?pagenum={{pagenum2}}" id="key">...</a>
+        <a href="/?pagenum={{pagesize}}">{{pagesize}}</a>
+        <a href="/?pagenum={{pagenum2}}">»</a>
+    </div>
+    {{!-- 当前页面显示 --}}
+    <div>
+        <p>当前为第{{nowpage}}页</p>
+    </div>
+</div>

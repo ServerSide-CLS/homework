@@ -1,0 +1,23 @@
+<div>
+    {{#each list}}
+    <div>
+        {{#each rowData}}
+        <div>
+            <div>
+                <span>{{aaa}}</span>
+                <span>{{bbb}}</span>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/each}}
+    <div>
+        <nav>
+            <ul>
+                {{#each page}}
+                <a href="/page{{pageNum}}">{{pageNum}}</a>
+                {{/each}}
+            </ul>
+        </nav>
+    </div>
+</div> 

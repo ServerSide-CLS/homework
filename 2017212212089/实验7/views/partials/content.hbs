@@ -1,0 +1,29 @@
+<div class="content" style="margin: 20px;margin-top:40px">
+    <div class="row">
+        {{#each list.records as |item|}}
+        <div class="col addMargin">
+            <div class="card" style="width: 300px; height: 300px">
+                <img src="/images/1.jpg" class="card-img-top" alt="show failed" style=" width: 250px; height: 150px;margin:25px">
+                <div class="card-body">
+                    <h5 class="card-title">title:这是个标题</h5>
+                    <p class="card-text">这里是具体的简介哦！</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    <div style="margin: 20px;">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-end">
+                {{#each list.pageCount as |item|}}
+                {{#if item.isactive}}
+                <li class="page-item active"><a class="page-link" href="/?page={{item.page}}&limit=8">{{item.page}}</a></li>
+                {{else}}
+                <li class="page-item"><a class="page-link" href="/?page={{item.page}}&limit=8">{{item.page}}</a></li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </nav>
+    </div>
+    {{!-- <h1>total: {{list.total}}</h1> --}}
+</div>
