@@ -3,13 +3,13 @@
 }
 .login_title{
     margin:10px 0;
-    line-height:50px;
+    line-height:40px;
 	font-size:20px;
-    color:#666666;
+    color:#665544;
     letter-spacing:30px;
 }
 .code{
-    width:60%;
+    width:55%;
     display: inline-block;
 }
 .bt{
