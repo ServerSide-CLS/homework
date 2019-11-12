@@ -13,7 +13,7 @@ router.post('/CheckEmail',function(req,res){
     var mail = req.body.mail;
     var server  = email.server.connect({
         user:    "1335678519@qq.com",      // 你的QQ用户
-        password:"xrrwwjncnygzfgii",           // 注意，不是QQ密码，而是刚才生成的授权码
+        password:"",           // 注意，不是QQ密码，而是刚才生成的授权码 保密
         host:    "smtp.qq.com",         // 主机，不改
         ssl:     true                   // 使用ssl
     });
