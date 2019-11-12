@@ -36,30 +36,30 @@ app.get("/goodlist",function (req,res) {
             vis:vis[1],
                 images1:[
                     {
-                        src:"/static/images/image1_1.png"
+                        src:"Here is a picture 1_1"
                     },
                     {
-                        src:"/static/images/image1_2.png"
+                        src:"Here is a picture 1_2"
                     },
                     {
-                        src:"/static/images/image1_3.png"
+                        src:"Here is a picture 1_3"
                     },
                     {
-                        src:"/static/images/image1_4.png"
+                        src:"Here is a picture 1_4"
                     },
                 ],
                 images2:[
                     {
-                        src:"/static/images/image1_5.png"
+                        src:"Here is a picture 1_5"
                     },
                     {
-                        src:"/static/images/image1_6.png"
+                        src:"Here is a picture 1_6"
                     },
                     {
-                        src:"/static/images/image1_7.png"
+                        src:"Here is a picture 1_7"
                     },
                     {
-                        src:"/static/images/image1_8.png"
+                        src:"Here is a picture 1_8"
                     },
                 ],
             },
@@ -67,30 +67,30 @@ app.get("/goodlist",function (req,res) {
                 vis:vis[2],
                 images1:[
                     {
-                        src:"/static/images/image2_1.png"
+                        src:"Here is a picture 2_1"
                     },
                     {
-                        src:"/static/images/image2_2.png"
+                        src:"Here is a picture 2_2"
                     },
                     {
-                        src:"/static/images/image2_3.png"
+                        src:"Here is a picture 2_3"
                     },
                     {
-                        src:"/static/images/image2_4.png"
+                        src:"Here is a picture 2_4"
                     },
                 ],
                 images2:[
                     {
-                        src:"/static/images/image2_5.png"
+                        src:"Here is a picture 2_5"
                     },
                     {
-                        src:"/static/images/image2_6.png"
+                        src:"Here is a picture 2_6"
                     },
                     {
-                        src:"/static/images/image2_7.png"
+                        src:"Here is a picture 2_7"
                     },
                     {
-                        src:"/static/images/image2_8.png"
+                        src:"Here is a picture 2_8"
                     },
                 ],
             },
@@ -98,30 +98,30 @@ app.get("/goodlist",function (req,res) {
                 vis:vis[3],
                 images1:[
                     {
-                        src:"/static/images/image3_1.png"
+                        src:"Here is a picture 3_1"
                     },
                     {
-                        src:"/static/images/image3_2.png"
+                        src:"Here is a picture 3_2"
                     },
                     {
-                        src:"/static/images/image3_3.png"
+                        src:"Here is a picture 3_3"
                     },
                     {
-                        src:"/static/images/image3_4.png"
+                        src:"Here is a picture 3_4"
                     },
                 ],
                 images2:[
                     {
-                        src:"/static/images/image3_5.png"
+                        src:"Here is a picture 3_5"
                     },
                     {
-                        src:"/static/images/image3_6.png"
+                        src:"Here is a picture 3_6"
                     },
                     {
-                        src:"/static/images/image3_7.png"
+                        src:"Here is a picture 3_7"
                     },
                     {
-                        src:"/static/images/image3_8.png"
+                        src:"Here is a picture 3_8"
                     },
                 ],
             },
@@ -129,30 +129,30 @@ app.get("/goodlist",function (req,res) {
                 vis:vis[4],
                 images1:[
                     {
-                        src:"/static/images/image4_1.png"
+                        src:"Here is a picture 4_1"
                     },
                     {
-                        src:"/static/images/image4_2.png"
+                        src:"Here is a picture 4_2"
                     },
                     {
-                        src:"/static/images/image4_3.png"
+                        src:"Here is a picture 4_3"
                     },
                     {
-                        src:"/static/images/image4_4.png"
+                        src:"Here is a picture 4_4"
                     },
                 ],
                 images2:[
                     {
-                        src:"/static/images/image4_5.png"
+                        src:"Here is a picture 4_5"
                     },
                     {
-                        src:"/static/images/image4_6.png"
+                        src:"Here is a picture 4_6"
                     },
                     {
-                        src:"/static/images/image4_7.png"
+                        src:"Here is a picture 4_7"
                     },
                     {
-                        src:"/static/images/image4_8.png"
+                        src:"Here is a picture 4_8"
                     },
                 ],
             },
@@ -160,30 +160,30 @@ app.get("/goodlist",function (req,res) {
                 vis:vis[5],
                 images1:[
                     {
-                        src:"/static/images/image5_1.png"
+                        src:"Here is a picture 5_1"
                     },
                     {
-                        src:"/static/images/image5_2.png"
+                        src:"Here is a picture 5_2"
                     },
                     {
-                        src:"/static/images/image5_3.png"
+                        src:"Here is a picture 5_3"
                     },
                     {
-                        src:"/static/images/image5_4.png"
+                        src:"Here is a picture 5_4"
                     },
                 ],
                 images2:[
                     {
-                        src:"/static/images/image5_5.png"
+                        src:"Here is a picture 5_5"
                     },
                     {
-                        src:"/static/images/image5_6.png"
+                        src:"Here is a picture 5_6"
                     },
                     {
-                        src:"/static/images/image5_7.png"
+                        src:"Here is a picture 5_7"
                     },
                     {
-                        src:"/static/images/image5_8.png"
+                        src:"Here is a picture 5_8"
                     },
                 ],
             },
@@ -191,30 +191,30 @@ app.get("/goodlist",function (req,res) {
                 vis:vis[6],
                 images1:[
                     {
-                        src:"/static/images/image6_1.png"
+                        src:"Here is a picture 6_1"
                     },
                     {
-                        src:"/static/images/image6_2.png"
+                        src:"Here is a picture 6_2"
                     },
                     {
-                        src:"/static/images/image6_3.png"
+                        src:"Here is a picture 6_3"
                     },
                     {
-                        src:"/static/images/image6_4.png"
+                        src:"Here is a picture 6_4"
                     },
                 ],
                 images2:[
                     {
-                        src:"/static/images/image6_5.png"
+                        src:"Here is a picture 6_5"
                     },
                     {
-                        src:"/static/images/image6_6.png"
+                        src:"Here is a picture 6_6"
                     },
                     {
-                        src:"/static/images/image6_7.png"
+                        src:"Here is a picture 6_7"
                     },
                     {
-                        src:"/static/images/image6_8.png"
+                        src:"Here is a picture 6_8"
                     },
                 ],
             },
@@ -222,34 +222,34 @@ app.get("/goodlist",function (req,res) {
                 vis:vis[7],
                 images1:[
                     {
-                        src:"/static/images/image7_1.png"
+                        src:"Here is a picture 7_1"
                     },
                     {
-                        src:"/static/images/image7_2.png"
+                        src:"Here is a picture 7_2"
                     },
                     {
-                        src:"/static/images/image7_3.png"
+                        src:"Here is a picture 7_3"
                     },
                     {
-                        src:"/static/images/image7_4.png"
+                        src:"Here is a picture 7_4"
                     },
                 ],
                 images2:[
                     {
-                        src:"/static/images/image7_5.png"
+                        src:"Here is a picture 7_5"
                     },
                     {
-                        src:"/static/images/image7_6.png"
+                        src:"Here is a picture 7_6"
                     },
                     {
-                        src:"/static/images/image7_7.png"
+                        src:"Here is a picture 7_7"
                     },
                     {
-                        src:"/static/images/image7_8.png"
+                        src:"Here is a picture 7_8"
                     },
                 ],
             }
         ]
     });
 });
-app.listen(1227);
+app.listen(3000);
