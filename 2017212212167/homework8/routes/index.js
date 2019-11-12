@@ -63,7 +63,8 @@ router.post('/', function(req, res){
  	else
  	{
  		var str = JSON.stringify(req.body,"","\t");
- 		fs.writeFile('user.json',str,function(err){
+ 		str="\n"+str;
+ 		fs.appendFile('user.json',str,function(err){
 			if (err) {res.status(500).send('Server is error...')}
 		})
 		res.send("注册成功(*^▽^*)！");
