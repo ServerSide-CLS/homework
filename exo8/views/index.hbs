@@ -1,0 +1,81 @@
+<body>
+    <h1>用户注册</h1>
+    <form action="/" method="post">
+        <div>
+            <p>用户名:  <input type="text" name="username" placeholder="请输入用户名" /></p>
+        </div>
+        <div>
+            <p>密码:  <input type="password" name="password" placeholder="请输入密码" /></p>
+        </div>
+        <div>
+            <p>确认密码:  <input type="password" name="ConfirmPassword" placeholder="请再次输入密码" /></p>
+        </div>
+        <div>
+            <p>Email:  <input type="text" name="email" placeholder="请输入邮箱" id="email" />
+            <input type="button" onclick="sendEmailid()" class="btn btn-danger" id="emailcore" value="发送验证码"><br>
+            <p>验证码:   <input type="text" name="code" placeholder="请输入验证码" id="code" />
+        </div>
+        <input type="submit" class="btn">
+    </form>
+    <footer>
+        <div>qinchen</div>
+    </footer>
+</body>
+
+<style>
+    h1{
+        text-align: left;
+    }
+    form{
+        text-align: left;
+        padding-top: 10px;
+        font-size: 13px;
+        line-height: 20px;   
+    }
+    p{
+        margin-top: 15px;
+    }
+    footer{
+        text-align: center;
+        color: darkgray;
+        margin-top: 10px;
+    }
+    .btn{
+        background-color: rgba(221, 221, 221, 0.733);
+        border: rgba(221, 221, 221, 0.733);
+        color: black;
+    }
+</style>
+
+<script>
+    function sendEmailid() {
+        var time = 3*60;
+        const email = $('#email').val();
+        console.log('defaults.hbs :' + email)
+        $.get('/email', {
+            email: email
+        },
+        function (data) {
+              console.log(data)
+        });
+        var myTime = setInterval(() => {
+            subs();
+        }, 1000)
+        function subs() {
+            time--;
+            $('#emailcore').attr("value", "请" + time + "秒后再试");
+            console.log('a');
+            if (time === 0) {
+                clearInterval(myTime);
+                $('#emailcore').attr("value", "发送验证码");
+                $('#emailcore').attr("disabled", false);
+                console.log('b');
+            }
+            else {
+                $('#emailcore').attr("disabled", true);
+                console.log('c');
+            }
+        }
+    }
+</script>
+
