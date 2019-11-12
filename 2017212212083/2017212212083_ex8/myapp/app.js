@@ -20,9 +20,6 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-// 设置session
-app.use(session(opt));
-
 // 设置模板引擎
 app.set('view engine', 'hbs');
 // 设置静态资源目录

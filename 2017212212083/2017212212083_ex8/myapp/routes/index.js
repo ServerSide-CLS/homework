@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 let sendmail = require('./nodemailer');
+var fs = require("fs");
 let code = "000000";
 
 function createSixCode() {
@@ -46,6 +47,20 @@ router.post('/', function (req, res) {
         if (emailTest(email)) {
             if (verification === code) {
                 if (password === rePassword) {
+                    var data = "{\n" +
+                        "  \"email\": \"" + email + "\",\n" +
+                        "  \"password\": \"" + password + "\"\n" +
+                        "}";
+                    // let writerStream = fs.createWriteStream('user.json');
+                    // writerStream.write(data, 'UTF8');
+                    // writerStream.end();
+                    // writerStream.on('finish', function () {
+                    //     console.log("写入完成。");
+                    // });
+                    fs.appendFile("user.json", data, (error) => {
+                        if (error) return console.log("追加文件失败" + error.message);
+                        console.log("追加成功");
+                    });
                     res.send("注册成功!");
                 } else {
                     res.send("两次密码输入不正确!");
