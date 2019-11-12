@@ -1,55 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <script type="text/javascript"  src="//code.jquery.com/jquery-1.8.2.min.js" ></script>
-  </head>
-  <body>
-    <form>
-      <div>
-        <label for="email">邮箱</label>
-        <input type="text" name="email" value="">
-      </div>
-      <div>
-        <label for="checkcode">验证码</label>        
-        <input type="text" name="checkcode" value="">
-        <input type="submit" οnclick="timeDown()" action="/sendCode?"  class="btn btn-danger" id="sendcode" value="发送验证码">
-      </div>
-      <div>
-        <label for="password">密码</label>        
-        <input type="text" name="password" value="">
-      </div>
-      <div>
-        <label for="comfirm">确认密码</label>
-        <input type="text" name="comfirm" value="">
-      </div>
-      <div>
-        <button type="submit">一键注册</button>
-      </div>
-    </form>
-     <script>
+    <script type="text/javascript"  src="//code.jquery.com/jquery-1.8.3.min.js" ></script>
+</head>
+<body>
+  <div> 
+    <div>
+      <label for="email">邮箱</label>
+      <input class="email" type="text" id="email" name="email" value="">
+    </div>
+    <div>
+      <label for="checkcode">验证码</label>        
+      <input class="checkcode" type="text" id="checkcode" name="checkcode" value="">
+      <input type="submit" class="btn" id="sendCd" value="发送验证码">
+    </div>
+    <div>
+      <label for="password">密码</label>        
+      <input class="password" type="text" name="password" value="">
+    </div>
+    <div>
+      <label for="comfirm">确认密码</label>
+      <input class="comfirm" type="text" name="comfirm" value="">
+    </div>
+    <div>
+      <input type="submit" class="register" value="一键注册">
+    </div>
+  </div>
+  <script type="text/javascript">
+    //发送验证码的按钮
+    $(".btn").on('click', function() {
+
+      var email = $(".email").val();
+
+      $.post("/sendCode", { 
+        email: email,
+      }, function(res) {
+          alert(res);
+      })
+
       var t=180;
-      function time(o) 
-      {
+      var time=setInterval(function(){
+        cntDown();
+      },1000)
+
+      function cntDown(){
+        t--;
+        $(".btn").val("重新发送("+t+")");
         if(t==0)
         {
-           o.removeAttribute("disabled");
-           o.value="获取验证码";  
-           t=60;
+          clearInterval(time);
+          $(".btn").attr("disabled", false);
+          $(".btn").val('获取验证码');
         }
         else
         {
-          o.setAttribute("disabled", true); 
-          o.value="重新发送(" + t + ")";  
-          t--;
-          setTimeout(function() {  
-            time(o)  
-          }, 1000)
+          $(".btn").attr("disabled", "disabled");
         }
-        //document.getElementById("sendcode").herf='sendCode?';
       }
-      document.getElementById("sendcode").onclick=function(){time(this);}
-    </script>
-  </body>
+    })
+    //提交注册信息的按钮
+    $(".register").on('click', function() {
+
+      var email = $(".email").val();
+      var checkcode = $(".checkcode").val();
+      var password = $(".password").val();
+      var comfirm = $(".comfirm").val();
+      //console.log(comfirm);
+      
+      $.post("/", { 
+        email: email,
+        checkcode: checkcode,
+        password: password,
+        comfirm: comfirm,
+      }, function(res) {
+        alert(res);
+      })
+    })
+  </script>
+</body>
 </html>
