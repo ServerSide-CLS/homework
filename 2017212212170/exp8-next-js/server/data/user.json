@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "email": "reqw@qq.com",
+      "pwd": 1234
+    },
+    {
+      "email": "432qw@qq.com",
+      "pwd": 1234
+    },
+    {
+      "email": "432qw@qq.com",
+      "pwd": 1234,
+      "id": "1573544460732"
+    },
+    {
+      "email": "whosiyuan@qq.com",
+      "vercode": "0010",
+      "pwd": "1234",
+      "repwd": "1234",
+      "status": "checking",
+      "id": "1573545795267"
+    }
+  ]
+}
