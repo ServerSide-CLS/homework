@@ -12,7 +12,7 @@ var transporter = nodemailer.createTransport({
     port: 465, // 端口号
     secure: true, 
     auth: {
-        user: "duoduobao@163.com", // 发送方邮箱地址
+        user: "duoduobao25@163.com", // 发送方邮箱地址
         pass: "gxy123" // smtp 验证码
     }
 });
@@ -33,7 +33,7 @@ router.post('/sendCode',function(req, res)
 		}
 		var address=req.body.email;
 	    var mailObj = {
-			from: 'duoduobao@163.com', // 发送方邮箱及标题
+			from: 'duoduobao25@163.com', // 发送方邮箱及标题
 			to: address, // 对方邮箱地址
 			subject: '验证码来啦！', // 
 			text: ckCode, // 邮件内容
