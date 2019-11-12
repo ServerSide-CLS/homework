@@ -41,6 +41,10 @@
         email: email,
       }, function(res) {
           alert(res);
+          if(res!="验证码邮件发送成功，请登录邮箱查看验证码>.<")
+          {
+            t=0;
+          }
       })
 
       var time=setInterval(function(){
