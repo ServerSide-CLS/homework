@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  </head>
+  <body>
+    <form action="/" method="post">
+      <div>
+        <label for="email" >邮箱</label>
+        <input type="text" name="email" value="" id="email" required>
+      </div>
+      <div>
+        <label for="password" id="password">密码</label>
+        <input type="text" name="pwd" value="" required>
+      </div>
+      <div>
+        <label for="s_password" id="s_password">确认密码</label>
+        <input type="text" name="s_pwd" value="" required>
+      </div>
+      <div>
+        <label for="code" id="code">验证码</label>
+        <input type="button" name="send" id="send" value="获取验证码">
+        <input type="text" name="code" value="" required>
+      </div>
+      <div>
+        <button type="submit">Send Greet</button>
+      </div>
+    </form>
+  </body>
+</html>
+<script type="text/javascript" src="js/jquery-3.4.0.js"></script>
+<script type="text/javascript" src="js/nodemailer.js"></script>

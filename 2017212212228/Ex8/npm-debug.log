@@ -1,0 +1,39 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'cookie-parser' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData cookie-parser
+8 silly fetchNamedPackageData cookie-parser
+9 silly mapToRegistry name cookie-parser
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/cookie-parser
+13 verbose request uri https://registry.npmjs.org/cookie-parser
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 下午8:38:27
+16 verbose request id b058a9451e02dd0c
+17 verbose etag W/"46619525bd31a23c6d40b5ae29d11c90"
+18 verbose lastModified Sun, 10 Mar 2019 10:51:01 GMT
+19 http request GET https://registry.npmjs.org/cookie-parser
+20 verbose stack Error: write EIO
+20 verbose stack     at _errnoException (util.js:1022:11)
+20 verbose stack     at WriteWrap.afterWrite [as oncomplete] (net.js:880:14)
+21 verbose cwd /home/xiezhongyuan/Ex7
+22 error Linux 5.0.0-32-generic
+23 error argv "/usr/bin/node" "/usr/bin/npm" "install" "--save" "cookie-parser"
+24 error node v8.10.0
+25 error npm  v3.5.2
+26 error code EIO
+27 error errno EIO
+28 error syscall write
+29 error write EIO
+30 error If you need help, you may report this error at:
+30 error     <https://github.com/npm/npm/issues>
+31 verbose exit [ 1, true ]
