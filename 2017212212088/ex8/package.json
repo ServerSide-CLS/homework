@@ -1,0 +1,22 @@
+{
+  "name": "12",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test7.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
+    "multer": "^0.1.8",
+    "nodemailer": "^6.3.1"
+  }
+}
