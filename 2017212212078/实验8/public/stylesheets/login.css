@@ -1,0 +1,18 @@
+.login{
+    margin-top:100px;
+}
+.login_title{
+    margin:10px 0;
+    line-height:50px;
+	font-size:20px;
+    color:#666666;
+    letter-spacing:30px;
+}
+.code{
+    width:60%;
+    display: inline-block;
+}
+.bt{
+    display: inline-block;
+    margin:5%;
+}
