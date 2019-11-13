@@ -24,11 +24,11 @@
     	// 验证码倒计时
 		function sendCode() {
 		    let data = {};
-		    email = $("#E_mail").val();
-		    if (!isCorrectEmail(email)) {
+		    data.email = $("#E_mail").val();
+		    if (!isCorrectEmail(data.email)) {
 		        alert("邮箱格式错误");
 		    } else {
-		        $.post("/sendCode", data, function(data) {
+		        $.post("/sendCode",data.email, function(data) {
 		            console.log(data);
 		            if (data == 0) {
 		                alert("该邮箱已被注册");
