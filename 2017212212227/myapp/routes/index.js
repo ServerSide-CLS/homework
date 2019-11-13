@@ -60,11 +60,11 @@ router.post('/sendCode', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-   	let to = req.body.to;
-   	let pwd = req.body.PWD;
-   	let apwd = req.body.RE_PWD;
+   	let code1 = req.body.code1;
+   	let PWD = req.body.PWD;
+   	let RE_PWD = req.body.RE_PWD;
    	if(PWD == RE_PWD){
-   		if(to == c_code){
+   		if(code1 == c_code){
 	   		fs.readFile('user.json',function(err,data){
 		        if(err){
 		            return console.error(err);
@@ -75,7 +75,7 @@ router.post('/', function(req, res, next) {
 		        }else{
 		        	user = [];
 		        }
-		        let newUser = { username: req.body.email, password: req.body.pwd };
+		        let newUser = { username: req.body.email, password: req.body.PWD };
 		        user.push(newUser);
 		        var str = JSON.stringify(user);
 		        fs.writeFile('user.json',str,function(err){
