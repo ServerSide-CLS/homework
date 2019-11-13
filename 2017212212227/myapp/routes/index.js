@@ -31,7 +31,6 @@ function sendCode(email) {
         code += Math.floor(Math.random() * 10);
     }
     c_code = code;
-    return code;
     var transporter = nodemailer.createTransport({
         service: 'qq',
         auth: {
@@ -42,7 +41,7 @@ function sendCode(email) {
     });
     var mailOptions = {
         from: '740185140@qq.com', // 发送者
-        to: user, // 接受者,可以同时发送多个,以逗号隔开
+        to: email, // 接受者,可以同时发送多个,以逗号隔开
         subject: '注册', // 标题
         html: "<h1>欢迎注册，您本次的注册验证码为：" + code + "</h1>"
     };
