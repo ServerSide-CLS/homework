@@ -60,11 +60,11 @@ router.post('/sendCode', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-   	let code = req.body.code;
-   	let pwd = req.body.pwd;
-   	let apwd = req.body.apwd;
-   	if(pwd == apwd){
-   		if(code == c_code){
+   	let to = req.body.to;
+   	let pwd = req.body.PWD;
+   	let apwd = req.body.RE_PWD;
+   	if(PWD == RE_PWD){
+   		if(to == c_code){
 	   		fs.readFile('user.json',function(err,data){
 		        if(err){
 		            return console.error(err);
