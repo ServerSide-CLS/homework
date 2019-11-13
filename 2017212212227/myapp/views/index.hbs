@@ -2,19 +2,19 @@
       <div>
         <label >Email</label>
         <input type="text" name="E_mail" id="E_mail">
-        <input type="button" name="code" value="获取验证码" id="code" onclick="sendCode()">
+        <input type="button" name="code" value="获取验证码" id="code" onclick="sendCode()" >
       </div>
       <div>
         <label >验证码</label>
-        <input type="text" name="to">
+        <input type="text" name="code1" id="code1" required>
       </div>
       <div>
         <label >密码</label>
-        <input type="password" name="PWD" id="PWD">
+        <input type="password" name="PWD" id="PWD" required>
       </div>
       <div>
         <label >确认密码</label>
-        <input type="password" name="RE_PWD" id="RE_PWD">
+        <input type="password" name="RE_PWD" id="RE_PWD" required>
       </div>
       <div>
         <button type="submit">注册</button>
@@ -28,7 +28,7 @@
 		    if (!isCorrectEmail(data.email)) {
 		        alert("邮箱格式错误");
 		    } else {
-		        $.post("/sendCode",data.email, function(data) {
+		        $.post("/sendCode",data, function(data) {
 		            console.log(data);
 		            if (data == 0) {
 		                alert("该邮箱已被注册");
