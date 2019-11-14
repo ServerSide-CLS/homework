@@ -10,6 +10,7 @@ const Person = require("./public/js/connection");
 var code;//验证码
 // 监听端口
 app.listen("8888");
+console.log("server is running in http:localhost:8888");
 //资源开放
 app.use("/node_modules/",express.static(path.join(__dirname,"node_modules")));
 app.use("/public/",express.static(path.join(__dirname,"public")));
@@ -86,6 +87,24 @@ app.post("/checkEmail",function(req,res){
 app.get("/admin",function(req,res){
     Person.find(function(err,Person){
         res.json(Person);
+    });
+});
+//登录判断
+app.post("/login",function(req,res){
+    let Email = req.body.Email,
+    pwd = req.body.pwd;
+    Person.find({email:Email},function(err,response){
+        if(response.length == 0){
+            res.send("notExist");
+        }
+        else{
+            if(response[0].pwd!=pwd){
+                res.send("passwordError");
+            }
+            else{
+                res.send("success");
+            }
+        }
     });
 });
 //检查邮箱格式
