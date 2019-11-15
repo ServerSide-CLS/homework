@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+    <style type="text/css">
+          div{
+            margin:30px;
+          }
+          button{
+            width: 160px;
+            height: 25px;
+            border-radius: 4px;
+            color: black;
+          }
+          #sendCode{
+            background-color: orange;
+            color: white;          
+          }
+    </style>
+  </head>
+  
+  <body>
+    <form action="/" method="post">
+      <div>
+        <label for="to">你的邮箱：</label>
+        <input type="text" name="email" value="" id="email">
+      </div>
+      <div>
+        <label for="to">验证码:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" name="checkCode" id="check" value="">
+        <button id="sendCode" onclick="click()">获取验证邮箱有效性</button>
+      </div>
+      <div>
+        <label for="to">输入密码：</label>
+        <input type="password" name="pwd" id="pwdcode" value=""> 
+      </div>
+      <div>
+        <label for="to">确认密码：</label>
+        <input type="password" name="checkPwd" id="checkpwd" value="">
+      </div>
+      <div>
+        <button type="submit">Send Greet</button>
+        <label name="info" id="info"></label>
+      </div>
+    </form>
+       <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        var info=document.getElementById("info");
+        var email=document.getElementById("email");
+        var pwd=document.getElementById("pwdcode");
+        var checkpwd=document.getElementById("checkpwd");
+        var sendcode=document.getElementById("sendCode");
+
+        //
+        function click (){
+          setTime();
+        };
+
+
+        // 设置按钮无法点击状态，设置时间为3分钟
+        var totaltime=180;
+
+        function setTime(){
+          if(totaltime==0){
+            btn_sendCode.attr("disabled",false);
+            btn_sendCode.html("发送验证码");
+            btn_sendCode.remove("disabled");
+            totaltime=180;
+            return;
+
+          }else{
+            btn_sendCode.addClass('disabled');
+            btn_sendCode.attr("disabled",true);
+            btn.html("重新发送（"+totaltime+")");
+            totaltime--;
+          }
+          setTimeout(setTime,1000);
+        }
+
+        $.post("/data",{"email":email,"pwd":pwd,"checkpwd":checkpwd,"sendcode":sendcode},function(res){
+          if(res.status=="s"){
+            info.innerHtml("SUCCESS");
+          }
+          else{
+            info.innerHtml(res.reason);
+          }
+        });
+
+        $.post("/sendCode",{"email":email});
+    </script>
+    <script type="text/javascript" src="/javascripts/sendcode.js" ></script> 
+  </body>
+</html>

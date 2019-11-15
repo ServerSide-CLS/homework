@@ -1,0 +1,56 @@
+<form action="/" method="post">
+    <div class="main-pane">
+        <label for="Email">邮箱&emsp;&emsp;</label>
+        <input type="text" id="email" name="email" placeholder="请输入邮箱">
+        <input type="button" id="emialcore" class="btn btn-danger" value="发送验证码" onclick="EmailClick()">
+    </div>
+    <div class="main-pane">
+        <label for="verification">验证码&emsp;</label>
+        <input type="text" name="verification" placeholder="请输入验证码">
+    </div>
+    <div class="main-pane">
+        <label for="password">密码&emsp;&emsp;</label>
+        <input type="password" name="password" placeholder="请输入密码">
+    </div>
+    <div class="main-pane">
+        <label for="rePassword">确认密码</label>
+        <input type="password" name="rePassword" placeholder="再次输入密码">
+    </div>
+    <div class="main-pane">
+        <button type="submit">register</button>
+    </div>
+</form>
+
+<script>
+    function EmailClick() {
+        let time = 180;//定义60秒的倒计时
+        const email = $('#email').val();//获取输入框的邮箱
+        $.get('/email', {
+                    email: email
+                },
+                function (data) {
+                }
+        );
+        //设置一个定时，一秒执行一次
+        let mytime = setInterval(function () {
+            subs();
+        }, 1000);
+
+        function subs() {
+            time--;
+            $('#emialcore').attr("value", "请" + time + "秒后再试");
+            if (time === 0) {
+                clearInterval(mytime);
+                $('#emialcore').attr("value", "发送验证码");
+                $('#emialcore').attr("disabled", false);//按键可用
+            } else {
+                $('#emialcore').attr("disabled", true);//按键不可用
+            }
+        }
+    }
+    function emailTest(email) {
+        let reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+        return reg.test(email);
+    }
+
+</script>

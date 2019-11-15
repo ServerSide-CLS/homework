@@ -1,0 +1,52 @@
+<body>
+<div>
+<form action="/" method="post">
+	<div>
+        <label>Email:</label>
+        <input type="text" id="email" name="email" placeholder="請輸入郵箱">
+        <input type="button"  name="send" id="send" onclick="sendEmail()" value="獲取郵箱驗證有效性">
+      </div>
+      <div>
+        <label >驗證碼:</label>
+        <input type="text" name="code" id="code" placeholder="請輸入驗證碼">
+      </div>
+      <div>
+      	<label>密碼:</label>
+        <input type="password" name="password" id="password" placeholder="請輸入密碼">
+      </div>
+      <div>
+      	<label>再次輸入密碼:</label>
+        <input type="password" name="doublepassword" id="doublepassword" placeholder="請再次輸入密碼">
+      </div>
+      <div>
+        <button type="submit" >注冊</button>
+      </div>
+</form>
+</div>
+</body>
+<script>
+	function sendEmail(){
+		var time = 180;
+		// $.get('/email', {
+  //           email: email
+  //       },
+  //           function (data) {
+  //               console.log(data)
+  //           });
+		var wait = setInterval(()=>{
+			waitTime();
+		},1000)
+		function waitTime(){
+			if(time == 0){
+				clearInterval(wait);
+				$('#send').html("獲取郵箱驗證有效性");
+				$('#send').attr("disable",false);
+			}else{
+				$('#send').html(time +"秒後重新發送");
+				$('#send').attr("disable",true);
+				time--;
+			}
+		}
+	}
+</script>
+

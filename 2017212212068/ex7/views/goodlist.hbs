@@ -17,19 +17,35 @@
                 {{#each onepieceInfoList}}
                 {{#if this.vis}}
                 {{#each this.images1}}
-                <img class="img1" src="{{this.src}}">
+
+                    <div class="rectangle">{{this.src}}</div>
+
                 {{/each}}
                 {{/if}}
                 {{/each}}
+                {{#each onepieceInfoList}}
+                    {{#if this.vis}}
+                        {{#each this.images1}}
 
+                            <p class="Introduction">欢迎来到英雄联盟！</p>
+                        {{/each}}
+                    {{/if}}
+                {{/each}}
             </div>
             <div id="row_2">
                 {{#each onepieceInfoList}}
                 {{#if this.vis}}
                 {{#each this.images2}}
-                <img class="img2" src="{{this.src}}">
+                    <div class="rectangle">{{this.src}}</div>
                 {{/each}}
                 {{/if}}
+                {{/each}}
+                {{#each onepieceInfoList}}
+                    {{#if this.vis}}
+                        {{#each this.images2}}
+                            <p class="Introduction">欢迎来到英雄联盟！</p>
+                        {{/each}}
+                    {{/if}}
                 {{/each}}
             </div>
         </div>

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6076fc45-55df-49bf-98eb-e6f57ed89f8f" name="Default Changelist" comment="" />
+    <list default="true" id="6076fc45-55df-49bf-98eb-e6f57ed89f8f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -12,33 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ex_7.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <element signature="e#861#1358#0" />
-                <element signature="e#1828#2781#0" />
-                <element signature="e#2811#3764#0" />
-                <element signature="e#3778#4731#0" />
-                <element signature="e#4749#5702#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/static/goodlist.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -52,7 +28,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>html</find>
+      <find>.png</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -61,54 +41,33 @@
         <option value="$PROJECT_DIR$/views/default.html" />
         <option value="$PROJECT_DIR$/../../../ex7/app.js" />
         <option value="$PROJECT_DIR$/views/goodlist.html" />
-        <option value="$PROJECT_DIR$/public/static/goodlist.css" />
+        <option value="$PROJECT_DIR$/../../../../../course/webserive/ex7/ex_7.js" />
+        <option value="$PROJECT_DIR$/../../../../../course/webserive/ex7/views/goodlist.hbs" />
         <option value="$PROJECT_DIR$/ex_7.js" />
+        <option value="$PROJECT_DIR$/views/goodlist.hbs" />
+        <option value="$PROJECT_DIR$/public/static/goodlist.css" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-4" />
-    <option name="y" value="-4" />
-    <option name="width" value="628" />
-    <option name="height" value="667" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-5" />
+    <option name="y" value="-5" />
+    <option name="width" value="630" />
+    <option name="height" value="670" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ex7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ex7" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ex7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ex7" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ex7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ex7" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ex7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ex7" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -139,18 +98,23 @@
       <updated>1572862008274</updated>
       <workItem from="1572862011096" duration="539000" />
       <workItem from="1572863083909" duration="8526000" />
+      <workItem from="1572965835363" duration="2226000" />
+      <workItem from="1572969262895" duration="2052000" />
+      <workItem from="1573546858365" duration="30000" />
+      <workItem from="1573546945000" duration="1693000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9065000" />
+    <option name="totallyTimeSpent" value="15066000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21466315" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0667107" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -160,87 +124,66 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.16831683" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.2082153" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/static/default.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/default.html">
+    <entry file="file://$PROJECT_DIR$/public/static/default.css" />
+    <entry file="file://$PROJECT_DIR$/views/default.html" />
+    <entry file="file://$PROJECT_DIR$/../../../ex7/routes/index.js" />
+    <entry file="file://$PROJECT_DIR$/../../../ex7/app.js" />
+    <entry file="file://$PROJECT_DIR$/../../../myapp/myapp/app.js" />
+    <entry file="file://$PROJECT_DIR$/../../../task7/app.js" />
+    <entry file="file://$PROJECT_DIR$/../../../exo7/app.js" />
+    <entry file="file://$PROJECT_DIR$/views/goodlist.html" />
+    <entry file="file://$PROJECT_DIR$/../../../../../course/webserive/ex7/views/goodlist.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="21" column="50" lean-forward="true" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+        <state relative-caret-position="238">
+          <caret line="43" column="50" lean-forward="true" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../ex7/routes/index.js">
+    <entry file="file://$PROJECT_DIR$/../../../../../course/webserive/ex7/ex_7.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+        <state relative-caret-position="338">
+          <caret line="246" selection-start-line="246" selection-end-line="247" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../ex7/app.js">
+    <entry file="file://$PROJECT_DIR$/views/goodlist.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../myapp/myapp/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../task7/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../exo7/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+        <state relative-caret-position="525">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/static/goodlist.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="825">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/goodlist.html">
+    <entry file="file://$PROJECT_DIR$/../../2017212212083/2017212212083_ex8/myapp/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        <state relative-caret-position="375">
+          <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ex_7.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#861#1358#0" />
-            <element signature="e#1828#2781#0" />
-            <element signature="e#2811#3764#0" />
-            <element signature="e#3778#4731#0" />
-            <element signature="e#4749#5702#0" />
-          </folding>
+        <state relative-caret-position="200">
+          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
         </state>
       </provider>
     </entry>

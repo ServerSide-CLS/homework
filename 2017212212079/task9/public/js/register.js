@@ -44,27 +44,28 @@ $(document).ready(function () {
     });
     //提交表单函数
     function submitForm(){
-        let email = $("#Email").val(),
-        pwd = $("#pwd").val(),
-        pwdConfirm = $("#pwdConfirm").val(),
-        checkNum = $("#checkNum").val();
-        $.post("/formPost",
-        {
-            "email":email,
-            "pwd":pwd,
-            "pwdConfirm":pwdConfirm,
-            "checkNum":checkNum
-        },
-        function(result){
-            if(result.status == "success"){
-                alert("注册成功");
-                window.location.href="/views/index.html";
-            }
-            else{
-                alert(result.reason);
-                window.location.href="/views/login.html";
-            }
-        });
+        // let email = $("#Email").val(),
+        // pwd = $("#pwd").val(),
+        // pwdConfirm = $("#pwdConfirm").val(),
+        // checkNum = $("#checkNum").val();
+        // $.post("/formPost",
+        // {
+        //     "email":email,
+        //     "pwd":pwd,
+        //     "pwdConfirm":pwdConfirm,
+        //     "checkNum":checkNum
+        // },
+        // function(result){
+        //     if(result.status == "success"){
+        //         alert("注册成功");
+        //         window.location.href="/views/index.html";
+        //     }
+        //     else{
+        //         alert(result.reason);
+        //         window.location.href="/views/login.html";
+        //     }
+        // });
+        window.location.href="/views/login.html";
     }
     //判断邮箱是否已存在
     $("#Email").blur(function(){

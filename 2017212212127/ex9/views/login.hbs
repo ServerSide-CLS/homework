@@ -1,0 +1,15 @@
+ <form action="/login" method="post">
+      
+      <input type="text" name="username" placeholder="username" required>
+
+      <input type="password" name="userpassword" placeholder="password" required>
+
+      <button type = "Submit">Login</button>
+
+      <a href="/signup">
+    		<button type="button">Sign up</button>
+	  </a>
+      {{#if message}}
+      <p>{{message}}</p>
+    {{/if}}
+ </form>

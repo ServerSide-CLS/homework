@@ -12,7 +12,7 @@ var transporter = nodemailer.createTransport({
     port: 465, // 端口号
     secure: true, 
     auth: {
-        user: "duoduobao@163.com", // 发送方邮箱地址
+        user: "duoduobao25@163.com", // 发送方邮箱地址
         pass: "gxy123" // smtp 验证码
     }
 });
@@ -33,7 +33,7 @@ router.post('/sendCode',function(req, res)
 		}
 		var address=req.body.email;
 	    var mailObj = {
-			from: 'duoduobao@163.com', // 发送方邮箱及标题
+			from: 'duoduobao25@163.com', // 发送方邮箱及标题
 			to: address, // 对方邮箱地址
 			subject: '验证码来啦！', // 
 			text: ckCode, // 邮件内容
@@ -43,7 +43,7 @@ router.post('/sendCode',function(req, res)
 	}
 	else
 	{
-		res.send(req.body.email+"请输入正确的邮箱地址！");
+		res.send("请输入正确的邮箱地址！");
 	}
 });
 
@@ -63,7 +63,8 @@ router.post('/', function(req, res){
  	else
  	{
  		var str = JSON.stringify(req.body,"","\t");
- 		fs.writeFile('user.json',str,function(err){
+ 		str="\n"+str;
+ 		fs.appendFile('user.json',str,function(err){
 			if (err) {res.status(500).send('Server is error...')}
 		})
 		res.send("注册成功(*^▽^*)！");

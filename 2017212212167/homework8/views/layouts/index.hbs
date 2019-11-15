@@ -33,7 +33,8 @@
     //发送验证码的按钮
     var t=180;
     $(".btn").on('click', function() {
-
+      
+      t=180;
       var email = $(".email").val();
 
       $.post("/sendCode", { 
@@ -77,11 +78,14 @@
         comfirm: comfirm,
       }, function(res) {
         alert(res);
-        $(".email").val('');
-        $(".checkcode").val('');
-        $(".password").val('');
-        $(".comfirm").val('');
-        t=0;
+        if(res=="注册成功(*^▽^*)！")
+        {
+          $(".email").val('');
+          $(".checkcode").val('');
+          $(".password").val('');
+          $(".comfirm").val('');
+          t=0;
+        }
       })
     })
   </script>

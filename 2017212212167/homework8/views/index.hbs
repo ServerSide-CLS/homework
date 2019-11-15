@@ -33,15 +33,24 @@
     //发送验证码的按钮
     var t=180;
     $(".btn").on('click', function() {
+      
+      t=180;
       var email = $(".email").val();
+
       $.post("/sendCode", { 
         email: email,
       }, function(res) {
           alert(res);
+          if(res!="验证码邮件发送成功，请登录邮箱查看验证码>.<")
+          {
+            t=0;
+          }
       })
+
       var time=setInterval(function(){
         cntDown();
       },1000)
+
       function cntDown(){
         t--;
         $(".btn").val("重新发送("+t+")");
@@ -59,6 +68,7 @@
     })
     //提交注册信息的按钮
     $(".register").on('click', function() {
+
       var email = $(".email").val();
       var checkcode = $(".checkcode").val();
       var password = $(".password").val();
@@ -72,11 +82,14 @@
         comfirm: comfirm,
       }, function(res) {
         alert(res);
-        $(".email").val('');
-        $(".checkcode").val('');
-        $(".password").val('');
-        $(".comfirm").val('');
-        t=0;
+        if(res=="注册成功(*^▽^*)！")
+        {
+          $(".email").val('');
+          $(".checkcode").val('');
+          $(".password").val('');
+          $(".comfirm").val('');
+          t=0;
+        }
       })
     })
   </script>

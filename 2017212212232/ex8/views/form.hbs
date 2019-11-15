@@ -1,0 +1,52 @@
+<form action="/" method="post">
+    <table >
+        <tr>
+            <td>
+                邮箱:
+            </td>  
+            <td>
+                <input type="input" id="email" name="email" value="{{mail}}">
+            </td>
+            <td>
+                <input type="button" name="cfmemail" onclick="SendMail()" id="cfmemail" {{cfmemail}} value="验证邮箱">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                验证码:
+            </td>  
+            <td>
+                <input type="input" name="vcode">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                密码:
+            </td>  
+            <td>
+                <input type="password" name="pwd">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                确认密码:
+            </td>  
+            <td>
+                <input type="password" name="cfmpwd">
+            </td>
+        </tr>
+        <tr  id="timehidden">
+            <td>
+                倒计时:
+            </td>  
+            <td>
+                <span id="time"></span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <input type="submit" name="submit" value="提交">
+            </td>
+        </tr>
+    </table>
+</form>

@@ -1,0 +1,99 @@
+<body>
+  <div class="g-container">
+    <div class="g-signup">
+      <div class="form-auto">
+        <form action="/home" name="sign-up" method="POST">
+          <div class="from-row">
+            <label for="email" class="from-label">E-mail</label>
+            <input type="email" name="email" class="from-input" required />
+          </div>
+          <div class="from-row verify-row">
+            <input type="text" name="vcode" class="from-input verify-input" required />
+            {{#if verifying}}
+            <button type="button" class="from-btn verify-btn verifying-btn">
+              重新获取 ( <span id="verify-time">{{verifyTime}}</span>s )
+            </button>
+            {{else}}
+            <button type="button" class="from-btn verify-btn">获取验证码</button>
+            {{/if}}
+          </div>
+          <div class="from-row">
+            <label for="pwd" class="from-label">Password</label>
+            <input type="password" name="pwd" class="from-input" placeholder="6-15个数字、字母或下划线" required />
+          </div>
+          <div class="from-row">
+            <label for="rpwd" class="from-label">Password</label>
+            <input type="password" name="rpwd" class="from-input" placeholder="6-15个数字、字母或下划线" required />
+          </div>
+          <div class="from-row">
+            <button type="submit" class="from-btn">Sign up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  {{!-- message --}}
+  {{#if msg}}
+  <div class="m-msg" style="background: {{msg.color}};">
+    {{msg.message}}
+  </div>
+  {{/if}}
+
+  <script>
+    // 检测是否有message
+    const msgDiv = document.getElementsByClassName('m-msg')[0]
+    console.log(msgDiv)
+    if (msgDiv) setTimeout(() => document.body.removeChild(msgDiv), 2000)
+
+    const verifyBtn = document.getElementsByClassName('verify-btn')[0]
+    // 如果刷新页面而上次的倒计时还没完成，根据session倒计时继续
+    const verifyTimeSpan = document.getElementById('verify-time')
+    if (verifyTimeSpan) {
+      verifyBtn.disabled = true
+      verifyTimer(parseInt(verifyTimeSpan.innerText))
+    }
+
+    verifyBtn.addEventListener('click', () => {
+      // 防止多次快速点击，从点击到返回发送成功或失败消息，因为异步所以有明显延迟。。。
+      verifyBtn.disabled = true
+      const data = {
+        email: document.forms['sign-up']['email'].value
+      };
+      /[\s\S]@[\s\S]+\.+[\s\S]{2,20}/.test(data.email) ?
+        axios.post('http://localhost:3000/verify', data).then((r) => {
+          console.log(r.data)
+          // 按钮样式变化
+          verifyBtn.disabled = true
+          verifyBtn.classList.add('verifying-btn')
+          let { message, status } = r.data
+          Msg(message, status)
+          // 计时器
+          verifyTimer()
+        }).catch(err => console.error(err))
+        : Msg('邮箱格式有误', 'error'); verifyBtn.disabled = false
+    })
+
+    function verifyTimer(timer = 60) {
+      if (timer > 0) {
+        verifyBtn.innerText = `重新获取 ( ${timer}s )`
+        setTimeout(() => verifyTimer(--timer), 1000)
+      } else {
+        verifyBtn.classList.remove('verifying-btn')
+        verifyBtn.innerText = '获取验证码'
+        verifyBtn.disabled = false
+      }
+    }
+
+    let Msg = function (txt, status = 'warn', timeout = 3000) {
+      const color = status === 'error' ? 'red' : status === 'warn' ? '#ef8f00' : '#68af02';
+      let msgDiv = document.createElement('DIV');
+      let content = document.createTextNode(txt);
+      msgDiv.classList.add('m-msg');
+      msgDiv.appendChild(content);
+      msgDiv.style.animationDuration = timeout / 1000 + 's';
+      msgDiv.style.backgroundColor = color;
+      document.body.appendChild(msgDiv);
+      setTimeout(() => document.body.removeChild(msgDiv), timeout);
+    }
+  </script>
+</body>

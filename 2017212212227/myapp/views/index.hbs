@@ -1,0 +1,65 @@
+<form action="/" method="post">
+      <div>
+        <label >Email</label>
+        <input type="text" name="E_mail" id="E_mail">
+        <input type="button" name="code" value="获取验证码" id="code" onclick="sendCode()" >
+      </div>
+      <div>
+        <label >验证码</label>
+        <input type="text" name="code1" id="code1" required>
+      </div>
+      <div>
+        <label >密码</label>
+        <input type="password" name="PWD" id="PWD" required>
+      </div>
+      <div>
+        <label >确认密码</label>
+        <input type="password" name="RE_PWD" id="RE_PWD" required>
+      </div>
+      <div>
+        <button type="submit">注册</button>
+      </div>
+</form>
+<script type="text/javascript">
+    	// 验证码倒计时
+		function sendCode() {
+		    let data = {};
+		    data.email = $("#E_mail").val();
+		    if (!isCorrectEmail(data.email)) {
+		        alert("邮箱格式错误");
+		    } else {
+		        $.post("/sendCode",data, function(data) {
+		            console.log(data);
+		            if (data == 0) {
+		                alert("该邮箱已被注册");
+		            }
+		        });
+		    }
+		    var code = $("#code");
+		    code.attr("disabled", "disabled");
+		    setTimeout(function() {
+		        // code.css("opacity", "0.5");
+		        code.css("color", "white");
+		    }, 1000)
+		    var time = 60;
+		    var minute = 2;
+		    var set = setInterval(function() {
+		        if (time == 0) {
+		            minute--;
+		            time = 60;
+		        }
+		        code.val(minute + "分" + --time + "秒后重新获取");
+		    }, 1000);
+		    setTimeout(function() {
+		        code.attr("disabled", false).val("重新获取验证码");
+		        clearInterval(set);
+		    }, 180000);
+		}
+
+		//验证邮箱
+		function isCorrectEmail(s) {
+		    var $re = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+		    if (!$re.test(s)) return false;
+		    return true;
+		}
+    </script>

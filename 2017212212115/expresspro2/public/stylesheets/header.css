@@ -1,0 +1,21 @@
+/* .header {
+    background-color: #62b1ff;
+} */
+.topnav{
+	padding-left:30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color:  rgb(108, 250, 250);
+    /* margin-top: 30px; */
+}
+.title{
+	font-size: 22px;
+	font-weight: bold;
+}
+.rightlink{
+    /* padding-top: 14px; */
+    margin-top: -10px;
+	display: flex;
+	float: right;
+}
