@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="product-list-warp row">
+        <div class="container"> 
+            <div class="row"> 
+                {{#each product}}
+                <div class="col-md-3"> 
+                    <h2>{{this.product-title}}</h2> 
+                    <p>{{this.product-des}}</p> 
+                    <p><a href="#">View details</a></p> 
+                </div> 
+                {{/each}}
+            </div> 
+        </div> 
+    </div>
+    <div>
+        <div class="col-md-12"> 
+            <a id="previous"
+            href=""><<</a>   
+           <a class="btn2" 
+                href="/?page=1}">1</a>
+           <a class="btn3" 
+                href="/?page=2}">2</a>
+           <a class="btn4" 
+                href="/?page=3}">3</a>
+           <a class="btn5" 
+                href="/?page=4}">4</a>
+           <a class="btn6" 
+                href="/?page=5}">5</a>
+            <a id="next"
+            href="">>></a>   
+        </div>
+    </div>
+</div>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script >
+    if({{currentPage}}==1){$("#next").attr("href","/?page=2}");$("#previous").attr("href","/?page=1}"); $("#previous").attr("disabled","disabled");}
+    else if({{currentPage}}==2){$("#next").attr("href","/?page=3}");$("#previous").attr("href","/?page=1}");}
+    else if({{currentPage}}==3){$("#next").attr("href","/?page=4}");$("#previous").attr("href","/?page=2}");}
+    else if({{currentPage}}==4){$("#next").attr("href","/?page=5}");$("#previous").attr("href","/?page=3}");}
+    else if({{currentPage}}==5){$("#next").attr("href","/?page=5}");$("#previous").attr("href","/?page=4}");}
+</script>
