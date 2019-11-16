@@ -1,0 +1,22 @@
+<h1>register</h1>
+<form action="/" method="post">
+    <div>
+        <p>username<input type="text" name="username" placeholder="请输入账号" /></p>
+    </div>
+    <div>
+        <p>password<input type="password" name="password" placeholder="请输入密码" /></p>
+    </div>
+    <div>
+        <p>ConfirmPassword<input type="password" name="ConfirmPassword" placeholder="请再次输入密码" /></p>
+    </div>
+    <div>
+        <p>Email<input type="text" name="email" placeholder="请输入邮箱" id="email" />
+        </p>
+        <input type="button" onclick="sendEmailid()" class="btn btn-danger" id="emailcore" value="发送验证码"><br>
+        <p><input type="text" name="code" placeholder="请输入验证码" id="code" /></p>
+    </div>
+    <input type="submit" class="btn">
+</form>
+<footer>
+    <div>-----created by shimakaze@mza-----</div>
+</footer>

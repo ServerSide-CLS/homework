@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <title>SHIMAKAZE</title>
+</head>
+
+<body class="{{params}}">
+    <div class="container" id="con">
+        {{{body}}}
+    </div>
+    
+</body>
+
+<script>
+    function sendEmailid() {
+        var time = 60 * 3;
+        const email = $('#email').val();
+        console.log('defaults.hbs :' + email)
+        $.get('/email', {
+            email: email
+        },
+            function (data) {
+                console.log(data)
+            });
+        var myTime = setInterval(() => {
+            subs();
+        }, 1000)
+        function subs() {
+            time--;
+            $('#emailcore').attr("value", "请" + time + "秒后再试");
+            console.log('1');
+            if (time === 0) {
+                clearInterval(myTime);
+                $('#emailcore').attr("value", "发送验证码");
+                $('#emailcore').attr("disabled", false);
+                console.log('2');
+            }
+            else {
+                $('#emailcore').attr("disabled", true);
+                console.log('3');
+            }
+        }
+    }
+</script>
+</html>
