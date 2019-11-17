@@ -1,0 +1,53 @@
+<title>注册</title>
+
+<body class="{{params}}">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="nav_top">
+        <div class="container">
+            <form class="navbar-form">
+                <p class="navbar-text" style="color:white;"><span class="glyphicon glyphicon-globe"><strong>
+                            注册</strong></span></p>
+            </form>
+            <!--标识-->
+        </div>
+    </nav>
+    <!--导航条-->
+
+    <div class="container">
+
+        <br />
+        <br />
+
+        <div class="row">
+            <!-- <div class="col-md-4 col-md-offset-2">
+        <img src="../images/xiaoyuan.png" alt="images" id="userImage">
+      </div> -->
+            <div class="col-md-4 col-md-offset-4">
+                <form class="form-horizontal" action="/signup" method="post">
+                    <p id="info"></p>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="username" placeholder="email" id="user_name" required>
+                        </div>
+                        <div class="form-group" id="form-group">
+                            <input style="width:57%" type="text" class="form-control" name="code" placeholder="验证码" id="check" required>
+                            <input type="button" class="btn" id="code" value="获取验证码" onclick="codeButton()" name="code">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="pwd" placeholder="密码" id="pwd">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="check_pwd" placeholder="确认密码" id="check_pwd">
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <input type="submit" class="form-control" value="注册" id="signup_btn">
+                    </div>
+                </form>
+                <p id="info">{{message}}</p>
+            </div>
+        </div>
+    </div>
+</body>
+
