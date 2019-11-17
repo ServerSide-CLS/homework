@@ -1,0 +1,16 @@
+<table>
+<thead>
+    <tr>
+        <th scope="col">EMAIL</th>
+        <th scope="col">PASSWORD</th>
+    </tr>
+</thead>
+<tbody>
+{{#each userData as |item|}}
+    <tr>
+        <td>{{item.email}}</td>
+        <td>{{item.password}}</td>
+    </tr>
+{{/each}}
+</tbody>
+</table>
