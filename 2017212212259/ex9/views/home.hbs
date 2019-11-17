@@ -1,0 +1,24 @@
+<form action="/" method="post">
+		<div>
+			<label for="Email">email</label>
+			<input type="text" name="email" id='email'>
+			<input type="button" id='emailButton' value="验证邮箱有效性" onclick="sendEmail()">
+			<p>{{email_msg}}</p>
+		</div>
+		<div>
+			<label for="pro_code">验证码</label>
+			<input type="text" name="pro_code" id='pro_code'>
+			<p>{{procode_msg}}</p>
+		</div>
+		<div>
+			<label for="pwd">密码</label>
+			<input type="password" name="pwd" id='pwd'>
+			<p>{{email_again}}</p>
+		</div>
+		<div>
+			<label for="Cpwd">确认密码</label>
+			<input type="password" name="Cpwd" id='Cpwd'>
+			<p>{{pwd_msg}}</p>
+		</div>
+		<button type="submit" value="">提交</button>
+	</form>
