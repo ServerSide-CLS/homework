@@ -1,0 +1,73 @@
+<div class="container" style="margin-top: 50px">
+  <form action="/register" method="POST" class="col-md-offset-4 col-lg-offset-4col-xl-offset-4" style="width: 400px; ">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <label for="captcha">Captcha</label>
+      <input type="text" class="form-control" name="captcha" id="captcha" placeholder="captcha">
+      <input type="button" id="sendCaptcha" class="btn btn-default" value="获取验证码">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" name="password" id="password" placeholder="password">
+    </div>
+    <div class="form-group">
+      <label for="repeat">repeat password</label>
+      <input type="password" class="form-control" name="repeat" id="repeat" placeholder="repeat">
+    </div>
+    <button type="submit" id="submit" class="btn btn-default">Register</button>
+  </form>  
+</div>
+
+<script>
+    var btn = document.getElementById("sendCaptcha");
+    var submit = document.getElementById("submit");
+    var count = 180;
+    var timer = null;
+    
+    btn.onclick = function() {
+
+      clearInterval(timer);
+      this.disabled = true;
+      var that = this;
+      that.value = "重新发送（" + count + "秒）";
+
+      function freezeSend() {
+        count--;
+        if(count > 0)
+        {
+          that.value = "重新发送（" + count + "秒）";
+        }
+        else
+        {
+          that.value = "获取验证码";
+          that.disabled = false;
+          clearInterval(timer);
+          count = 180;
+        }
+      }
+      timer = setInterval(freezeSend, 1000); 
+
+      let data = {"email" : document.getElementById("email").value};
+      if (/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/.test(data.email)) {
+        $.get('/sendEmail', data)
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+      } else alert('邮箱格式错误!');
+    }
+
+    submit.onclick = function () {
+      let password = document.getElementById("password").value;
+      let repeat = document.getElementById("repeat").value;
+      if (!(password == repeat)){
+        alert('两次输入密码不同!');
+        event.preventDefault();
+      }
+    }
+</script>
