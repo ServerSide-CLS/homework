@@ -12,8 +12,10 @@ router.get('/', function(req, res, next) {
     });
 });
 
+//get请求获得邮箱并发送验证码
 router.get('/email/:email', (req, res) =>{
     let email = req.params.email;
+    //将验证码存入session中
     let code =  ('0000' + Math.floor(Math.random() * 999999)).slice(-4);
     req.session.code = code;
     req.session.save();
@@ -54,13 +56,12 @@ router.get('/email/:email', (req, res) =>{
 console.log(111111);
 router.post('/register',(req,res) => {
     let info = req.body;
-    console.log(info);
 
     //验证码校验
     if(info.code == req.session.code){
         let data = JSON.parse(fs.readFileSync("user.json"));
         let loginFlag = true;
-        console.log(data);
+       
 
         //判断是否已注册
         for(let i = 0; i < data.length; i++){
@@ -69,11 +70,12 @@ router.post('/register',(req,res) => {
                 break;
             }
         }
-
+        
+        //两次密码不相符
         if(info.passwd != info.repasswd){
             loginFlag = false;
         }
-
+        
         if(loginFlag === true){
             let user = {
                 email: info.email,
@@ -86,11 +88,12 @@ router.post('/register',(req,res) => {
         }
 
         if(loginFlag === false){
-
-            res.send({status:"fail", message:"邮箱已注册"});
+            res.send({status:"fail", message:"信息不正确"});
         }
 
     }
+    
+    //验证码不正确
     else{
         console.log(req.session.code);
         res.send({status:"fail"});
