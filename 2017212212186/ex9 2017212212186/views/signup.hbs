@@ -1,0 +1,60 @@
+<body>
+  <div class="container1">
+    <form class="form-horizontal" name='sign-up' method="POST">
+
+      <div class="form-group">
+        <label for="exampleInputUsername1" class="col-sm-2 control-label  inline-style font-position-right">邮箱</label>
+        <div class="col-sm-9  inline-style">
+          <input type="email" class="form-control" id="exampleInputEmail1" name='email' placeholder="邮箱" required>
+        </div>
+        <div class="form-group">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputUsername1" class="col-sm-5 control-label"></label>
+        <div class="form-inline row">
+          <input type="text" class="form-control" id="inIdentyCode" name="vcode" placeholder="请输入验证码" required />
+          {{#if verifying}}
+          <button type="button" class="btn btn-primary verify-btn verifying-btn">
+            重新获取 ( <span id="verify-time">{{verifyTime}}</span>s )
+          </button>
+          {{else}}
+          <button type="button" class="btn btn-primary btn-lg verify-btn">获取验证码</button>
+          {{/if}}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <!--<h2 class="form-signin-heading">注册</h2>-->
+        <label for="exampleInputUsername1" class="col-sm-2 control-label  inline-style font-position-right">密码</label>
+        <div class="col-sm-9  inline-style">
+          <input type="password" class="form-control" id="exampleInputPassword1" name='pwd' placeholder="密码" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <!--<h2 class="form-signin-heading">注册</h2>-->
+        <!-- class="sr-only"将label标签隐藏 -->
+        <label for="exampleInputUsername1" class="col-sm-2 control-label inline-style font-position-right">确认密码</label>
+        <div class="col-sm-9 inline-style ">
+          <input type="password" class="form-control" id="exampleInputUsername1" name='checkPwd' placeholder="确认密码" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-1 col-sm-10">
+          <button class="btn btn-lg btn-primary btn-block register-btn" type="submit">注册</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+  {{!-- message --}}
+  {{#if msg}}
+  <div class="m-msg" style="background: {{msg.color}};">
+    {{msg.message}}
+  </div>
+  {{/if}}
+  <script src="/static/javascripts/email.js"></script>
+</body>

@@ -1,0 +1,22 @@
+<table>
+<thead>
+    <tr>
+        <th class="tdEmail" scope="col">EMAIL</th>
+        <th scope="col">PASSWORD</th>
+    </tr>
+</thead>
+<tbody>
+{{#each userData as |item|}}
+    <tr>
+        <td class="tdEmail">{{item.email}}</td>
+        <td>{{item.password}}</td>
+    </tr>
+{{/each}}
+</tbody>
+</table>
+
+<style>
+    .tdEmail{
+  padding-right: 50%;
+}
+</style>
