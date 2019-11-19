@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>ex9</title>
+</head>
+<body class="{{parmas}}">
+<div class="container" id="con">
+	{{{body}}}
+</div>
+
+</body>
+<script >
+	function sendEmail(){
+		console.log("1");
+		var time = 180;
+		var email = $("#email").val();
+		$.get('/email',{email:email})
+		var wait = setInterval(()=>{
+			waitTime();
+		},1000)
+		function waitTime(){
+			if(time == 0){
+				clearInterval(wait);
+				$('#send').attr("value","獲取郵箱驗證有效性");
+				$('#send').attr("disable",false);
+			}else{
+				$('#send').attr("value",time +"秒後重新發送");
+				$('#send').attr("disable",true);
+				time--;
+			}
+		}
+	}
+
+</script>
+</html>
