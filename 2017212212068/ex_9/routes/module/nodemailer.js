@@ -26,8 +26,8 @@ module.exports = {
             transport.sendMail({
                 from: 'kshines1999@163.com', // 发件邮箱
                 to: EMAIL, // 收件列表
-                subject: 'test8', // 标题
-                html: '<p>text8</p><p>验证码：<strong style="color: #ff4e2a;">' + code + '</strong></p><p>****该验证码3分钟内有效，3分钟后请重新发送。如果不是您的行为，您的邮箱有被盗号的风险。****</p>' // html 内容
+                subject: 'test9', // 标题
+                html: '<p>test9</p><p>你的验证码是：<strong style="color: #ff4e2a;">' + code + '</strong></p><p>****该验证码3分钟内有效，3分钟后请重新发送。如果不是您的行为，您的邮箱有被盗号的风险。****</p>' // html 内容
             }, function (error, data) {
                 if (error) {
                     console.error(error);
