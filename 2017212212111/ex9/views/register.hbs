@@ -1,0 +1,25 @@
+<body class="{{params}}">
+    <form action="/register" method="post">
+      <div>
+        <label for="Email">邮箱&emsp;&emsp;</label>
+        <input type="text" id="email" name="email" placeholder="请输入邮箱">
+      </div>
+      <div>
+        <label for="verification">验证码&emsp;</label>
+        <input type="text" name="verification" placeholder="请输入验证码">
+      </div>
+      <div>
+        <label for="password">密码&emsp;&emsp;</label>
+        <input type="password" name="password" placeholder="请输入密码">
+      </div>
+      <div>
+        <label for="rePassword">重复密码</label>
+        <input type="password" name="rePassword" placeholder="请重复输入密码">
+      </div>
+      <div>
+        <input type="button" class="btn" id="code" value="获取验证码" name="code">
+        <input type="submit" value="注册" id="signup_btn">
+      </div>
+    </form>
+    <p id="info">{{message}}</p>
+</body>
