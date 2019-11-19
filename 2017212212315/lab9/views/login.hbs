@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="row">
+		<div class="container">
+			<div class="col-md-6 col-md-offset-2">
+				<h1>登录</h1>
+				{{#if message}}
+				<h4>{{message}}</h4>
+				{{/if}}
+				<form action="login" method="post">
+                    <div class="form-group">
+                        <label>邮箱</label>
+                        <input type="text" class="form-control" name="email" placeholder="邮箱" required>
+                    </div>
+					<div class="form-group">
+						<label>密码</label>
+						<input type="password" class="form-control" name="password" placeholder="密码" required>
+					</div>
+					<button type="submit" class="btn btn-default">登录</button>
+				</form>
+			</div>
+		</div> 
+	</div> 
+</body>
+</html>
