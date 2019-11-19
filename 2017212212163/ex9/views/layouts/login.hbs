@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>登陆</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>登陆</h1>
+    <form action="/login" method="post">
+    用户名：&emsp;
+    <input type="text" name="name" placeholder="UserId" id="name" required>
+    <br><br>
+    密码：&emsp;&emsp;
+    <input type="password" name="pwd" placeholder="Password" id="pwd" required>
+    <br><br>
+    <button type = "Submit">Sign up</button>
+</form>
+<p>{{tip}}</p>
+  </body>
+
+</html>
