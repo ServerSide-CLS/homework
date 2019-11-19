@@ -1,0 +1,23 @@
+admin page
+<div>
+    {{#if response.err}}
+        <h1>{{response.err}}</h1>
+    {{else}}
+        <table border="1">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">email</th>
+                <th scope="col">password</th>
+            </tr>
+            </thead>
+            {{#each response.data}}
+                <tr>
+                    <td>{{@index}}</td>
+                    <td>{{email}}</td>
+                    <td>{{password}}</td>
+                </tr>
+            {{/each}}
+        </table>
+    {{/if}}
+</div>
