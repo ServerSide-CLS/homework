@@ -1,0 +1,36 @@
+<form class="form-horizontal" role="form" action="/search" method="post">
+    <div class="form-group">
+        <label class="control-label col-sm-1">Email</label>
+        <div class="col-sm-5">
+            <input type="email" class="form-control" name="email" id="email"
+                   placeholder="输入邮箱进行查询"
+                    required/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-1"></label>
+        <div class="col-sm-5">
+            <input class="btn btn-success" type="submit" id="register" value="查询"/>
+        </div>
+    </div>
+
+</form>
+
+<p>{{result}}</p>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th class="col-md-6">EMAIL</th>
+        <th class="col-md-6">PASSWORD</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each datas as |item|}}
+        <tr>
+            <td class="col-md-6">{{item.email}}</td>
+            <td class="col-md-6">{{item.password}}</td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>

@@ -1,0 +1,18 @@
+body {
+  padding: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  border-radius: 8px;
+  border: 1px beige solid;
+}
+.mytitle{
+  padding-bottom: 20px;
+}
+a {
+  color: #00B7FF;
+}
+
+footer{
+  border-top: 1px beige solid;
+  text-align: center;
+  padding-top: 10px;
+}
