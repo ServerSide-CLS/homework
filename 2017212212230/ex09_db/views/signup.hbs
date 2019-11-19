@@ -1,0 +1,43 @@
+<body>
+  <div class="g-container">
+    <div class="g-signup">
+      <div class="form-auto">
+        <div class="form-header">
+          <a href="javascript: void()" class="form-on">Sign up</a>
+          <a href="/signin">Sign in</a>
+        </div>
+        <form action="/signup" name="sign-up" method="POST">
+          <div class="from-row">
+            <label for="email" class="from-label">E-mail</label>
+            <input type="email" name="email" class="from-input" required />
+          </div>
+          <div class="from-row">
+            <label for="pwd" class="from-label">Password</label>
+            <input type="password" name="pwd" class="from-input" placeholder="6-15个数字、字母或下划线" required />
+          </div>
+          <div class="from-row">
+            <label for="rpwd" class="from-label">Password</label>
+            <input type="password" name="rpwd" class="from-input" placeholder="6-15个数字、字母或下划线" required />
+          </div>
+          <div class="from-row">
+            <button type="submit" class="from-btn">Sign up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  {{!-- message --}}
+  {{#if message}}
+  <div class="m-msg">
+    {{message}}
+  </div>
+  {{/if}}
+
+  <script>
+    // 检测是否有message
+    const msgDiv = document.getElementsByClassName('m-msg')[0];
+    console.log(msgDiv)
+    if (msgDiv) setTimeout(() => document.body.removeChild(msgDiv), 2000);
+  </script>
+
+</body>
