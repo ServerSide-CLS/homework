@@ -1,0 +1,9 @@
+ <form action="/login" method="post">
+      <input type="text" name="username" placeholder="用户邮箱" required>
+      <input type="password" name="userpassword" placeholder="密 码" required>
+      <button type = "Submit">登 录</button>
+      <a href="/signup"><button type="button">注 册</button></a>
+      {{#if message}}
+      <p>{{message}}</p>
+    {{/if}}
+ </form>
