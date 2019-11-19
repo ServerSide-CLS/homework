@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>人员列表</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+    <div class="container" style="margin-top:30px;">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>账号</th>
+                        <th>密码</th>
+                        <th>邮件</th>
+                    </tr>
+                    {{#each people}}
+                    <tr>
+                        <th>{{admin}}</th>
+                        <th>{{password}}</th>
+                        <th>{{email}}</th>
+                    {{/each}}
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
