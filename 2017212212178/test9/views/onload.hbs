@@ -1,0 +1,48 @@
+{{!-- 登陆页面 --}}
+<div>
+    <header>
+        <h1 >用户登陆</h1>
+    </header>
+    <label>E m a i l：</label>
+    <input type="text" id="email" name="emailaddress"></input>
+    <br>
+    <label>密码：</label>
+    <input type="password" class="pwd" id="firstsecret"/><br>
+    <button class="btn" onclick="toOnload()">确认</button>
+    <button class="btn" onclick="clearAll()">清空</button>
+    <button class="btn" onclick="turnregister()">注册</button>
+</div>
+<script>
+    //清空事件
+    function clearAll(){
+        $('#email').val('');
+        $('.definecode').val('');
+        $('#code').val('');
+        $('.pwd').val('');
+    }
+
+    //确认按钮事件
+    function toOnload(){
+        var secret = $('#firstsecret').val();
+        var email = $('#email').val();
+
+        $.get('/isonload',{
+            secret:secret,
+            email:email
+        },
+        function(data){
+            if(data=='success'){
+                window.location.href = 'http://localhost:5000/index';
+            }
+            if(data=='false'){
+                alert('用户名或密码错误');
+            }
+        })
+    }
+
+    //跳转到注册页
+    function turnregister(){
+        window.location.href = 'http://localhost:5000/register';
+    }
+
+</script>

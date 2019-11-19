@@ -1,0 +1,60 @@
+
+<form class="form-horizontal" role="form" action="/register" method="POST">
+    <div class="form-group">
+        <label class="control-label col-sm-1">Email</label>
+        <div class="col-sm-5">
+            <input type="email" class="form-control" id="email"
+                   placeholder="email@example.com"
+                   name="email"
+                   required/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-1"></label>
+        <div class="col-sm-5">
+            <button class="btn btn-primary" id="codeBtn" type="button">获取验证码</button>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-1">验证码</label>
+        <div class="col-sm-5">
+            <input class="form-control" type="text" id="code"
+                   placeholder="请输入验证码"
+                   name="code"
+                   required/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="inputPassword" class="col-sm-1 control-label">密码</label>
+        <div class="col-sm-5">
+            <input type="password" class="form-control" id="passwd"
+                   placeholder="请输入密码"
+                   name="passwd"
+                    required/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="inputPassword" class="col-sm-1 control-label">确认密码</label>
+        <div class="col-sm-5">
+            <input type="password" class="form-control" id="rePasswd"
+                   placeholder="请再次输入密码"
+                   name="repasswd"
+                    required/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-1"></label>
+        <div class="col-sm-5">
+            <input class="btn btn-success" type="submit" id="register"/>
+        </div>
+    </div>
+
+    <p id="hint"></p>
+
+</form>

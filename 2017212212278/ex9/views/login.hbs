@@ -1,0 +1,24 @@
+<form action="/login" method="post">
+<body>
+<div>
+    <p>邮箱<input type="text" id="emailInput"></p>
+</div>
+<div>
+    <p>密码<input type="password" id="pwdInput"></p>
+</div>
+<div>
+    <button type="submit" id = 'loginIn'>登录</button>
+    <button type="button" id = 'rregister' onclick="register()">注册</button>
+</div>
+<div>
+{{lmessage}}
+</div>
+
+</body>
+<script src="/js/send.js"></script>
+<script>
+	 function register(){
+ 		window.location.href = "/";
+ 	}
+</script>
+</form>

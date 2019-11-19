@@ -4,6 +4,12 @@ var a = require('../public/javascript/sixNum.js');
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1:27017/new_db');
 
+const conn = mongoose.connection
+var msg = "";
+conn.on('error', function (err) {
+  msg = '连接数据库失败'
+});
+
 var userSchema = mongoose.Schema({
   user: String,
   password: String
@@ -18,12 +24,12 @@ router.get('/admin', function(req, res){
 });
 
 router.get('/', function(req, res,next){
-  res.render('home')
+  res.render('home',{msg:""});
 });
 
 //渲染registered表单//注册路由
 router.get('/registered', function(req, res,next){
-  res.render('registered')
+  res.render('registered',{msg:msg})
 });
 
 //注册路由提交表单
@@ -76,7 +82,7 @@ router.post('/registered', function(req, res){
 
 //登陆路由
 router.get('/login', function(req, res){
-  res.render('login');
+  res.render('login',{msg:msg});
 });
 
 router.post('/login', function(req, res){
@@ -85,6 +91,7 @@ router.post('/login', function(req, res){
   if(!userInfo.user || !userInfo.password){
     res.render("login",{msg:"有空输入"});
   } else {
+     
      users.find({user:userInfo.user},function(err,response){
       let data = JSON.stringify(response);
       var data1 = eval(data);

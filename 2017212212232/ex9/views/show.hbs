@@ -1,0 +1,21 @@
+<table  class="contentview">
+    <tr>
+        <th>序号</th>
+        <th>用户</th>
+        <th>密码</th>
+    </tr>
+</table>
+            
+<script>
+$.get('search', function (res) {
+    for (var i = 0; i < res.length; i++) {
+        $(".contentview").append(`
+        <tr>
+            <td>${i+1}</td>
+            <td>${res[i].email}</td>
+            <td>${res[i].password}</td>
+        </tr>
+        `)
+    }
+})
+</script>
