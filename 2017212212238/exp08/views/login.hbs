@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <form action="/login" method="post">
+                    <div>
+                        <label for="Email">email</label>
+                        <input type="text" name="email" id='email'>
+                        <p>{{emailMsg}}</p>
+                    </div>
+                    <div>
+                        <label for="pro_code">密码</label>
+                        <input type="password" name="pwd" id='pwd'>
+                        <p>{{pwdMsg}}</p>
+                    </div>
+                    <button type="submit" value="">登录</button>
+            </form>
+            <form action="/registerweb" method="post">
+                    <button type="submit" value="">注册</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+               <form action="/check" class="form-horizontal" method="post">
+                    <div class="form-group mt-3 ml-3">
+                        <label for="Email">邮箱地址</label>
+                        <div class="input-group mb-3">
+                            <input  type="email" class="form-control" id="Email" placeholder="邮箱地址" name = "email"required>
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="submit" id="getCAPTCHA" onclick="check()">获取验证码</button>
+                            </div>
+                        </div>
+                    </div>
+               </form>
+               <form action="/register" class="form-horizontal" method="post">
+                    <div class="form-group mt-3 ml-3">
+                        <label for="password">密码</label>
+                        <input type="password" class="form-control" id="password" name="password"placeholder="请输入密码" required>
+                    </div>
+                    <div class="form-group mt-3 ml-3">
+                        <label for="checkPassword">确认密码</label>
+                        <input type="password" class="form-control" id="checkPassword"  name="checkPassword" placeholder="请再输入一次密码" required>
+                    </div>
+                    <div class="form-group ml-3">
+                        <label for="CAPTCHA">验证码</label>
+                        <input type="text" class="form-control" id="CAPTCHA" placeholder="验证码" id="CAPTCHA"required>
+                    </div>
+                    <button type="submit" class="btn btn-default" id="register">提交</button>
+                </form>
+            </div>
+        </div>
+    </div>

@@ -6,14 +6,17 @@ let transporter = nodemailer.createTransport({
     secure: true, // 使用了 SSL
     auth: {
         user: "522852329@qq.com",
-        pass: "zshfiozssdeucbdg" // smtp授权码
+        pass: "bcizjhkufulxbhej" // smtp授权码
     }
 });
 
-let mail = {
+let mail = 
+{
     transporter: transporter,
-    send(mail, content, callback) {
-        let mailOptions = {
+    send(mail, content, callback) 
+    {
+        let mailOptions = 
+        {
             from: '"注册验证码" <522852329@qq.com>',
             to: mail,
             subject: "欢迎注册",
@@ -21,8 +24,10 @@ let mail = {
             html: `欢迎注册，你的验证码为：${content}`
         }
 
-        this.transporter.sendMail(mailOptions, (error, info) => {
-            if (error) {
+        this.transporter.sendMail(mailOptions, (error, info) => 
+        {
+            if (error) 
+            {
                 console.log(error)
                 callback(-1);
                 return console.log(error);
