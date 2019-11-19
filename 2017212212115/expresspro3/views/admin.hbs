@@ -1,0 +1,22 @@
+<div class="container w-75 p-3">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">_id</th>
+                <th scope="col">email</th>
+                <th scope="col">password</th>
+                <th scope="col">__v</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each users}}
+            <tr>
+                <th scope="row">{{this._id}}</th>
+                <td>{{this.email}}</td>
+                <td>{{this.password}}</td>
+                <td>{{this.__v}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

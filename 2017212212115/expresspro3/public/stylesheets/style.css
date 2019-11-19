@@ -1,0 +1,161 @@
+input {
+    border: 1px solid rgb(56, 76, 252);
+    height: 30px;
+    width: 200px;
+    padding: 7px 0px;
+    border-radius: 10px;
+    padding-left: 5px;
+    margin-top: 5px;
+    outline:none;
+  
+  }
+  
+  .login_bar_p {
+    font-size: 15px;
+    display: block;
+    margin-top: 7px;
+  }
+  
+  .btn_login {
+    background-color: #2192f5;
+    color: white;
+    height: 30px;
+    line-height: 15px;
+    border: none;
+    border-radius: 20px;
+  }
+  /* body{
+      font-size: 20px;
+  } */
+  .topnav{
+      padding-left:30px;
+      padding-right: 30px;
+      background-color: #f9f9f9;
+  }
+  .logo{
+      width: 100px;
+      text-decoration: none;
+  }
+  .title{
+      font-size: 22px;
+      font-weight: bold;
+  }
+  .link{
+      width: 150px;
+      text-align: center;
+      font-size: 0.8rem;
+      border-right: 1px #eee solid;
+      color: #000;
+  }
+  nav{
+      display: flex;
+  }
+  .rightlink{
+      padding-top: 14px;
+      display: flex;
+      float: right;
+  }
+  #login{
+      background-color: #eee;
+      /* font-size: 1.1rem; */
+      font-size: 0.9rem;
+  }
+  .body{
+      margin-top: 20px;
+      /* font-size: 1.1rem; */
+      align-items: center;
+  }
+  
+  .content{
+      display: flex;
+  }
+  
+  .bread{
+      margin-left: 100px;
+      font-size: 0.7rem;
+  }
+  
+  .leftbar{
+      background-color: #fafafa;
+      margin-top: 30px;
+      width: 30%;
+      text-align: center;
+      border-radius: 10px;
+      color:black;
+  }
+  .contentTitle{
+      height: 106px;
+      background-color: #4fa7f5;
+      font-size: 1.5rem;
+      padding-top: 25px;
+      color: #fff;
+  }
+  
+  
+  .leftlink{
+      height: 70px;
+      padding-top: 20px;
+      border-bottom: 1px #eee solid;
+      color:#000;
+  }
+  
+  
+  
+  .rightbar{
+      margin-top: 30px;
+  
+  }
+  footer{
+      text-align: center;
+      color:#eee;
+      height: 70px;
+      padding-top: 18px;
+      /* line-height: 35px; */
+      background-color: #262d3d;
+      font-size: 12px;
+  }
+  
+  
+  @media all and (max-width: 1200px){
+      body{
+          width: 1200px;
+      }
+      .container{
+          width: 1200px;
+      }
+  }
+  
+  /* 登录页 */
+  .login_img{
+      width: 100%;
+      opacity:0.7;
+  }
+  .login_bar{
+      background-color: white;
+      width: 400px;
+      /* height: 300px; */
+      position: absolute;
+      margin-top: -600px;
+      margin-left:1000px ;
+      margin-bottom: 100px;
+      z-index: 10;
+      
+      
+  }
+  .login_bar_top{
+      height: 40px;
+  padding-left: 20px;
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
+  background-color: #2192f5;
+  color: white;
+  line-height: 40px;
+  opacity:0.7;
+  }
+  .login_text_bar{
+      padding-top:30px ;
+      padding-left: 20px;
+      padding-bottom: 20px;
+      opacity:0.7;
+  }
+  
