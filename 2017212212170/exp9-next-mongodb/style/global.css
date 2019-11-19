@@ -1,0 +1,58 @@
+.g-content {
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+}
+
+.m-form {
+  width: 450px;
+}
+
+.toast-wrap {
+  display: flex;
+  flex-direction: row-reverse;
+  min-height: 80px;
+}
+
+.toast {
+  width: 400px;
+  padding-right: 20px;
+}
+
+.ui.button:not(.icon)>.icon:not(.button):not(.dropdown) {
+  margin: 0 !important;
+}
+
+.ui.form .field.success label {
+  /*color: #308330;*/
+}
+
+.ui.form .field.success input {
+  /*background: #f4faf4 none repeat scroll 0 0;*/
+  border-color: #a3c293;
+  border-radius: 0.285714rem;
+  box-shadow: none;
+}
+
+/* Success Placeholder */
+.ui.form .success ::-webkit-input-placeholder {
+  color: #5e9e5e;
+}
+
+.ui.form .success ::-ms-input-placeholder {
+  color: #5e9e5e;
+}
+
+.ui.form .success ::-moz-placeholder {
+  color: #5e9e5e;
+}
+
+.ui.form .success :focus::-webkit-input-placeholder {
+  color: #558e55;
+}
+.ui.form .success :focus::-ms-input-placeholder {
+  color: #558e55;
+}
+.ui.form .success :focus::-moz-placeholder {
+  color: #558e55;
+}
