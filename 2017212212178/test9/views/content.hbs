@@ -1,0 +1,109 @@
+{{!-- 注册页 --}}
+<div>
+    <header>
+        <h1 >用户注册</h1>
+    </header>
+    <form action="" method="post" target="iframe" >
+        <label>E m a i l：</label>
+        <input type="text" id="email" name="emailaddress"></input>
+        <br>
+        <label>验证码：</label>
+        <input type="text" class="definecode" id="code"></input>
+        <button  onclick="checkEmail()" id="inputdefine">获取验证码</button><br>
+        <label>密码：</label>
+        <input type="password" class="pwd" id="firstsecret"/><br>
+        <label>确认密码：</label>
+        <input type="password" class="pwd" id="secondsecret"/><br>
+        <button class="btn" onclick="defineflag()">确认</button>
+        <button class="btn" onclick="clearAll()">清空</button>
+    </form>
+    <iframe id="iframe" name="iframe" style="display:none;"></iframe>
+</div>
+
+<script>
+    var email;
+
+    //清空事件
+    function clearAll(){
+        $('#email').val('');
+        $('.definecode').val('');
+        $('#code').val('');
+        $('.pwd').val('');
+    }
+
+    //验证码获取
+    function checkEmail(){
+        email = $('#email').val();
+        var patt1 = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
+        var time = 300;
+
+        //email格式验证
+        if (!email || email == ""){
+            alert('请输入邮箱地址');
+        }else{
+            if(email.match(patt1) == null){
+                alert('请输入正确的邮箱地址');
+            }else{
+
+           //将邮箱发送到后台
+            $.get('/email',{
+                email:email,
+            },
+            function(data){
+                if(data=='success'){
+                alert('邮件已注册');
+                clearInterval(mytime);
+            }
+            }) 
+
+            //设置一个定时，一秒执行一次
+            var mytime = setInterval(function () {
+                subs();
+            },1000)
+
+            function subs(){
+                time--;
+                if(time==0){
+                    document.getElementById("inputdefine").innerHTML = "获取验证码";
+                        $('#inputdefine').attr("disabled",false);//按键可用
+                    clearInterval(mytime);
+                    } else{
+                        document.getElementById("inputdefine").innerHTML = "请"+time+"秒后再试";  
+                        $('#inputdefine').attr("disabled",true);//按键不可用
+                    }
+                }           
+             }
+
+        }
+    }
+
+    //确认按钮事件
+    function defineflag(){
+        var secret1 = $('#firstsecret').val();
+        var secret2 = $('#secondsecret').val();
+        var code = $('#code').val();
+
+        $.get('/check',{
+            secret1:secret1,
+            secret2:secret2,
+            code:code,
+            email:email
+        },
+        function(data){
+            if(data=='success'){
+                alert('注册成功');
+            }
+            if(data=='fault1'){
+                alert('两次密码不一致');
+            }
+            if(data=='fault2'){
+                alert('验证码错误');
+            }
+        })
+
+        if(secret1 == "" || secret1 == null){
+            alert('密码不能为空');
+        }
+    }
+
+</script>
