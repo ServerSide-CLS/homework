@@ -1,0 +1,44 @@
+body {
+	padding: 50px;
+	font: 30px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.part label
+{
+	height: 30px;
+	width:200px;
+	float:left;
+	text-align:right;
+	padding-right: 20px;
+}
+
+.part input
+{
+	padding:1px 1px;
+	border:1px solid #ccc;
+	height:30px;
+	width: 200px;
+}
+
+.btn
+{
+	width: 120px;
+	font-size: 20px;
+	margin-left: 20px;
+}
+
+.login
+{
+	width: 120px;
+	font-size: 20px;
+	margin-left: 150px;
+	margin-top: 30px;
+}
+
+.register
+{
+	width: 120px;
+	font-size: 20px;
+	margin-left: 20px;
+	margin-top: 30px;
+}
