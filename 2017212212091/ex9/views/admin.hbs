@@ -1,0 +1,26 @@
+<div>
+    {{#if result.code}}
+    <h1>{{result.err}}</h1>
+    {{else}}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">email</th>
+                <th scope="col">password</th>
+                <th scope="col">code</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each result.records as |item|}}
+            <tr>
+                <th scope="row">{{addOne @index}}</th>
+                <td>{{item.email}}</td>
+                <td>{{item.password}}</td>
+                <td>{{item.code}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{/if}}
+</div>
