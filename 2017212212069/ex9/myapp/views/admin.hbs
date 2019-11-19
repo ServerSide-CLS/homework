@@ -1,0 +1,15 @@
+<h1>/admin</h1>
+<table border="1">
+    <tr>
+        <th>index</th>
+        <th>email</th>
+        <th>password</th>
+    </tr>
+    {{#each data}}
+        <tr>
+            <td>{{@index}}</td>
+            <td>{{email}}</td>
+            <td>{{password}}</td>
+        </tr>
+    {{/each}}
+</table>
