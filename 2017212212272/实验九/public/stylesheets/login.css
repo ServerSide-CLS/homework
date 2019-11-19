@@ -1,0 +1,64 @@
+
+H2 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
+    margin-bottom: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 98%;
+    color: #666666;
+}
+#inputPwd{
+	margin-bottom: 20px;
+}
+
+input[type='text'],input[type='password']{
+	margin-top: 20px;
+}
+
+input[type='submit']{
+	background-color: rgb(122, 228, 35);
+    font-size: 18px;
+    color: #ffffff;
+    width:106%;
+    margin-top:20px;
+    margin-bottom: 20px;
+    padding:10px 5px;
+    border:none;
+    border-radius: 5px;
+}
+
+label{
+	font-size: 14px;
+	margin-top: 16px;
+	margin-bottom: 12px;
+}
+
+.inner {
+    margin: 10% 30%;
+    padding: 2% 8% 4% 8%;
+    border: 1px solid LightGrey;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.comment {
+    font-size:16px;
+    height:20px;
+    border-radius:5px;
+    border:1px solid #c8cccf;
+    color:#6a6f77;
+    display:block;
+    outline:0;
+    padding:10px;
+    width:100%;
+    resize:none;
+    margin-top:100px;
+}
+
+.signup{
+    float:right;
+    font-size:12px;
+    color:#6a6f77;
+    display: block;
+    text-decoration: none;
+}
