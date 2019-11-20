@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>{{title}}</title>
+  <script src="javascripts/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    {{{body}}}
+  </div>
+</body>
+
+<script>
+  var time=180;
+  var btn=document.getElementById("getCaptcha");
+  btn.onclick=function(){
+    btn.setAttribute('disabled',true);
+
+    var Captcha="";
+    for(var i=0;i<6;i++){
+      Captcha=Captcha+Math.floor(Math.random()*10)
+    }
+    
+    var exp = new Date(); 
+    exp.setTime(exp.getTime() + 3*60*1000);
+    document.cookie="Captcha="+Captcha+ ";expires=" + exp.toGMTString();
+    
+    $.post("/mails",{mail:$('#email').val(),Captcha:Captcha},function(data){},"text");
+
+    var timer=setInterval(function(){
+      if(time==0){
+        btn.removeAttribute('disabled');
+        btn.innerHTML='获取验证邮箱有效性(有效时间3分钟)';
+        clearInterval(timer);
+        time=180;
+      }else{
+        btn.innerHTML="距离可再次发送时间"+time;
+        time--;
+      }
+    },1000);
+  }
+</script>
+
+
+</html>
