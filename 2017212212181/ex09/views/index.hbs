@@ -1,0 +1,55 @@
+<form action="/" method="post">
+    <div class = form>
+        <h1>注册</h1>
+        <label class="Email">邮箱&emsp;&emsp;
+        </label>
+        <input type="text" id="email" name="email" >
+        <input type="button" id="emialcore" class="btn btn-danger" value="获取验证邮箱有效性" onclick="EmailClick()">
+    </div>
+    <div class = form>
+        <label class="verification">验证码&emsp;
+        </label>
+        <input type="text" name="verification" >
+    </div>
+    <div class = form>
+        <label class="password">密码&emsp;&emsp;
+        </label>
+        <input type="password" name="password">
+    </div>
+    <div class = form>
+        <label class="rePassword">确认密码
+        </label>
+        <input type="password" name="rePassword">
+    </div>
+    <div>
+        <button type="submit">注册</button>
+    </div>
+</form>
+<script>
+    function EmailClick() {
+        let time = 180;//倒计时
+        const email = $('#email').val();//获取输入的邮箱
+        $.get('/email', {
+            email: email
+        },
+            function (data) {
+                console.log(data)
+            }
+        );
+        //设置一个定时，一秒执行一次
+        let mytime = setInterval(function () {
+            subs();
+        }, 1000);
+        function subs() {
+            time--;
+            $('#emialcore').attr("value", "请" + time + "s后再试");
+            if (time === 0) {
+                clearInterval(mytime);
+                $('#emialcore').attr("value", "发送验证码");
+                $('#emialcore').attr("disabled", false);//按键可用
+            } else {
+                $('#emialcore').attr("disabled", true);//按键不可用
+            }
+        }
+    }
+</script>
