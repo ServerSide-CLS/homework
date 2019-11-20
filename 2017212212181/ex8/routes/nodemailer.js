@@ -1,31 +1,34 @@
 var nodemailer = require('nodemailer');
-const smtpTransport = require('nodemailer-smtp-transport')
+const smtpTransport = require('nodemailer-smtp-transport');
+
 // 发送邮件，SMTP
 const transport = nodemailer.createTransport(smtpTransport({
-    host: 'smtp.qq.com',
-    port: 465,
+    host: 'smtp.163.com', //主机
+    port: 465, // SMTP 端口
     auth: {
-        user: '3324791952@qq.com', //邮箱账号
-        pass: 'devtuqdosorhdaeb'  //授权码
+        user: '17376598411@163.com', // 发件地址
+        pass: 'slq501266' // 邮箱授权码
     }
 }));
 
-function send(mail){
-    //随机生成验证码
-    var Code = Math.floor(Math.random() * (1000000 - 100000 + 1) + 100000);
-    transporter.sendMail({
-        from:'<3324791952@qq.com>',
-        to:mail,
-        subject:"验证码",
-        html:"注册验证码为：" + Code
-    },function (err,res) {
-        if(error){
-            console.log('error');
-        }
-        else{
-            console.log('success');
-        }
-    });
+//发送邮件
+module.exports = {
+    sendMailFn(req, res, code) {
+    let email = req.query.email;
+        transport.sendMail({
+            from: '17376598411@163.com',
+            to: email,
+            subject: '验证码', // 邮件标题
+            html: '<p>Your code is:<p>' + code + '</p></p>' // html与text不能同时使用
+        }, function (error, data) {
+            if (error) {
+                console.error(error);
+            } else {
+                console.log('发送成功');
+            }
+            transport.close();
+        });
+        console.log('发送的验证码：' + code);
+        res.send(code);
+    }
 };
-
-module.exports = {send};
