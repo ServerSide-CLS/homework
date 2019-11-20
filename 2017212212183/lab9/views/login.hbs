@@ -1,0 +1,40 @@
+<div>
+    <div>
+        <label for="email">用户名</label>
+        <input type="email" name="email" id="email" placeholder="请输入用户名邮箱">
+    </div>
+    <div>
+        <label for="password">密码&emsp;</label>
+        <input type="password" name="password" id="password" placeholder="请输入用户密码">
+    </div>
+    <div>
+        <button type="submit" id="loginBtn" style="width: 5.2cm">login</button>
+    </div>
+</div>
+
+<script>
+    jQuery(function ($) {
+        $('#loginBtn').click(function () {
+            let userInfo = {
+                email: $('#email').val(),
+                password: $('#password').val()
+            };
+            $.ajax({
+                url: "/login",
+                type: "post",
+                data: userInfo,
+                success: function (response) {
+                    console.log(response);
+                    alert(response.massage);
+                    //successfully
+                    if (response.status === 200) {
+                        window.location.href = '/admin';
+                    }
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            })
+        })
+    })
+</script>

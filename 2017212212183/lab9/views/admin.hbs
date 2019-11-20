@@ -1,0 +1,18 @@
+<div>
+    <table border="1" cellspacing="0">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>email</th>
+            <th>password</th>
+        </tr>
+        </thead>
+        {{#each response.data}}
+            <tr>
+                <td>{{@index}}</td>
+                <td>{{email}}</td>
+                <td>{{password}}</td>
+            </tr>
+        {{/each}}
+    </table>
+</div>

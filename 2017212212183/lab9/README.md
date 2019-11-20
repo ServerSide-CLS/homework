@@ -1,0 +1,4 @@
+- http://localhost:3000/  home界面
+- http://localhost:3000/login  登录界面
+- http://localhost:3000/register  注册界面
+- http://localhost:3000/admin  管理界面
