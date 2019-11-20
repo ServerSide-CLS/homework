@@ -1,0 +1,20 @@
+<div id="content">
+    <div id="list">
+    	{{#each data}}
+    	<div class="images">
+            <p>{{this}}</p>
+        </div> 
+		{{/each}}
+    </div>
+    <div id="navbar">
+    	{{#if flagLeft}}
+        <a class="nav" href="/?page={{left}}"><<</a>
+        {{/if}}
+        {{#each pageCountList}}
+        <a class="nav" href="/?page={{this}}">{{this}}</a>
+        {{/each}}
+        {{#if flagRight}}
+        <a class="nav" href="/?page={{right}}">>></a>
+        {{/if}}
+    </div>
+</div>
