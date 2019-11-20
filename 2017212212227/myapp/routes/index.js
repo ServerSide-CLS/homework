@@ -8,6 +8,17 @@ let cookieParser = require("cookie-parser")
 var bodyParser = require('body-parser');
 var session = require('express-session');
 const jsdom = require('jsdom');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://127.0.0.1:27017/user');
+
+var check_code;
+
+var personSchema = mongoose.Schema({
+   name: String,
+   password: String,
+});
+var Person = mongoose.model("users", personSchema);
+
 const { JSDOM } = jsdom;
 const { document } = (new JSDOM('<!doctype html><html><body></body></html>')).window;
 global.document = document;
@@ -21,6 +32,16 @@ var codeMap = new Map();
 
 router.get('/', function(req, res, next) {
   res.render('index');
+});
+
+router.get('/admin', function(req, res, next) {
+  Person.find(function(err, response){
+    let info = "";
+    for(let each in response) {
+        info += "用户名:" + response[each].name + "<br>"+"密码:" + response[each].password + "<br><br>";
+    }
+    res.send(info);
+  });
 });
 
 
@@ -55,36 +76,46 @@ function sendCode(email) {
 
 router.post('/sendCode', function(req, res, next) {
 	let email = req.body.email;
-	sendCode(email);
-   	
+  Person.find({name: email},
+  function(err, response){
+            if (response == "") { //如果数据库中没有这个用户名
+              sendCode(email);
+            }else{  //如果数据库中有这个用户名
+              res.send("0");
+            }
+      }); 
+});
+
+router.post('/login', function(req, res, next) {
+    let username = req.body.username;
+    let pwd = req.body.pwd;
+    Person.find({name:username}, 
+      function(err, response){
+          if (response[0].password == pwd) {
+              res.render('index',{layout: 'index'});
+          }else{
+              res.render('index',{layout: 'login'});
+          }
+      });
 });
 
 router.post('/', function(req, res, next) {
    	let code1 = req.body.code1;
    	let PWD = req.body.PWD;
    	let RE_PWD = req.body.RE_PWD;
+    let email = req.body.E_mail;
    	if(PWD == RE_PWD){
    		if(code1 == c_code){
-	   		fs.readFile('user.json',function(err,data){
-		        if(err){
+        var newPerson = new Person({
+         name: email,
+         password: req.body.PWD
+        });
+	   		newPerson.save(function(err, Person){
+		        if(err)
 		            return console.error(err);
-		        }
-		        var user = data.toString();
-		        if(user != ""){
-		        	user = JSON.parse(user);
-		        }else{
-		        	user = [];
-		        }
-		        let newUser = { username: req.body.email, password: req.body.PWD };
-		        user.push(newUser);
-		        var str = JSON.stringify(user);
-		        fs.writeFile('user.json',str,function(err){
-		            if(err){
-		                console.error(err);
-		            }
-		            res.send("注册成功");
-		      	})
-	    	})
+		        else
+            res.render('index',{layout: 'login'});//注册成功就跳转到登录界面
+        });
    		}else{
    			res.send("验证码错误");
    		}
