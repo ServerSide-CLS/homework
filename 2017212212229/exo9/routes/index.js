@@ -10,7 +10,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/demo');
 var check_code;
 var personSchema = mongoose.Schema({
    username: String,
-   password: Number,
+   password: String,
 });
 var Person = mongoose.model("users", personSchema);
 /* GET home page. */
