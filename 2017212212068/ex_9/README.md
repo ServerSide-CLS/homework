@@ -10,7 +10,6 @@ npm install nodemailer-smtp-transport
 
 npm install --save mongoose
 
-npm install 
 
 ```
 

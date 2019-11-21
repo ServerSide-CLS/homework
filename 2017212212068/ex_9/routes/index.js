@@ -9,6 +9,8 @@ router.get('/', function (req, res, next) {
     res.render('index');
 });
 
+
+
 router.use("/login", loginRouter);
 
 router.use("/admin", adminRouter);
