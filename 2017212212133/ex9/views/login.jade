@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 SHIYINGDAN
+  p Login
+  form(action="/login" method="post")
+    div
+      span email：
+      input#email-login(type="text",name="email",placeholder="请输入邮箱号")
+    div
+      span password：
+      input#password-login(type="password",name="age",placeholder="请输入密码")
+    div
+      span 
+      button#login(type="submit") Login

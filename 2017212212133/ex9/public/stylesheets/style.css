@@ -1,0 +1,45 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+/*home*/
+#homeTitle{
+	text-align: center;
+}
+
+
+
+
+
+/*register*/
+div{
+	margin-bottom: 6px;
+}
+
+#email, #password, #repeatPassword{
+	width: 150px;
+}
+
+#code{
+	width: 70px;
+}
+
+input.register{
+	position: absolute;
+	left: 120px;
+}
+#sendCode{
+	position: absolute;
+	left: 200px;
+	background-color: white;
+}
+#register{
+	position: absolute;
+	left: 150px;
+}

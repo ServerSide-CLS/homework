@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1 SHIYINGDAN
+  p Register
+  div
+    span email:
+    input.register#email
+
+  div
+    span 验证码:
+    input.register#code
+    button#sendCode 发送验证码
+
+  div
+    span 密码:
+    input.register#password(type="password")
+
+  div
+    span 确认密码:
+    input.register#repeatPassword(type="password")
+    
+  button#register 注册
+
+
+  p 2578420247@qq.com

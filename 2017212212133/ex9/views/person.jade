@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 SHIYINGDAN
+  p Welcome to SHIYINGDAN
+  form(action="/person" method="post")
+    div
+      input(type="text",name="name",value="tom")
+    div
+      input(type="text",name="age",value="23")
+    div
+      input(type="text",name="nationality",value="23")
+    div
+      button(type="submit") Create new person
