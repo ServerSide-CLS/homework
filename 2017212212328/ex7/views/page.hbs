@@ -1,0 +1,23 @@
+<div class="m-data">
+  {{#each entries}}
+    <li>{{this}}</li>
+  {{/each}}
+</div>
+
+<div class="pagination">
+  <li>
+    <a href="{{#le pageNumber 1}}?{{else}}?page={{reduce pageNumber 1}}{{/le}}">
+      <span>&laquo;</span>
+    </a>
+  </li>
+  {{#times pageCount 1 pageCount}}
+    <li {{#equals pageNumber this.step}}class="active" {{/equals}}>
+      <a href="?page={{step}}">{{step}}</a>
+    </li>
+  {{/times}}
+  <li>
+    <a href="{{#ge pageNumber pageCount}}?page={{pageCount}}{{else}}?page={{add pageNumber 1}}{{/ge}}" aria-label="Previous">
+      <span>&raquo;</span>
+    </a>
+  </li>
+</div>
