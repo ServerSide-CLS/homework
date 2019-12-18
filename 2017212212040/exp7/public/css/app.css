@@ -1,0 +1,35 @@
+.content{
+    margin: 80px 40px 100px 10px;
+    float:top;
+}
+.content-box{
+    text-align: center;
+    border: 1px black solid;
+    padding: 50px;
+    float:left;
+    width: 10%;
+    margin: 20px;
+}
+.page{
+    padding-top: 50px;
+    padding-left: 20px;
+    clear: both;
+}
+.left{
+    float:left;
+}
+.body{
+    float:left;
+}
+.right{
+    float:left;
+}
+
+.footer{
+    margin-top: 50px; 
+    clear: both;
+    text-align: center;
+}
+.header{
+    text-align: center;
+}
