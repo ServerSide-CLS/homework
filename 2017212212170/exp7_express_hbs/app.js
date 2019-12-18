@@ -16,6 +16,7 @@ app.engine('.hbs', exphbs({
   extname: '.hbs',
   helpers: require('./utils/handlebars-helpers') //only need this
 }));
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
