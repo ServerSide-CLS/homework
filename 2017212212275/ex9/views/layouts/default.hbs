@@ -1,0 +1,21 @@
+{{!-- 主页面 --}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>实验9</title>
+  <link rel="stylesheet"  href="../stylesheets/index.css"/>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body class="{{params}}">
+    {{!-- 引入头部部分 --}}
+    {{> header}}
+  <div>
+    {{!-- 引入中间部分 --}}
+    {{{body}}}
+  </div>
+    {{!-- 引入结尾部分 --}}
+    {{> footer}}
+</body>
+</html>
