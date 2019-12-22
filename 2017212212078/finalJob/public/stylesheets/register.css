@@ -1,0 +1,44 @@
+#login_div {
+	margin: 120px auto;
+	width: 380px;
+	height: 300px;
+	background: rgba(255, 255, 255, 0.2);
+	background: url(images/img3.jpg) no-repeat center center;
+	border-radius: 8px;
+	box-shadow: 0 0 5px #000;
+	text-align: center;
+	font-family: "幼圆";
+	color: #fff;
+	text-shadow: 0 0 2px #000;
+	}
+.login_input {
+	width: 220px;
+	height: 30px;
+	font-size: 12px;
+	border: 0;
+	border-radius:5px;
+	margin-top:10px;
+	outline: none;
+	position: relative;
+	top:20px;
+	color: #ff5000;
+	font-weight: bolder;
+	padding-left: 8px;
+}
+#login_div > h2 {
+	position: relative;
+	top: 30px;
+	color: #fff;
+}
+#login {
+	width: 200px;
+	height: 30px;
+	border-radius: 5px;
+	color: #fff;
+	background: #ff5050;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	position: relative;
+	top: 50px;
+}

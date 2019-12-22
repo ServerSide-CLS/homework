@@ -1,0 +1,35 @@
+#remember {
+	width: 200px;
+	height: 30px;
+	border: 0;
+	margin: auto;
+	font-size: 12px;
+	padding: 0;
+	position: relative;
+	top:30px;
+}
+#remember p {
+	margin-top: 5px;
+	border: 0;
+	padding: 0;
+	line-height: 20px;
+	height: 20px;
+	width: 100px;
+	float: left;
+	text-shadow: 0 0 1px #333;
+	position: relative;
+	text-align: left;
+	cursor: pointer;
+}
+#login_div a {
+	text-shadow: 0 0 1px #000;
+	font-size: 12px;
+	width: 50px;
+	height: 30px;
+	position: relative;
+	margin-left: 310px;
+	margin-top: 70px;
+	display: block;
+	text-decoration: underline;
+	cursor: pointer;
+}
