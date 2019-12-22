@@ -1,0 +1,38 @@
+<p id="hometip" style="color: red">{{noLogin}} {{postSuccess}}</p>
+<div class="part">
+	<div class="col-sm-3 col-md-2 sidebar">
+		<ul class="nav nav-sidebar">
+			<li class="active"><a href="#">C <span class="sr-only">(current)</span></a></li>
+			<li><a href="#">Java</a></li>
+			<li><a href="#">前端开发</a></li>
+			<li><a href="">后端开发</a></li>
+			<li><a href="">数据库</a></li>
+			<li><a href="">人工智能</a></li>
+			<li><a href="">架构</a></li>
+			<li><a href="">游戏开发</a></li>
+		</ul>
+	</div>
+</div>
+{{#if isTable}}
+<div class="postTips">
+	<table class="table table-hover">
+		<tr>
+			<td>帖子类型</td>
+			<td>标题</td>
+			<td>发帖人</td>
+			<td>发表时间</td>
+			<td>点击量</td>
+		</tr>
+
+		{{#each resq}}
+		<tr>
+			<td><p style="color: #6699FF">{{this.part}}</p></td>
+			<td width="500px"><a href="/openPost?temp={{this._id}}" class="postTitle" id="{{this._id}}">{{this.title}}</a></td>
+			<td>{{this.author}}</td>
+			<td>{{this.time}}</td>
+			<td>{{this.look_count}}</td>	
+		</tr>
+		{{/each}}
+	</table>
+</div>
+{{/if}}	

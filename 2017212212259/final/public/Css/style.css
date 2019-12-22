@@ -1,0 +1,279 @@
+body{
+	background-color: rgba(112,112,112,0.31);
+}
+#title{
+	font-weight: bold;
+	font-size: 20px;
+}
+#title_img{
+	width: 20px;
+	height: 20px;
+}
+.sign_in{
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 20px;
+	width: 500px;
+	height: 500px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 80px;
+}
+#username{
+	width:300px;
+}
+#pwd{
+	margin-top:10px;
+	width: 300px;
+}
+.input{
+	width: 300px;
+	margin: 0 auto;
+	margin-top:100px;
+}
+#button_signin{
+	width: 300px;
+	margin-top: 30px;
+	background-color: #EEEEEE;
+}
+#title_signin{
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 40px;
+}
+#backhome{
+	text-decoration: none;
+	color: black;
+	float: left;
+	margin-top: -20px;
+	margin-left: 410px;
+}
+.register{
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 20px;
+	width: 500px;
+	height: 580px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+#title_register{
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 40px;
+}
+#email{
+	width: 205px;
+}
+#emailButton{
+
+	margin:-115px 0 0 205px;
+	background-color: #EEEEEE;
+}
+#sendemail{
+}
+#button_register{
+	width: 300px;
+	background-color: #EEEEEE;
+}
+.reg_input{
+	width: 300px;
+	margin: 0 auto;
+	margin-top:70px;
+}
+#reg_username{
+}
+#reg_pwd{
+}
+#reg_pwd_again{
+}
+#pro_code{
+	margin-top: -20px;
+}
+.tip{
+	float: left;
+}
+.tip_login{
+	float: left;
+}
+#person_signin{
+	/*	margin-top: -20px;*/
+}
+#person_pic{
+	width:50px;
+}
+#person_pic1{
+	width: 100px;
+	height:100px;
+	border-radius: 50% 50%;
+	float: left;
+	margin:0 0 0 50px;
+}
+.info1{
+	margin-top:40px;
+	margin-bottom: 50px;
+}
+.info1 p{
+	width: 300px;
+	margin:10px 0 0 100px;
+	padding-left: 100px;
+	font-size: 15px;
+}
+.postinfo{
+	width: 1000px;
+	height: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
+#aticle{
+	margin-top: 60px;
+}
+#post_title{
+	margin-top: 50px;
+}
+.file{
+	margin-top: -110px;
+	width: 200px;
+}
+#postacicle{
+	margin:50px;
+	width: 200px;
+	height: 50px;
+}
+#goon{
+	float: left;
+}
+#empty_tip{
+	margin-top: 10px;
+}
+
+.sub-header {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #eee;
+}
+
+.sidebar {
+	display: none;
+}
+@media (min-width: 768px) {
+	.sidebar {
+		position: fixed;
+		top: 51px;
+		bottom: 0;
+		left: 0;
+		z-index: 1000;
+		display: block;
+		padding: 20px;
+		overflow-x: hidden;
+		overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+		background-color: #f5f5f5;
+		border-right: 1px solid #eee;
+	}
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+	margin-right: -21px; /* 20px padding + 1px border */
+	margin-bottom: 20px;
+	margin-left: -20px;
+	text-align: center;
+}
+.nav-sidebar > li > a {
+	padding-right: 20px;
+	padding-left: 20px;
+	color:rgba(0,0,0,0.7);
+}
+.nav-sidebar > .active > a {
+	color: #fff;
+	background-color: #428bca;
+}
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+	color: #fff;
+	background-color: #428bca;
+}
+#hometip{
+	padding: 0 0 0 650px;
+}
+.postTips{
+	margin-left: 300px;
+	border: 1px solid black;
+	width:900px;
+	background-color: white; 
+	border-radius: 10px;
+}
+td{
+	text-align: center;
+}
+.postTitle{
+	font-size: 17px;
+	font-weight: bold;
+	color: black;
+}
+.postTips a:hover{
+	color: red;
+}
+.postTips a{
+	text-decoration: none;
+}
+.per_info{
+	border: 1px solid black;
+	background-color: white;
+	width: 900px;
+	margin: 0 auto;
+}
+/* 半透明的遮罩层 */
+.shadow {
+    background: #000;
+    filter: alpha(opacity=70); /* IE的透明度 */
+    opacity: 0.5; /* 透明度 */
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 965; /* 此处的图层要大于页面 */
+}
+
+.login-box {
+    width: 500px;
+    height: 500px;
+    /*border: 3px solid gainsboro;*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    -webkit-box-shadow: #666 0 0 1px;
+    -moz-box-shadow: #666 0 0 1px;
+    box-shadow: #fff8e7 0 0 6px 1px;
+    z-index: 996;  /* 此处的图层要大于遮罩图层 */
+}
+.close-btn{
+	margin-left: 460px;
+	margin-top:10px;
+}
+.input-item{
+	width: 350px;
+	margin:0 0 10px 85px;
+}
+#changeinfo{
+	font-size: 25px;
+	font-weight: bold;
+	margin-left: 30px;
+	margin-bottom: 30px;
+}
+#change_btn{
+	background-color: #EEEEEE;
+	margin-left:290px;
+	margin-top: 20px;
+}
+#person_t{
+	font-size: 25px;
+	font-weight: bold;
+	margin:20px 0 0 50px;
+}
+
+

@@ -1,0 +1,21 @@
+<div class="postinfo">
+	<form action="/upload" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+		<div class="input-group" id="post_title">
+			<span class="input-group-addon" id="sizing-addon2">title</span>
+			<input type="text" class="form-control" placeholder="请输入该帖子的标题" aria-describedby="sizing-addon2" name="p_title" id="p_title">
+			<select class="form-control" name="part">
+				<option>前端开发</option>
+				<option>后端开发</option>
+				<option>Java</option>
+				<option>Python</option>
+			</select>
+		</div>
+		<textarea class="form-control" rows="15" name="aticle" id="aticle"></textarea>
+		<input type="submit" class="btn btn-default" name="postacicle" value="发表" id="postacicle">
+		<div class="file">
+			<label for="file" id="goon">文件上传:</label>
+			<input class="form-inline" type="file" name="file" id="file"/> 
+		</div>
+		<p id="empty_tip" style="color: red">{{empty_tip}}</p>
+	</form>
+</div>

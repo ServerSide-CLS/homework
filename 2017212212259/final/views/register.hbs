@@ -1,0 +1,25 @@
+<a href="/" id='backhome'><<返回首页</a>
+<div class="register">
+	<div class="reg_input">
+		<form action="/isCorrectRegister" method="post">
+			<p id=title_register>NDSC注册</p>
+		
+			<input type="text" class="form-control" name="reg_username" placeholder="请输入用户名" aria-describedby="sizing-addon1" id="reg_username" onblur="checkUsername()">
+	
+			<p class='tip' id='check_username'">*6~18个字符，需以字母开头</p>
+
+			<input type="password" class="form-control" name="reg_pwd" placeholder="请输入密码" aria-describedby="sizing-addon1" id="reg_pwd" onblur="checkPwd()">
+			<p class='tip'" id="check_pwd">*6~16个字符，区分大小写</p>
+			<input type="password" class="form-control" name="reg_pwd_again" placeholder="请再次输入密码" aria-describedby="sizing-addon1" id="reg_pwd_again" onblur="issamePwd()">
+			<p class='tip'" id="check_pwd_again">*请再次填写密码</p>
+			<div id='sendemail'>
+				<input type="text" class="form-control" name="email" placeholder="请输入验证邮箱" aria-describedby="sizing-addon1" id='email' onblur="checkEmail()">
+				<p class='tip' id="check_email">*请以正确的邮箱格式填写</p>
+				<input type="button" class="btn btn-default" id='emailButton' value="发送验证码" onclick="sendEmail()">
+			</div>
+			<input type="text" class="form-control" placeholder="请输入验证码" ria-describedby="sizing-addon1" name="pro_code" id='pro_code'>
+			<p class='tip' style="color: red">*{{tips}}</p>
+			<input type="submit" class="btn btn-default" name="button_register" value="注册" id="button_register">
+		</form>
+	</div>
+</div>
