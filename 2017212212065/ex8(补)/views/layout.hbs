@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="JavaScript/jquery-3.4.1.min.js"></script>
+    <title>注册</title>
+  </head>
+  <br>
+  <body>
+    {{{body}}}
+  </body>
+  <br>
+  <footer>
+    copyright©allright reserved
+  </footer>
+  <script>
+    var time = 180;
+    var btn = document.getElementById("send_captcha");
+    btn.onclick=function(){
+      btn.setAttribute('disabled',true);
+      var Captcha="";
+      for(var i=0;i<6;i++){
+        Captcha=Captcha+Math.floor(Math.random()*10)
+      }
+      var e = new Date();
+      e.setTime(e.getTime() + 3 * 60 * 1000);
+      document.cookie="Captcha=" + Captcha + ";expires=" + e.toGMTString() + ";";
+      $.post("/mail",{email:$('#email').val(),Captcha:Captcha},function(data){},"text");
+      var timer=setInterval(function(){
+        if(time == 0){
+          btn.removeAttribute('disabled');
+          btn.innerHTML='发送验证码';
+          clearInterval(timer);
+          time = 180;
+        }
+        else{
+          btn.innerHTML=time+"秒后可再次发送";
+          time--;
+        }
+      },1000);
+    }
+  </script>
+</html>
