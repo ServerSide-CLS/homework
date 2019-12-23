@@ -1,0 +1,31 @@
+module.exports = {
+    'imgData':[
+        {
+            'src':'./images/乱藤四郎.png'
+        },
+        {
+            'src':'./images/五虎退_极_内番.png'
+        },
+        {
+            'src':'./images/信浓.png'
+        },
+        {
+            'src':'./images/前田藤四郎.png'
+        },
+        {
+            'src':'./images/后藤.png'
+        },
+        {
+            'src':'./images/太鼓钟贞宗_战斗.png'
+        },
+        {
+            'src':'./images/爷爷.png'
+        },
+        {
+            'src':'./images/莺丸.png'
+        },
+        {
+            'src':'./images/萤丸.png'
+        }
+    ]
+}
