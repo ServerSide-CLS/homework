@@ -1,0 +1,30 @@
+<form action="/" method="post">
+        <div>
+            <p>账号<input type="text" id="username" placeholder="请输入账号" /></p>
+        </div>
+        <div>
+            <p>密码<input type="password" id="password" placeholder="请输入密码" /></p>
+        </div>
+        <div>
+            <p>确认密码<input type="password" id="CPassword" placeholder="请再次输入密码" /></p>
+        </div>
+        <div>
+            <p>Email<input type="text" name="email" placeholder="请输入邮箱" id="email" />
+            </p>
+            <input type="button" id='check' value="验证邮箱有效性" onclick="send()"><input type="text" name="check" placeholder="请输入验证码" id="check" />
+            <br>
+            <br>
+        </div>
+       
+    <div>
+        <button type="submit" id = 'submit'>注册</button>
+        <input type="button" id='glogin' value="登录界面" onclick="login()">
+    </div>
+     {{message}}
+    </form>
+<script src="/js/send.js"></script>
+<script>
+    function login(){
+        window.location.href = "/login";
+    }
+</script>
